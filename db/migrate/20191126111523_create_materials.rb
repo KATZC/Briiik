@@ -4,7 +4,7 @@ class CreateMaterials < ActiveRecord::Migration[5.2]
       t.string :category
       t.text :description
       t.integer :minimum_price
-      t.datetimestatus :deadline
+      t.datetime :deadline
       t.references :site, foreign_key: true
       t.references :site_user, foreign_key: true
 
