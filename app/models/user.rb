@@ -5,5 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :bids
   has_many :sites, through: :site_users
-  validates :email, uniqueness: true
 end
