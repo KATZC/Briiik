@@ -1,7 +1,7 @@
 class MaterialsController < ApplicationController
   def index
-    if params[:address].present?
-      @materials = Material.search_by_category_and_description(params[:address])
+    if params[:address][:address].present?
+      @materials = Material.search_by_category_and_description(params[:address][:address])
     end
 
     if params[:category].present?
@@ -34,7 +34,7 @@ class MaterialsController < ApplicationController
       # end
 
     # else
-    #   @materials = Material.allvitrage
+    @materials = Material.all if @materials.nil?
 
   end
 

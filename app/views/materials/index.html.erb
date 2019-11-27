@@ -21,10 +21,7 @@
 
 
       <p><strong>Address </strong></p>
-      <%= text_field_tag :address,
-      params[:address],
-      class: "form-control has-search",
-      placeholder: "Paris?"%>
+      <%= collection_select :address, :address, Site.all, :address, :address, class: "form-control has-search", placeholder: "Paris?"%>
 
       <br>
       <p><strong>Prix minimum </strong></p>
