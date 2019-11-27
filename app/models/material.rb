@@ -10,9 +10,11 @@ class Material < ApplicationRecord
   validates :status, presence: true
   validates :category, presence: true
 
-
-  pg_search_scope :search_by_category,
-    against: [ :category],
+  pg_search_scope :search_by_category_and_description,
+    against: [:category, :description],
+    associated_against: {
+      site: [:address]
+    },
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }

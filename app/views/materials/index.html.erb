@@ -8,16 +8,23 @@
     <div class="search_bar">
       <%= form_tag materials_path, method: :get do %>
       <p><strong>Catégorie </strong></p>
-      <%= text_field_tag :query,
-      params[:query],
+      <%= text_field_tag :category,
+      params[:category],
       class: "form-control has-search",
       placeholder: "Peinture? Plomberie?"%>
 
       <p><strong>Description </strong></p>
-      <%= text_field_tag :query4,
-      params[:query4],
+      <%= text_field_tag :description,
+      params[:description],
       class: "form-control has-search",
       placeholder: "Barrettes? Cuivre?"%>
+
+
+      <p><strong>Address </strong></p>
+      <%= text_field_tag :address,
+      params[:address],
+      class: "form-control has-search",
+      placeholder: "Paris?"%>
 
       <br>
       <p><strong>Prix minimum </strong></p>
