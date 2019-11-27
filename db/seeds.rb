@@ -169,7 +169,7 @@ contreplaque_6.save!
 
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 barrette_20 = Material.new(
-    category: "plomberie",
+    category: "Plomberie",
     description: "20 barrettes de cuivres non-utilisées",
     minimum_price: 300,
     deadline: Date.new(2019, 12, 25),
@@ -286,7 +286,7 @@ store_4.save!
 
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 radiateur_1 = Material.new(
-    category: "Electricité",
+    category: "Consommable",
     description: "1 radiateur made in Germany en bon état",
     minimum_price: 120,
     deadline: Date.new(2020, 12, 17),
