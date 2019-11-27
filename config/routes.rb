@@ -9,11 +9,10 @@ Rails.application.routes.draw do
   get 'sales', to: 'materials#sales', as: :sales
 
   resources :sites do
-    resources :site_users do
-      resources :materials, only: [:index, :show]
-    end
+    resources :site_users
   end
 
+  resources :materials, only: [:index, :show]
   # get 'profiles' to: 'profiles#index'
 
 end
