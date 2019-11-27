@@ -20,4 +20,8 @@ class Material < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+
+  def highest_bid
+    bids.order('price ASC').last&.price  || minimum_price
+  end
 end

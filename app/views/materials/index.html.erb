@@ -11,7 +11,7 @@
 
       <p><strong>Catégories </strong></p>
       <%#= collection_select :material, :category, Material::CATEGORIES, :material%>
-      <%= select_tag "category", options_for_select(Material::CATEGORIES) %>
+      <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), prompt: "Choisir une catégorie" %>
 
 
       <p><strong>Description </strong></p>
@@ -23,24 +23,11 @@
 
       <p><strong>Address </strong></p>
 
-      <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address") %>
+      <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]), prompt: "Choisir une adresse" %>
+
 
       <br>
-      <p><strong>Prix minimum </strong></p>
-      <%= text_field_tag :query2,
-      params[:query2],
-      class: "form-control",
-      placeholder: "Minimum_price?"
-      %>
-      <br>
-        <p><strong>Prix maximum </strong></p>
-      <%= text_field_tag :query3,
-        params[:query3],
-        class: "form-control",
-        placeholder: "Maximum price?"
-      %>
-      <br>
-     <%= submit_tag "Search", class: "btn button-index button-color" %>
+     <%= submit_tag "Search", class: "btn btn-primary" %>
 
     <% end %>
     </div>
