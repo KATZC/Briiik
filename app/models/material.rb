@@ -6,4 +6,6 @@ class Material < ApplicationRecord
   validates :deadline, presence: true
   validates :status, presence: true
   validates :category, presence: true
+  validates_inclusion_of :status, in: ['En ligne', 'Vendu', 'Non-vendu', 'Remis', 'Cloturé']
 end
+
