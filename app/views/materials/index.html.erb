@@ -1,2 +1,58 @@
 <h1>Materials#index</h1>
 <p>Find me in app/views/materials/index.html.erb</p>
+
+
+<!-- [...] -->
+<div class="container">
+
+    <div class="search_bar">
+      <%= form_tag materials_path, method: :get do %>
+      <p><strong>Catégorie </strong></p>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control has-search",
+      placeholder: "Peinture? Plomberie?"%>
+
+      <p><strong>Description </strong></p>
+      <%= text_field_tag :query4,
+      params[:query4],
+      class: "form-control has-search",
+      placeholder: "Barrettes? Cuivre?"%>
+
+      <br>
+      <p><strong>Prix minimum </strong></p>
+      <%= text_field_tag :query2,
+      params[:query2],
+      class: "form-control",
+      placeholder: "Minimum_price?"
+      %>
+      <br>
+        <p><strong>Prix maximum </strong></p>
+      <%= text_field_tag :query3,
+        params[:query3],
+        class: "form-control",
+        placeholder: "Maximum price?"
+      %>
+      <br>
+     <%= submit_tag "Search", class: "btn button-index button-color" %>
+
+    <% end %>
+    </div>
+
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <div id="materials">
+        <% @materials.each do |material| %>
+          <h4><%= material.description %></h4>
+          <p><%= material.category %></p>
+          <p><%= material.minimum_price %></p>
+          <p><%= material.deadline %></p>
+          <p><%= material.site.address%></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
