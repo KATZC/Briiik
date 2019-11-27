@@ -28,6 +28,7 @@ class MaterialsController < ApplicationController
   end
 
   def new
+    @materiel = Material.new
   end
 end
 
