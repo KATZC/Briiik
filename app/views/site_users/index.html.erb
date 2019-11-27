@@ -1,0 +1,11 @@
+<h3>Confirmez vous que vous voulez rattacher ce compagnon ?</h3>
+<% @user.each do |user| %>
+<%= user.name %>
+<%= user.email %>
+<% end %>
+
+
+<h3>Compagnon déjà présent sur site</h3>
+<% @site_users.each do |site_user| %>
+<%= User.find(site_user.user_id).email %>
+<% end %>
