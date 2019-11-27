@@ -8,22 +8,15 @@
     <div class="search_bar">
       <%= form_tag materials_path, method: :get do %>
 
-
-      <p><strong>Catégories </strong></p>
       <%#= collection_select :material, :category, Material::CATEGORIES, :material%>
-      <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), prompt: "Choisir une catégorie" %>
+      <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), include_blank: "Choisir une catégorie" %>
 
+       <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]), include_blank: "Choisir une adresse de chantier" %>
 
-      <p><strong>Description </strong></p>
       <%= text_field_tag :description,
       params[:description],
       class: "form-control has-search",
-      placeholder: "Barrettes? Cuivre?"%>
-
-
-      <p><strong>Address </strong></p>
-
-      <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]), prompt: "Choisir une adresse" %>
+      placeholder: "Produit recherché. Ex: barrettes, cuivre, cloisons,..."%>
 
 
       <br>
