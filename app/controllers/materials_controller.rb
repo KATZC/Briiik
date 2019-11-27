@@ -5,7 +5,7 @@ class MaterialsController < ApplicationController
     @my_posts_pickup = current_user.materials.where(status: 'Vendu').limit(2)
     @my_posts_done = current_user.materials.where(status: 'Cloturé').limit(2)
   end
-end
+
 
   def index
 
