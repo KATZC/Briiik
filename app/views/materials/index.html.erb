@@ -7,11 +7,12 @@
 
     <div class="search_bar">
       <%= form_tag materials_path, method: :get do %>
-      <p><strong>Catégorie </strong></p>
-      <%= text_field_tag :category,
-      params[:category],
-      class: "form-control has-search",
-      placeholder: "Peinture? Plomberie?"%>
+
+
+      <p><strong>Catégories </strong></p>
+      <%#= collection_select :material, :category, Material::CATEGORIES, :material%>
+      <%= select_tag "category", options_for_select(Material::CATEGORIES) %>
+
 
       <p><strong>Description </strong></p>
       <%= text_field_tag :description,
@@ -21,7 +22,8 @@
 
 
       <p><strong>Address </strong></p>
-      <%= collection_select :address, :address, Site.all, :address, :address, class: "form-control has-search", placeholder: "Paris?"%>
+
+      <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address") %>
 
       <br>
       <p><strong>Prix minimum </strong></p>
