@@ -1,6 +1,18 @@
-<h1><%= @site.address %>
-  <%= @site.company %>
+<div class="container">
+  <h1><%= @site.address %>
+    <%= @site.company %>
+  </h1>
 
-</h1>
+  <% @site_users.each do |user| %>
+    <%= user.email %>
+  <% end %>
+
+  <hr>
+
+  <%= simple_form_for([@site, @site_user]) do |f| %>
+    <%= f.input :user_id, collection: User.all %>
+    <%= f.submit 'Ajouter', class: 'btn btn-primary' %>
+  <% end %>
+</div>
 
 
