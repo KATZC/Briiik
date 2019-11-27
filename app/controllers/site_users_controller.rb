@@ -1,5 +1,6 @@
 class SiteUsersController < ApplicationController
 
+
   def new
     @user = User.where(email: params[:query])
     Site.find(params[:site_id])
@@ -36,6 +37,7 @@ private
  def site_user_params
    params.require(:site_user).permit(:user_id)
  end
+
 
 
 end
