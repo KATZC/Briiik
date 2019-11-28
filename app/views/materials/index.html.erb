@@ -35,9 +35,12 @@
         <div class="card-material">
           <h4><%= material.description %></h4>
           <p><%= material.category %></p>
-          <p><%= material.minimum_price %></p>
+          <p><%= material.highest_bid %></p>
           <p><%= material.deadline %></p>
           <p><%= material.site.address%></p>
+          <%= link_to material_path(material) do %>
+            <%= render './shared/card', material: material %>
+             <% end %>
         <% end %>
         </div>
       </div>
@@ -45,6 +48,4 @@
   </div>
 </div>
 
-
-  bid.price highest si présent sinon material.price_minimum
 
