@@ -22,7 +22,12 @@ class SitesController < ApplicationController
   def show
     @site = Site.find(params[:id])
     @site_users = @site.users
-    @site_user = SiteUser.new
+    if @site_users.nil? == false
+      render 'new'
+    else
+      @site_user = SiteUser.new
+    end
+
   end
 
   def edit
