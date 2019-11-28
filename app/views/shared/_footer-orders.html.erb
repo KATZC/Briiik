@@ -1,7 +1,7 @@
-<div class="footer orders">
-  <li>
-    <%= link_to "J'achète", materials_path, class:"footer_link"%>
-    <p> Page mes achats à créer </p>
-    <p> link_to Je vends, materials_new_path à corriger footer_link </p>
-  </li>
+<div class="footer">
+  <div class="orders">
+    <%= link_to "J'achète", materials_path, class:"footer-link"%>
+    <%= link_to "Mes achats", "Page mes achats à créer", class:"footer-link"%>
+    <%= link_to "Je vends", new_material_path, class:"footer-link"%>
+  </div>
 </div>

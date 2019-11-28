@@ -1,22 +1,27 @@
 .footer {
-  background: red;
+   background: #3D2B3D; //blue
+  // background: #9B1D20; //red
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
+  justify-content: space-evenly;
+  height: 80px;
   color: rgba(0,0,0,0.3);
   align-item: flex-end;
 }
+
+
 .footer-links {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer-link {
-  color: black;
-  opacity: 0.15;
+  color: white;
   text-decoration: none;
   font-size: 24px;
-  padding: 0px 10px;
+  display:flex;
+  justify-content: space-evenly;
+  // padding: 0px 50px;
 }
+
