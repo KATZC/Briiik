@@ -7,6 +7,7 @@ class Material < ApplicationRecord
   belongs_to :site_user
   has_one :user, through: :site_user
   has_many :bids
+  has_one_attached :photo
 
   validates :minimum_price, presence: true
   validates :deadline, presence: true
