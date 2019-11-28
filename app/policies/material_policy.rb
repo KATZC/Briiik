@@ -13,6 +13,10 @@ class MaterialPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def new?
     true
   end

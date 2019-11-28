@@ -9,11 +9,18 @@
 
   <hr>
 
-  <%= simple_form_for([@site, @site_user]) do |f| %>
-    <%= f.input :user_id, collection: @users %>
-    <%= f.submit 'Ajouter', class: 'btn btn-primary' %>
+  <% if policy(@site).create? %>
+    <%= simple_form_for([@site, @site_user]) do |f| %>
+      <%= f.input :user_id, collection: @users %>
+      <%= f.submit 'Ajouter', class: 'btn btn-primary' %>
+    <% end %>
   <% end %>
+
+  <br>
+  <%= link_to 'Edit', edit_site_path(@site) %>
+  <%= link_to 'Back', site_path %>
+  <br>
 </div>
 
-
 <%= render "shared/footer-sales" %>
+
