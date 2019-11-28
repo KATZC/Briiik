@@ -9,3 +9,5 @@
 <% @site_users.each do |site_user| %>
 <%= User.find(site_user.user_id).email %>
 <% end %>
+
+<%= render "shared/footer-sales" %>
