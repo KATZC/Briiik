@@ -10,3 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar {
+  background-color: #FDFFFC;
+}
+
+#toto > svg {
+  height: 30px;
+  width: 30px;
+}
+#toto > svg > path {
+  fill: #F46036;
+}
