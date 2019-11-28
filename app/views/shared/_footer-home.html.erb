@@ -1,12 +1,14 @@
 
+
+
 <div class="row footer">
-    <div class="footer-links">
-        <%= link_to "Je vends", new_material_path, class:"footer-link col-6"%>
-      </div>
-      <div class="home_sales col-6">
-        <%= link_to "J'achète", materials_path, class:"footer-link col-6"%>
-      </div>
+    <div class="col-6 h-100 d-flex justify-content-center align-items-center">
+      <%= link_to "Je vends", new_material_path, class:"footer-link"%>
     </div>
+    <div class="col-6 h-100 d-flex justify-content-center align-items-center red">
+     <%= link_to "J'achète", materials_path, class:"footer-link"%>
+    </div>
+
 </div>
 
 
