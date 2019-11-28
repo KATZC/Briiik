@@ -1,2 +1,10 @@
 <h1>Materials#show</h1>
 <p>Find me in app/views/materials/show.html.erb</p>
+<%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
+<ul>
+  <li><%= @material.category %></li>
+  <li><%= @material.minimum_price %></li>
+  <li><%= @material.deadline %></li>
+  <li><%= @material.description %></li>
+  <li><%= @material.status %></li>
+</ul>
