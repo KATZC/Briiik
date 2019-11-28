@@ -1,8 +1,11 @@
-<div class="footer orders">
-  <li>
-    <%= link_to "J'achète", materials_path, class:"footer_link"%>
-    <p> Page mes achats à créer </p>
-     <p> link_to Je vends, materials_new_path à corriger footer_link </p>
-
-  </li>
+<div class="row footer">
+    <div class="col-4 h-100 d-flex justify-content-center align-items-center red">
+      <%= link_to "J'achète", materials_path, class:"footer-link"%>
+    </div>
+    <div class="col-4 h-100 d-flex justify-content-center align-items-center red">
+      <%= link_to "Page Mes achats à créer", new_material_path, class:"footer-link"%>
+    </div>
+    <div class="col-4 h-100 d-flex justify-content-center align-items-center">
+      <%= link_to "Je vends", new_material_path, class:"footer-link"%>
+    </div>
 </div>
