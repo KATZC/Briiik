@@ -1,8 +1,9 @@
-
-<h1><strong>Sites</strong></h1>
-
-<h3> <% @sites.each do |site| %>
-  <%= site.company %>
-  <%= site.address %>
+<h1> <% @sites.each do |site| %>
+<%= site.company %>
+<%= site.address %>
 <% end %>
-</h3>
+<%= render './shared/card' %>
+</h1>
+
+<%= render "shared/footer-sales" %>
+
