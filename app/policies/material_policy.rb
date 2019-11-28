@@ -13,7 +13,12 @@ class MaterialPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def new?
-    user.sites.any?
+    # user.sites.any?
+    true
   end
 end
