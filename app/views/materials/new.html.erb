@@ -4,7 +4,26 @@
   <div class="row justify-content">
     <div class="col-md-6 mt-3 p-5">
       <h1>Je vends un matériel</h1>
-    <!--   <%=# render "form" %> -->
+
+    <%= simple_form_for(@material) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="container">
+    <div class="form-inputs">
+      <%= f.input :category %>
+      <%= f.input :minimum_price %>
+      <%= f.input :deadline %>
+      <%= f.input :minimum_price %>
+      <%= f.input :description %>
+      <%= f.input :minimum_price %>
+
+
+    </div>
+  </div>
+  <div class="form-actions button-color">
+    <%= f.submit "Ajouter un chantier" %>
+  </div>
+<% end %>
     </div>
   </div>
 </div>
