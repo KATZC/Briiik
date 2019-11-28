@@ -10,6 +10,7 @@ class Material < ApplicationRecord
   validates :minimum_price, presence: true
   validates :deadline, presence: true
   validates :status, presence: true
+  validates_inclusion_of :status, in: ['En ligne', 'Vendu', 'Non-vendu', 'Remis', 'Cloturé']
   validates :category, :inclusion => CATEGORIES
 
   pg_search_scope :search_by_category_and_description,
@@ -25,3 +26,4 @@ class Material < ApplicationRecord
     bids.order('price ASC').last&.price  || minimum_price
   end
 end
+

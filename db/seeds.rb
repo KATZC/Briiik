@@ -1,10 +1,24 @@
 require 'faker'
 require 'open-uri'
 
+Bid.destroy_all
+Material.destroy_all
+SiteUser.destroy_all
+Site.destroy_all
 User.destroy_all
+
 puts 'Cleaning database...'
 
 # file_joe_dalton = URI.open('./app/assets/images/joe_dalton.jpg')
+celine = User.new(
+    name:    "Céline Katz",
+    email: "katz.celine@gmail.com",
+    phone_number: "O612343324",
+    password: "123456"
+  )
+  # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
+  celine.save!
+
 joe_dalton = User.new(
     name:    "Joe Dalton",
     email: "joe@dalton.com",
@@ -75,21 +89,21 @@ idrissi_obama = User.new(
 
 vinci_paradis_10 = Site.new(
     company:    "Vinci",
-    address: "10, rue de Paradis"
+    address: "10 rue de paradis 75010 paris"
   )
 vinci_paradis_10.save!
 
 vinci_richer_10 = Site.new(
     company:    "Vinci",
-    address: "14, rue Richer"
+    address: "14 rue richer 75009 paris"
   )
 vinci_richer_10.save!
 
-bouygue_lobineau_20 = Site.new(
-    company:    "Bouygue",
-    address: "20, rue Lobineau"
+bouygues_lobineau_20 = Site.new(
+    company:    "bouyguess",
+    address: "20 rue lobineau 75006 Paris"
   )
-bouygue_lobineau_20.save!
+bouygues_lobineau_20.save!
 
 # eiffage_balard_30 = Site.new(
 #     company:    "Eiffage",
@@ -135,30 +149,24 @@ fifth_site_user.save!
 
 sixth_site_user = SiteUser.new(
   user: margot_blakchouche,
-  site: bouygue_lobineau_20,
+  site: bouygues_lobineau_20,
   manager: true
   )
 sixth_site_user.save!
 
 seventh_site_user = SiteUser.new(
   user: moktar_oulabala,
-  site: bouygue_lobineau_20,
+  site: bouygues_lobineau_20,
   manager: false
   )
 seventh_site_user.save!
 
-seventh_site_user = SiteUser.new(
-  user: idrissi_obama,
-  site: bouygue_lobineau_20,
-  manager: false
-  )
-seventh_site_user.save!
 
 
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 contreplaque_6 = Material.new(
     category: "Habillage",
-    description: "6 contreplaqué en bon état",
+    description: "6 contreplaqués en bon état",
     minimum_price: 100,
     deadline: Date.new(2019, 12, 20),
     status: "En ligne",
@@ -170,8 +178,8 @@ contreplaque_6.save!
 
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 barrette_20 = Material.new(
-    category: "plomberie",
-    description: "20 barrettes de cuivres non-utilisées",
+    category: "Plomberie",
+    description: "20 barrettes de cuivres non utilisées",
     minimum_price: 300,
     deadline: Date.new(2019, 12, 25),
     status: "Vendu",
@@ -184,7 +192,7 @@ barrette_20.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 vitre_4 = Material.new(
     category: "Habillage",
-    description: "4 cloison vitrée dans un état de merde",
+    description: "4 cloisons vitrées",
     minimum_price: 450,
     deadline: Date.new(2019, 12, 25),
     status: "En ligne",
@@ -197,7 +205,7 @@ vitre_4.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 peinture_10 = Material.new(
     category: "Consommable",
-    description: "10 pots de peinture non-ouverts",
+    description: "10 pots de peinture blanche non ouverts",
     minimum_price: 40,
     deadline: Date.new(2019, 12, 25),
     status: "Vendu",
@@ -210,7 +218,7 @@ peinture_10.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 moquette_1 = Material.new(
     category: "Consommable",
-    description: "1 moquette rayée bleu/rouge non-utilisée",
+    description: "1 moquette rayée bleu/rouge non utilisée",
     minimum_price: 70,
     deadline: Date.new(2020, 01, 13),
     status: "En ligne",
@@ -223,7 +231,7 @@ moquette_1.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 kitchenette_2 = Material.new(
     category: "Habillage",
-    description: "2 kitchenttes en bon état",
+    description: "2 kitchenettes en bon état",
     minimum_price: 85,
     deadline: Date.new(2019, 12, 30),
     status: "Non-vendu",
@@ -236,92 +244,244 @@ kitchenette_2.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 cloison_2 = Material.new(
     category: "Habillage",
-    description: "2 cloisons double vitrage en très très bon état",
+    description: "2 cloisons double vitrage en excellent état",
     minimum_price: 1200,
     deadline: Date.new(2019, 12, 21),
-    status: "Remis",
-    site: bouygue_lobineau_20,
+    status: "Cloturé",
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
 cloison_2.save!
 
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+cloison_5 = Material.new(
+    category: "Habillage",
+    description: "5 cloisons neuves, made in Poland",
+    minimum_price: 1500,
+    deadline: Date.new(2019, 12, 26),
+    status: "Vendu",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+cloison_5.save!
 
-first_bid = Bid.new(
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+moquette_10 = Material.new(
+    category: "Consommable",
+    description: "1 moquette grise utilisée et en bon état, made in France",
+    minimum_price: 300,
+    deadline: Date.new(2020, 01, 04),
+    status: "Vendu",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+moquette_10.save!
+
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+store_4 = Material.new(
+    category: "Habillage",
+    description: "4 stores avec lamelles intérieures neufs",
+    minimum_price: 120,
+    deadline: Date.new(2020, 01, 17),
+    status: "Cloturé",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+store_4.save!
+
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+radiateur_1 = Material.new(
+    category: "Consommable",
+    description: "1 radiateur made in Germany en bon état",
+    minimum_price: 120,
+    deadline: Date.new(2020, 12, 17),
+    status: "Vendu",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+radiateur_1.save!
+
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+cloison_4 = Material.new(
+    category: "Habillage",
+    description: "1 radiateur made in Germany en bon état",
+    minimum_price: 200,
+    deadline: Date.new(2020, 12, 20),
+    status: "En ligne",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+cloison_4.save!
+
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+table_10 = Material.new(
+    category: "Habillage",
+    description: "10 petites tables rondes neuves très design",
+    minimum_price: 1000,
+    deadline: Date.new(2020, 12, 23),
+    status: "En ligne",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+table_10.save!
+
+# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+fauteuil_2 = Material.new(
+    category: "Habillage",
+    description: "2 fauteuils gris made in UK comme neufs",
+    minimum_price: 300,
+    deadline: Date.new(2020, 12, 28),
+    status: "En ligne",
+    site: bouygues_lobineau_20,
+    site_user: seventh_site_user
+  )
+  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+fauteuil_2.save!
+
+
+bid_1 = Bid.new(
   user: idrissi_obama,
   price: 110,
   material: contreplaque_6
   )
-first_bid.save!
+bid_1.save!
 
-second_bid = Bid.new(
+bid_2 = Bid.new(
   user: adam_levin,
   price: 115,
   material: contreplaque_6
   )
-second_bid.save!
+bid_2.save!
 
-third_bid = Bid.new(
+bid_3 = Bid.new(
   user: manu_chao,
   price: 120,
   material: contreplaque_6
   )
-third_bid.save!
+bid_3.save!
 
-fourth_bid = Bid.new(
+bid_4 = Bid.new(
   user: manu_chao,
   price: 320,
   material: barrette_20
   )
-fourth_bid.save!
+bid_4.save!
 
-fifth_bid = Bid.new(
+bid_5 = Bid.new(
   user: alfred_dalton,
   price: 335,
   material: barrette_20
   )
-fifth_bid.save!
+bid_5.save!
 
-sixth_bid = Bid.new(
+bid_6 = Bid.new(
   user: idrissi_obama,
   price: 460,
   material: vitre_4
   )
-sixth_bid.save!
+bid_6.save!
 
-seventh_bid = Bid.new(
+bid_7 = Bid.new(
   user: margot_blakchouche,
   price: 460,
   material: vitre_4
   )
-seventh_bid.save!
+bid_7.save!
 
-eight_bid = Bid.new(
+bid_8 = Bid.new(
   user: margot_blakchouche,
   price: 45,
   material: peinture_10
   )
-eight_bid.save!
+bid_8.save!
 
-ninth_bid = Bid.new(
+bid_9 = Bid.new(
   user: idrissi_obama,
   price: 50,
   material: peinture_10
   )
-ninth_bid.save!
+bid_9.save!
 
-ninth_bid = Bid.new(
+bid_10 = Bid.new(
   user: adam_levin,
   price: 55,
   material: peinture_10
   )
-ninth_bid.save!
+bid_10.save!
 
-tenth_bid = Bid.new(
+bid_11 = Bid.new(
   user: moktar_oulabala,
-  price: 1500,
+  price: 1250,
   material: cloison_2
   )
-tenth_bid.save!
+bid_11.save!
 
+bid_12 = Bid.new(
+  user: margot_blakchouche,
+  price: 130,
+  material: radiateur_1
+  )
+bid_12.save!
 
+bid_13 = Bid.new(
+  user: alfred_dalton,
+  price: 145,
+  material: radiateur_1
+  )
+bid_13.save!
+
+bid_14 = Bid.new(
+  user: moktar_oulabala,
+  price: 145,
+  material: radiateur_1
+  )
+bid_14.save!
+
+bid_15 = Bid.new(
+  user: alfred_dalton,
+  price: 150,
+  material: store_4
+  )
+bid_15.save!
+
+bid_16 = Bid.new(
+  user: adam_levin,
+  price: 160,
+  material: store_4
+  )
+bid_16.save!
+
+bid_17 = Bid.new(
+  user: adam_levin,
+  price: 340,
+  material: moquette_10
+  )
+bid_17.save!
+
+bid_18 = Bid.new(
+  user: adam_levin,
+  price: 1600,
+  material: cloison_5
+  )
+bid_18.save!
+
+bid_19 = Bid.new(
+  user: manu_chao,
+  price: 1650,
+  material: cloison_5
+  )
+bid_19.save!
+
+bid_19 = Bid.new(
+  user: margot_blakchouche,
+  price: 1750,
+  material: cloison_5
+  )
+bid_19.save!
