@@ -34,6 +34,8 @@ class MaterialsController < ApplicationController
   end
 
   def show
+    @material = Material.find(params[:id])
+    authorize @material
   end
 
   def new
