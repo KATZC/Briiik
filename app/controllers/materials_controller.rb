@@ -37,9 +37,31 @@ class MaterialsController < ApplicationController
   end
 
   def new
-    @materiel = Material.new
-    authorize @materiel
+    @material = Material.new
+    @sites = current_user.sites
+    authorize @material
   end
+
+  def create
+    @user = current_user
+    @site = Site.find(params[:site_id])
+    @material = Material.new(material_params)
+    @site_user.site = @site
+    authorize @site_user
+
+    if @site_user.save
+      redirect_to site_path(@site)
+    else
+      render 'new'
+    end
+  end
+
+  private
+
+  def material_params
+    params.require(:material).permit(:category, :minimum_price, :photo, :deadline, :description)
+  end
+
 end
 
 
