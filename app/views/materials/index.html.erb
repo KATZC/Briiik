@@ -1,31 +1,31 @@
-<h1>Materials#index</h1>
-<p>Find me in app/views/materials/index.html.erb</p>
-
-
-<!-- [...] -->
 <div class="container">
+
+  <div class="search_materials">
 
     <div class="search_bar">
       <%= form_tag materials_path, method: :get do %>
 
       <%#= collection_select :material, :category, Material::CATEGORIES, :material%>
-      <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), include_blank: "Choisir une catégorie" %>
+      <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), include_blank: "Choisir une catégorie",
+      class: "form-control has-search"%>
+      <br>
 
-       <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]), include_blank: "Choisir une adresse de chantier" %>
+       <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]),
+       include_blank: "Choisir une adresse de chantier", class: "form-control has-search"%>
+      <br>
 
       <%= text_field_tag :description,
-      params[:description],
-      class: "form-control has-search",
-      placeholder: "Produit recherché. Ex: barrettes, cuivre, cloisons,..."%>
-
-
+      params[:description],class: "form-control has-search",placeholder: "Vous recherchez? Ex: cloison, moquette,...", style:"font-style:italic"%>
       <br>
+
      <%= submit_tag "Search", class: "btn btn-primary" %>
 
     <% end %>
     </div>
 
   </div>
+
+</div>
 
 <div class="container">
   <div class="row">
