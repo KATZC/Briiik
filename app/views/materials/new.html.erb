@@ -10,10 +10,10 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <div class="container">
     <div class="form-inputs">
-      <%= f.input :category, collection: ["Plomberie", "Electricité", "Mobilier", "Sol", "Mur"] %>
+      <%= f.input :category, collection: Material::CATEGORIES %>
       <%= f.input :minimum_price %>
       <%= f.input :deadline %>
-      <%= f.input :site, collection: @sites, label_method: :address %>
+      <%= f.input :site_id, collection: @sites, label_method: :address %>
       <%= f.input :description %>
       <%= f.input :photo, as: :file %>
     </div>

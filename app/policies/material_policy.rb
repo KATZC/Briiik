@@ -16,4 +16,8 @@ class MaterialPolicy < ApplicationPolicy
   def new?
     user.sites.any?
   end
+
+  def create?
+    true
+  end
 end
