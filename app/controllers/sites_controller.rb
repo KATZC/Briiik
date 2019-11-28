@@ -30,7 +30,6 @@ class SitesController < ApplicationController
     else
       @site_user = SiteUser.new
     end
-
   end
 
   def edit
