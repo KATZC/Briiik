@@ -1,14 +1,15 @@
 class MaterialsController < ApplicationController
+  skip_after_action :verify_policy_scoped, only: :index
 
   def sales
+    authorize :material, :sales?
+    @user = current_user
     @my_posts = current_user.materials.limit(2)
     @my_posts_pickup = current_user.materials.where(status: 'Vendu').limit(2)
     @my_posts_done = current_user.materials.where(status: 'Cloturé').limit(2)
   end
 
-
   def index
-
     if params[:address].present?
       @materials = Material.search_by_category_and_description(params[:address])
     end
@@ -37,6 +38,7 @@ class MaterialsController < ApplicationController
 
   def new
     @materiel = Material.new
+    authorize @materiel
   end
 end
 

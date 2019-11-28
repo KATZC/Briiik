@@ -5,6 +5,7 @@ class Material < ApplicationRecord
 
   belongs_to :site
   belongs_to :site_user
+  has_one :user, through: :site_user
   has_many :bids
 
   validates :minimum_price, presence: true
