@@ -10,6 +10,15 @@ User.destroy_all
 puts 'Cleaning database...'
 
 # file_joe_dalton = URI.open('./app/assets/images/joe_dalton.jpg')
+celine = User.new(
+    name:    "Céline Katz",
+    email: "katz.celine@gmail.com",
+    phone_number: "O612343324",
+    password: "123456"
+  )
+  # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
+  celine.save!
+
 joe_dalton = User.new(
     name:    "Joe Dalton",
     email: "joe@dalton.com",
@@ -80,21 +89,21 @@ idrissi_obama = User.new(
 
 vinci_paradis_10 = Site.new(
     company:    "Vinci",
-    address: "10, rue de Paradis"
+    address: "10 rue de paradis 75010 paris"
   )
 vinci_paradis_10.save!
 
 vinci_richer_10 = Site.new(
     company:    "Vinci",
-    address: "14, rue Richer"
+    address: "14 rue richer 75009 paris"
   )
 vinci_richer_10.save!
 
-bouygue_lobineau_20 = Site.new(
-    company:    "Bouygue",
-    address: "20, rue Lobineau"
+bouygues_lobineau_20 = Site.new(
+    company:    "bouyguess",
+    address: "20 rue lobineau 75006 Paris"
   )
-bouygue_lobineau_20.save!
+bouygues_lobineau_20.save!
 
 # eiffage_balard_30 = Site.new(
 #     company:    "Eiffage",
@@ -140,14 +149,14 @@ fifth_site_user.save!
 
 sixth_site_user = SiteUser.new(
   user: margot_blakchouche,
-  site: bouygue_lobineau_20,
+  site: bouygues_lobineau_20,
   manager: true
   )
 sixth_site_user.save!
 
 seventh_site_user = SiteUser.new(
   user: moktar_oulabala,
-  site: bouygue_lobineau_20,
+  site: bouygues_lobineau_20,
   manager: false
   )
 seventh_site_user.save!
@@ -157,7 +166,7 @@ seventh_site_user.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 contreplaque_6 = Material.new(
     category: "Habillage",
-    description: "6 contreplaqué en bon état",
+    description: "6 contreplaqués en bon état",
     minimum_price: 100,
     deadline: Date.new(2019, 12, 20),
     status: "En ligne",
@@ -170,7 +179,7 @@ contreplaque_6.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 barrette_20 = Material.new(
     category: "Plomberie",
-    description: "20 barrettes de cuivres non-utilisées",
+    description: "20 barrettes de cuivres non utilisées",
     minimum_price: 300,
     deadline: Date.new(2019, 12, 25),
     status: "Vendu",
@@ -183,7 +192,7 @@ barrette_20.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 vitre_4 = Material.new(
     category: "Habillage",
-    description: "4 cloison vitrée dans un état de merde",
+    description: "4 cloisons vitrées",
     minimum_price: 450,
     deadline: Date.new(2019, 12, 25),
     status: "En ligne",
@@ -196,7 +205,7 @@ vitre_4.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 peinture_10 = Material.new(
     category: "Consommable",
-    description: "10 pots de peinture non-ouverts",
+    description: "10 pots de peinture blanche non ouverts",
     minimum_price: 40,
     deadline: Date.new(2019, 12, 25),
     status: "Vendu",
@@ -209,7 +218,7 @@ peinture_10.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 moquette_1 = Material.new(
     category: "Consommable",
-    description: "1 moquette rayée bleu/rouge non-utilisée",
+    description: "1 moquette rayée bleu/rouge non utilisée",
     minimum_price: 70,
     deadline: Date.new(2020, 01, 13),
     status: "En ligne",
@@ -222,7 +231,7 @@ moquette_1.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 kitchenette_2 = Material.new(
     category: "Habillage",
-    description: "2 kitchenttes en bon état",
+    description: "2 kitchenettes en bon état",
     minimum_price: 85,
     deadline: Date.new(2019, 12, 30),
     status: "Non-vendu",
@@ -235,11 +244,11 @@ kitchenette_2.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 cloison_2 = Material.new(
     category: "Habillage",
-    description: "2 cloisons double vitrage en très très bon état",
+    description: "2 cloisons double vitrage en excellent état",
     minimum_price: 1200,
     deadline: Date.new(2019, 12, 21),
     status: "Cloturé",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -248,11 +257,11 @@ cloison_2.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 cloison_5 = Material.new(
     category: "Habillage",
-    description: "5 cloisons bon état, made in Poland",
+    description: "5 cloisons neuves, made in Poland",
     minimum_price: 1500,
     deadline: Date.new(2019, 12, 26),
     status: "Vendu",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -261,11 +270,11 @@ cloison_5.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 moquette_10 = Material.new(
     category: "Consommable",
-    description: "1 moquette rayée bleu/rouge utilisée et en bon état, made in France",
+    description: "1 moquette grise utilisée et en bon état, made in France",
     minimum_price: 300,
     deadline: Date.new(2020, 01, 04),
     status: "Vendu",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -274,11 +283,11 @@ moquette_10.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 store_4 = Material.new(
     category: "Habillage",
-    description: "4 stores avec lamelles intèrieures neufs",
+    description: "4 stores avec lamelles intérieures neufs",
     minimum_price: 120,
     deadline: Date.new(2020, 01, 17),
     status: "Cloturé",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -291,7 +300,7 @@ radiateur_1 = Material.new(
     minimum_price: 120,
     deadline: Date.new(2020, 12, 17),
     status: "Vendu",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -304,7 +313,7 @@ cloison_4 = Material.new(
     minimum_price: 200,
     deadline: Date.new(2020, 12, 20),
     status: "En ligne",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -317,7 +326,7 @@ table_10 = Material.new(
     minimum_price: 1000,
     deadline: Date.new(2020, 12, 23),
     status: "En ligne",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -326,11 +335,11 @@ table_10.save!
 # file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
 fauteuil_2 = Material.new(
     category: "Habillage",
-    description: "2 fauteuils gris made in UK comme neuf",
+    description: "2 fauteuils gris made in UK comme neufs",
     minimum_price: 300,
     deadline: Date.new(2020, 12, 28),
     status: "En ligne",
-    site: bouygue_lobineau_20,
+    site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
   # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -409,7 +418,7 @@ bid_10.save!
 
 bid_11 = Bid.new(
   user: moktar_oulabala,
-  price: 1500,
+  price: 1250,
   material: cloison_2
   )
 bid_11.save!
