@@ -32,12 +32,12 @@
     <div class="col-sm-8 offset-sm-2">
       <div id="materials">
         <% @materials.each do |material| %>
-        <div class="card-material">
-          <h4><%= material.description %></h4>
+        <div class="card-material-search">
+         <!--  <h4><%= material.description %></h4>
           <p><%= material.category %></p>
           <p><%= material.highest_bid %></p>
           <p><%= material.deadline %></p>
-          <p><%= material.site.address%></p>
+          <p><%= material.site.address%></p> -->
           <%= link_to material_path(material) do %>
             <%= render './shared/card', material: material %>
              <% end %>
