@@ -5,7 +5,25 @@
     <div class="col-md-6 mt-3 p-5">
       <h1>Je vends un matériel</h1>
 
+<%= simple_form_for(@material) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="container">
+    <div class="form-inputs">
+      <%= f.input :category, collection: ["Plomberie", "Electricité", "Mobilier", "Sol", "Mur"] %>
+      <%= f.input :minimum_price %>
+      <%= f.input :deadline %>
+      <%= f.input :site, collection: @sites, label_method: :address %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
+
     </div>
+  </div>
+  <div class="form-actions button-color">
+    <%= f.submit "Ajouter un matériel" %>
+  </div>
+<% end %>
+  </div>
   </div>
 </div>
 
