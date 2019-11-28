@@ -37,9 +37,14 @@ class MaterialsController < ApplicationController
   end
 
   def new
-    @material = Material.new
-    @sites = current_user.sites
-    authorize @material
+    if current_user.sites.any?
+      @material = Material.new
+      @sites = current_user.sites
+      authorize @material
+    else
+      authorize Site.new
+      redirect_to new_site_path
+    end
   end
 
   def create
