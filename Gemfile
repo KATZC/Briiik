@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'faker'
+gem 'pundit'
 
 gem 'pg_search', '~> 2.3.0'
 
