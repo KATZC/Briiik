@@ -45,7 +45,7 @@ class MaterialsController < ApplicationController
       authorize @material
     else
       authorize Site.new
-      redirect_to new_site_path
+      redirect_to sites_path
     end
   end
 
