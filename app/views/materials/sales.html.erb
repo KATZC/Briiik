@@ -2,35 +2,53 @@
 <%= @user.name %> <%= @user.email %> -->
 <h1><strong>Mes Ventes</strong></h1>
 
-<h3><strong>Annonces en ligne</strong></h3>
+<div class="container">
 
-<div class="col-sm-8 offset-sm-2">
-  <div id="materials">
-    <% @my_posts.each do |material| %>
-    <div class="card-material">
-      <h4><%= material.description %></h4>
-      <p><%= material.category %></p>
-      <p><%= material.highest_bid %></p>
-      <p><%= material.deadline %></p>
-      <p><%= material.site.address%></p>
-      <%= link_to material_path(material) do %>
-        <%= render './shared/card', material: material %>
-         <% end %>
-    <% end %>
+<h3><strong>Annonces en ligne</strong></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <div id="materials">
+          <% @my_posts_online.each do |material| %>
+            <div class="card-material-sales">
+             <!--  <h4><%= material.description %></h4>
+              <p><%= material.category %></p>
+              <p><%= material.highest_bid %></p>
+              <p><%= material.deadline %></p>
+              <p><%= material.site.address%></p> -->
+            <%= link_to material_path(material) do %>
+              <%= render 'shared/card-material-sales', material: material %>
+            <% end %>
+          <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<hr>
 
-<h3><strong>Matériaux à remettre en mains propres</strong></h3>
-<% @my_posts_pickup.each do |material| %>
-  <p>Categorie: <%= material.category %></p>
-  <p>Desc: <%= material.description %></p>
-<!--   <p>User: <%= material.user.email %></p> -->
-  <p>Jusqu'au: <%= material.deadline.strftime('%F') %></p>
-  <p><strong>Dernière offre: €<%#= material.bids.last.price %></strong></p>
-<% end %>
-<hr>
+  <h3><strong>Matériaux à remettre à l'acheteur</strong></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <div id="materials">
+          <% @my_posts_pickup.each do |material| %>
+            <div class="card-material-sales">
+             <!--  <h4><%= material.description %></h4>
+              <p><%= material.category %></p>
+              <p><%= material.highest_bid %></p>
+              <p><%= material.deadline %></p>
+              <p><%= material.site.address%></p> -->
+            <%= link_to material_path(material) do %>
+              <%= render 'shared/card-material-sales', material: material %>
+            <% end %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <h3><strong>Ventes passées</strong></h3>
 <% @my_posts_done.each do |material| %>
   <p>Categorie: <%= material.category %></p>
@@ -41,6 +59,8 @@
 <% end %>
 
 <%= render "shared/footer-sales" %>
+
+</div>
 
 
 
