@@ -49,15 +49,6 @@
   </div>
 
 
-
-<% @my_posts_pickup.each do |material| %>
-  <p>Categorie: <%= material.category %></p>
-  <p>Desc: <%= material.description %></p>
-<!--   <p>User: <%= material.user.email %></p> -->
-  <p>Jusqu'au: <%= material.deadline.strftime('%F') %></p>
-  <p><strong>Dernière offre: €<%#= material.bids.last.price %></strong></p>
-<% end %>
-<hr>
 <h3><strong>Ventes passées</strong></h3>
 <% @my_posts_done.each do |material| %>
   <p>Categorie: <%= material.category %></p>
