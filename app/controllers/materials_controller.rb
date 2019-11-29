@@ -34,6 +34,8 @@ class MaterialsController < ApplicationController
   end
 
   def show
+    @material = Material.find(params[:id])
+    authorize @material
   end
 
   def new
@@ -48,14 +50,13 @@ class MaterialsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @site = Site.find(params[:site_id])
     @material = Material.new(material_params)
-    @site_user.site = @site
-    authorize @site_user
-
-    if @site_user.save
-      redirect_to site_path(@site)
+    @site_user = SiteUser.find_by(site: @material.site, user: current_user)
+    @material.site_user = @site_user
+    @material.status = "En ligne"
+    authorize @material
+    if @material.save
+      redirect_to material_path(@material)
     else
       render 'new'
     end
@@ -64,9 +65,6 @@ class MaterialsController < ApplicationController
   private
 
   def material_params
-    params.require(:material).permit(:category, :minimum_price, :photo, :deadline, :description)
+    params.require(:material).permit(:category, :minimum_price, :photo, :deadline, :description, :site_id, :user_id)
   end
-
 end
-
-
