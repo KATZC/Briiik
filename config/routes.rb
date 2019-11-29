@@ -9,9 +9,11 @@ Rails.application.routes.draw do
     resources :site_users
   end
 
-  resources :materials, only: [:index, :show, :new, :create]
+  resources :materials, only: [:index, :show, :new, :create] do
+    resources :bids, only: :create
+  end
 
-  resources :bids, only: [:index]
+  resources :bids, only: [:index, :show]
   # get 'profiles' to: 'profiles#index'
 
 end

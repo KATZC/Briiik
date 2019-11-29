@@ -3,9 +3,28 @@
 <%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
 <ul>
   <li><%= @material.category %></li>
-  <li><%= @material.minimum_price %></li>
+  <li><%= @material.highest_bid %></li>
   <li><%= @material.deadline %></li>
   <li><%= @material.description %></li>
   <li><%= @material.status %></li>
 </ul>
-<%= render "shared/footer-sales" %>
+
+
+<%= simple_form_for([@material, @bid]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :price %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<% if @material.user == current_user %>
+  <%= render "shared/footer-sales" %>
+<% else %>
+  <%= render "shared/footer-orders" %>
+<% end %>
