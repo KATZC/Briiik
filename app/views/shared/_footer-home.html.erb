@@ -1,9 +1,14 @@
 
-<div class="footer home">
-  <li>
-    <p> link_to Je vends, materials_new_path à corriger footer_link </p>
-    <%= link_to "J'achète", materials_path, class:"footer_link"%>
-  </li>
+
+
+<div class="row footer">
+    <div class="col-6 h-100 d-flex justify-content-center align-items-center">
+      <%= link_to "Je vends", new_material_path, class:"footer-link"%>
+    </div>
+    <div class="col-6 h-100 d-flex justify-content-center align-items-center red">
+     <%= link_to "J'achète", materials_path, class:"footer-link"%>
+    </div>
+
 </div>
 
 

@@ -1,14 +1,15 @@
 class MaterialsController < ApplicationController
+  skip_after_action :verify_policy_scoped, only: :index
 
   def sales
+    authorize :material, :sales?
+    @user = current_user
     @my_posts = current_user.materials.limit(2)
     @my_posts_pickup = current_user.materials.where(status: 'Vendu').limit(2)
     @my_posts_done = current_user.materials.where(status: 'Cloturé').limit(2)
   end
 
-
   def index
-
     if params[:address].present?
       @materials = Material.search_by_category_and_description(params[:address])
     end
@@ -33,11 +34,37 @@ class MaterialsController < ApplicationController
   end
 
   def show
+    @material = Material.find(params[:id])
+    authorize @material
   end
 
   def new
-    @materiel = Material.new
+    if current_user.sites.any?
+      @material = Material.new
+      @sites = current_user.sites
+      authorize @material
+    else
+      authorize Site.new
+      redirect_to new_site_path
+    end
+  end
+
+  def create
+    @material = Material.new(material_params)
+    @site_user = SiteUser.find_by(site: @material.site, user: current_user)
+    @material.site_user = @site_user
+    @material.status = "En ligne"
+    authorize @material
+    if @material.save
+      redirect_to material_path(@material)
+    else
+      render 'new'
+    end
+  end
+
+  private
+
+  def material_params
+    params.require(:material).permit(:category, :minimum_price, :photo, :deadline, :description, :site_id, :user_id)
   end
 end
-
-
