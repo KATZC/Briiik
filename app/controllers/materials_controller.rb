@@ -4,9 +4,10 @@ class MaterialsController < ApplicationController
   def sales
     authorize :material, :sales?
     @user = current_user
-    @my_posts = current_user.materials.limit(2)
-    @my_posts_pickup = current_user.materials.where(status: 'Vendu').limit(2)
-    @my_posts_done = current_user.materials.where(status: 'Cloturé').limit(2)
+    @my_posts = current_user.materials
+    @my_posts_online = current_user.materials.where(status: 'En ligne')
+    @my_posts_pickup = current_user.materials.where(status: 'Vendu')
+    @my_posts_done = current_user.materials.where(status: 'Cloturé')
   end
 
   def index
@@ -45,7 +46,7 @@ class MaterialsController < ApplicationController
       authorize @material
     else
       authorize Site.new
-      redirect_to new_site_path
+      redirect_to sites_path
     end
   end
 

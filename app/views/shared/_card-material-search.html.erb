@@ -1,7 +1,5 @@
-<div class="container">
-  <div class="card-material">
+<div class="card-material search">
     <%= image_tag("hammer.jpg") %>
-    <div class="card-material-search">
       <div class="card-material-infos">
         <div>
           <h2><%=material.description%></h2>
@@ -12,11 +10,18 @@
         <div class="card-prices">
           <h2 class="card-material-pricing card-material-highest-bid"><%= material.highest_bid%>€</h2>
         </div>
-          <p class="card-material-user"><%= material.deadline%></p>
-      </div>
+          <p class="card-material-user"><%= material.deadline.strftime('%F')%></p>
     </div>
-  </div>
 </div>
+<!--   </div> -->
+
+
+
+
+
+<!-- <h2 class="card-material-pricing card-material-highest-bid"><%= material.highest_bid%>€</h2> -->
+
+
 
 <!-- <div class="container">
 <div class="card-material">
