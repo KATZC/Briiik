@@ -19,11 +19,11 @@ class SiteUsersController < ApplicationController
     @site_user.site = @site
     authorize @site_user
 
-    # if @site_user.save
-    #   redirect_to site_path(@site)
-    # else
-    #   render 'new'
-    # end
+    if @site_user.save
+      redirect_to site_path(@site)
+    else
+      render 'new'
+    end
   end
 
   def show
