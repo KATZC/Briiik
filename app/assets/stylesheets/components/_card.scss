@@ -1,7 +1,8 @@
 .card-material  {
   overflow: hidden;
   // background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .card-material > img {
@@ -70,12 +71,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+
   // margin: 5px 0px 5px 10px;
 }
 
 .card-material-pricing.card-material {
   margin-left: 10px;
   align-items: center;
+  box-shadow: none;
 }
 
 
