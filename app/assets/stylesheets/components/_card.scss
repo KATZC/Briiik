@@ -58,7 +58,7 @@
 
 }
 
-.card-material-highest-bid {
+.card-material {
   // background-color: #9B1D20;
   // border-radius: 2px;
   color: #9B1D20;
@@ -73,7 +73,7 @@
   // margin: 5px 0px 5px 10px;
 }
 
-.card-material-pricing.card-material-highest-bid {
+.card-material-pricing.card-material {
   margin-left: 10px;
   align-items: center;
 }
@@ -111,4 +111,8 @@
 .personalized-message {
   display: flex;
   justify-content: center;
+}
+
+.blue {
+  color :#3D2B3D;
 }
