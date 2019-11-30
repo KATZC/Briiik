@@ -8,6 +8,13 @@ class MaterialsController < ApplicationController
     @my_posts_online = current_user.materials.where(status: 'En ligne')
     @my_posts_pickup = current_user.materials.where(status: 'Vendu')
     @my_posts_done = current_user.materials.where(status: 'Cloturé')
+
+    # A voir avec TA
+    # if material.bids.order.any?
+    #  @historical_price = current_user.materials.bids.order('price ASC').last&.price
+    # else
+    # @historical_price = "Non vendu"
+    # end
   end
 
   def index
