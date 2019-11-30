@@ -1,7 +1,7 @@
 .card-material  {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-material > img {
@@ -11,13 +11,13 @@
 }
 
 .card-material h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-material p {
-  font-size: 12px;
+  font-size: 11px;
   opacity: .7;
   margin: 0;
 }
@@ -93,6 +93,7 @@
 .card-material-description {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .card-material-left {
