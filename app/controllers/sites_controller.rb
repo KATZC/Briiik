@@ -2,7 +2,7 @@ class SitesController < ApplicationController
   before_action :set_site, only: %i(show edit update destroy)
 
   def index
-    # @sites = Site.all
+    @sites = Site.all
     @sites = policy_scope(Site)
   end
 
