@@ -51,18 +51,18 @@
 }
 
 .card-material-bid-user {
-  background-color: #3D2B3D;
-  border-radius: 2px;
-  color: white;
-  padding: 3px 6px;
+  // background-color: #3D2B3D;
+  // border-radius: 2px;
+  color: #9B1D20;
+  // padding: 3px 6px;
 
 }
 
 .card-material-highest-bid {
-  background-color: #9B1D20;
-  border-radius: 2px;
-  color: white;
-  padding: 3px 6px;
+  // background-color: #9B1D20;
+  // border-radius: 2px;
+  color: #9B1D20;
+  // padding: 3px 6px;
 }
 
 .card-prices {
@@ -70,16 +70,19 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 5px 0px 5px 10px;
+  // margin: 5px 0px 5px 10px;
 }
 
 .card-material-pricing.card-material-highest-bid {
-margin-left: 10px;
+  margin-left: 10px;
+  align-items: center;
 }
+
 
 .card-material-details {
   display: flex;
   justify-content: space-between;
+  margin-top: 5px;
 }
 
 .card-material-text {
@@ -96,10 +99,13 @@ margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
 }
+
 .card-material-right {
-  flex-grow: 3;
+  display: flex;
+  align-content: center;
+  align-self: center;
+  flex-direction: column;
 }
 
 .personalized-message {
