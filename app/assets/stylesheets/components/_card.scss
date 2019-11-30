@@ -30,6 +30,7 @@
   align-items: flex-end;
   position: relative;
   color: #1E1E24;
+  flex: column;
 }
 
 .card-material-infos .card-material-user {
@@ -66,10 +67,42 @@
 
 .card-prices {
   display: inline-flex;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 5px 0px 5px 10px;
 }
 
+.card-material-pricing.card-material-highest-bid {
+margin-left: 10px;
+}
 
+.card-material-details {
+  display: flex;
+  justify-content: space-between;
+}
 
+.card-material-text {
+  flex-grow: 1;
+  // padding: 10px;
+}
 
+.card-material-description {
+  display: flex;
+  justify-content: center;
+}
 
+.card-material-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+.card-material-right {
+  flex-grow: 3;
+}
+
+.personalized-message {
+  display: flex;
+  justify-content: center;
+}
