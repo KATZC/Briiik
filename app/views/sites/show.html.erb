@@ -1,9 +1,12 @@
 <div class="container">
-  <h2><%= @site.address %></h2>
-    <h2><%= @site.company %></h2>
+  <h3><%= @site.company %></h3>
+  <h3><%= @site.address %></h3>
 
+
+  <h5>Membres du chantier </h5>
   <% @site_users.each do |user| %>
-    <%= 'Créateur du chantier: ' %><%= user.email %>
+   <%= user.email %>
+   <br>
   <% end %>
 
   <hr>
@@ -16,8 +19,8 @@
   <% end %>
 
   <br>
-  <%= link_to 'Edit', edit_site_path(@site) %>
-  <%= link_to 'Back', site_path %>
+<!--   <%= link_to 'Edit', edit_site_path(@site) %> -->
+  <%= link_to 'Retourner sur mes chantiers', sites_path %>
   <br>
 </div>
 
