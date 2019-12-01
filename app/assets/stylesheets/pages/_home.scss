@@ -21,3 +21,22 @@ body {
 .container {
   position: relative;
 }
+
+.home-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-text {
+  font-size: 13px;
+}
+
+.concept {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.briiik-color {
+  color : #F46036;
+}
