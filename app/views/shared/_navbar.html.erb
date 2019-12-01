@@ -1,31 +1,30 @@
 <nav class="navbar navbar-light bg-light navbar-lewagon">
-    <div class="d-flex flex-grow-1">
-      <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-        <a class="navbar-brand" href="#">
-          <%= link_to root_path do %>
-            <span id="toto">
-              <%= show_svg('helmet.svg') %>
-            </span>
-          <% end %>
-          BRIIIK
-        </a>
+  <div class="d-flex flex-grow-1">
+    <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+    <a class="navbar-brand" href="#">
+    <%= link_to root_path do %>
+      <span id="toto">
+      <%= show_svg('helmet.svg') %>
+      </span>
+    <% end %>
+        BRIIIK
+    </a>
       <div class="w-100 text-right">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
+          <span class="navbar-toggler-icon"></span>
         </button>
-          <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
-              </li>
-              <li class="nav-item dropdown">
-                <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-              </li>
-            </ul>
-          </div>
-          </span>
+        <div class="text-right collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          </ul>
         </div>
-    </div>
+      </div>
+  </div>
 </nav>
 
 

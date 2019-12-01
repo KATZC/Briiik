@@ -12,6 +12,7 @@
               <%= f.input :detailed_description, :label => "Description détaillée", placeholder: "Dimension? Poids? Quantité?" %>
               <%= f.input :site_id, :label => "Adresse du chantier", collection: @sites, label_method: :address %>
               <%= f.input :minimum_price, :label => "Prix minimum" %>
+
                 <div class="form-date">
                   <%= f.input :deadline, :label => "Date de fin des enchères" %>
                 </div>
@@ -22,9 +23,10 @@
           <div class="form-actions">
             <%= f.submit "Ajouter un matériel", class: "btn main-button" %>
           </div>
+          <br>
         <% end %>
     </div>
+<%= render "shared/footer-sales" %>
   </div>
 </div>
 
-<%= render "shared/footer-sales" %>
