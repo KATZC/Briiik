@@ -7,13 +7,15 @@
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
           <div class="container">
             <div class="form-inputs">
-              <%= f.input :category,:label => "Catégorie", collection: Material::CATEGORIES %>
+               <%= f.input :category,:label => "Catégorie", collection: Material::CATEGORIES %>
+              <%= f.input :description %>
+              <%= f.input :detailed_description, :label => "Description détaillée", placeholder: "Dimension? Poids? Quantité?" %>
+              <%= f.input :site_id, :label => "Adresse du chantier", collection: @sites, label_method: :address %>
               <%= f.input :minimum_price, :label => "Prix minimum" %>
                 <div class="form-date">
                   <%= f.input :deadline, :label => "Date de fin des enchères" %>
                 </div>
-              <%= f.input :site_id, :label => "Adresse du chantier", collection: @sites, label_method: :address %>
-              <%= f.input :description %>
+
               <%= f.input :photo, as: :file, class: "btn btn-flat" %>
             </div>
           </div>

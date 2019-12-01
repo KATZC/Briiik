@@ -1,7 +1,8 @@
 .card-material  {
   overflow: hidden;
-  background: white;
+  // background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .card-material > img {
@@ -11,13 +12,13 @@
 }
 
 .card-material h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-material p {
-  font-size: 12px;
+  font-size: 11px;
   opacity: .7;
   margin: 0;
 }
@@ -30,6 +31,7 @@
   align-items: flex-end;
   position: relative;
   color: #1E1E24;
+  flex: column;
 }
 
 .card-material-infos .card-material-user {
@@ -50,26 +52,72 @@
 }
 
 .card-material-bid-user {
-  background-color: #3D2B3D;
-  border-radius: 2px;
-  color: white;
-  padding: 3px 6px;
+  // background-color: #3D2B3D;
+  // border-radius: 2px;
+  color: #9B1D20;
+  // padding: 3px 6px;
 
 }
 
-.card-material-highest-bid {
-  background-color: #9B1D20;
-  border-radius: 2px;
-  color: white;
-  padding: 3px 6px;
+.card-material {
+  // background-color: #9B1D20;
+  // border-radius: 2px;
+  color: #9B1D20;
+  // padding: 3px 6px;
 }
 
 .card-prices {
   display: inline-flex;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+
+  // margin: 5px 0px 5px 10px;
+}
+
+.card-material-pricing.card-material {
+  margin-left: 10px;
+  align-items: center;
+  box-shadow: none;
 }
 
 
+.card-material-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
 
+.card-material-text {
+  flex-grow: 1;
+  // padding: 10px;
+}
 
+.card-material-description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
+.card-material-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-material-right {
+  display: flex;
+  align-content: center;
+  align-self: center;
+  flex-direction: column;
+}
+
+.personalized-message {
+  display: flex;
+  justify-content: center;
+}
+
+.blue {
+  color :#3D2B3D;
+}
