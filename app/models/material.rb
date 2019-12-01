@@ -14,7 +14,8 @@ class Material < ApplicationRecord
   validates :deadline, presence: true
   validates :status, presence: true
   validates_inclusion_of :status, in: ['En ligne', 'Vendu', 'Non-vendu', 'Remis', 'Cloturé']
-  validates :category, :inclusion => CATEGORIES
+  validates :category, presence:true, :inclusion => CATEGORIES
+  validates :site_id, presence: true
 
   pg_search_scope :search_by_category_and_description,
     against: [:category, :description],
