@@ -1,12 +1,44 @@
 .footer {
-   background: #3D2B3D; //blue
-  // background: #9B1D20; //red
+  //  background: #3D2B3D; //blue
+  // // background: #9B1D20; //red
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-evenly;
+  // height: 80px;
+  // color: rgba(0,0,0,0.3);
+  // align-item: flex-end;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  background: #3D2B3D;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
-  height: 80px;
-  color: rgba(0,0,0,0.3);
+  height: 60px;
+  color: rgba(0, 0, 0, 0.3);
   align-item: flex-end;
+  position: absolute;
+  bottom: -73px;
+  width: 100%;
+}
+
+.footer-sales {
+  background: #3D2B3D;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  justify-content: space-evenly;
+  height: 60px;
+  color: rgba(0, 0, 0, 0.3);
+  align-item: flex-end;
+  position: absolute;
+  bottom: -10px;
+  width: 104%;
 }
 
 .red {

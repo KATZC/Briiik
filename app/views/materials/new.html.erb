@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content">
-    <div class="col-md-6 mt-3 p-5">
+    <div class="col-sm-6 mt-3 p-3">
       <h3>Je vends un matériel</h3>
         <%= simple_form_for(@material) do |f| %>
         <%= f.error_notification %>
@@ -19,8 +19,8 @@
               <%= f.input :photo, as: :file, class: "btn btn-flat" %>
             </div>
           </div>
-          <div class="form-actions button-color">
-            <%= f.submit "Ajouter un matériel" %>
+          <div class="form-actions">
+            <%= f.submit "Ajouter un matériel", class: "btn main-button" %>
           </div>
         <% end %>
     </div>
