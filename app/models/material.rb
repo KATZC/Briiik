@@ -10,6 +10,7 @@ class Material < ApplicationRecord
   has_one_attached :photo
 
   validates :minimum_price, presence: true
+  validates :description, presence: true
   validates :deadline, presence: true
   validates :status, presence: true
   validates_inclusion_of :status, in: ['En ligne', 'Vendu', 'Non-vendu', 'Remis', 'Cloturé']
