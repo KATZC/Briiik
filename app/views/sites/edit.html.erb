@@ -1,19 +1,21 @@
-<%= simple_form_for(@site) do |f| %>
-<%= f.error_notification %>
-<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <div class="container">
-    <div class="form-inputs">
-      <%= f.input :company %>
-      <%= f.input :address %>
+<div class="container">
+  <div class="row justify-content">
+    <div class="col-sm-6 mt-3 p-3">
+      <%= simple_form_for(@site) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :company, :label => "Nom de la compagnie" %>
+      <%= f.input :address, :label => "Adresse du chantier"%>
+
+      </div>
+      <div class="form-actions main-button">
+        <%= f.submit "Mettre à jour le chantier" %>
+      </div>
+    <% end %>
+    <%= link_to 'Back', @site_path, class: "button-back" %>
     </div>
   </div>
-  <div class="form-actions button-color">
-    <%= f.submit "Mettre à jour le chantier" %>
-  </div>
-<% end %>
-
-<br>
-<%= link_to 'Back', @site_path %>
+<%= render "shared/footer-sales" %>
 
 
 
