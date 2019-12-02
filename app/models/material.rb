@@ -30,6 +30,10 @@ class Material < ApplicationRecord
     bids.order('price ASC').last&.price || minimum_price
   end
 
+  def highest_bid_user(current_user)
+    bids.where(user: current_user).order('price ASC').last&.price
+  end
+
   def remaining_time
     diff = (self.deadline - Time.zone.now).to_i
     diff_format = diff.fdiv(3600 * 24)
@@ -40,7 +44,6 @@ class Material < ApplicationRecord
     else
       deadline = "Terminée"
     end
-  end
 end
 
 
