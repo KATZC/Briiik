@@ -16,7 +16,7 @@
 </ul>
 
 <% if @material.user == current_user %>
-  <%= render "shared/footer-sales" %>
+  <%= render "shared/footer-home" %>
 <% else %>
 <%= simple_form_for([@material, @bid]) do |f| %>
   <%= f.error_notification %>
