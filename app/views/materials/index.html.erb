@@ -3,19 +3,22 @@
     <div class="search_bar">
       <br>
       <%= form_tag materials_path, method: :get do %>
-      <%#= collection_select :material, :category, Material::CATEGORIES, :material%>
-      <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), include_blank: "Choisir une catégorie",
-      class: "form-control has-search"%>
-      <br>
-      <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]),
-      include_blank: "Choisir une adresse de chantier", class: "form-control has-search"%>
-      <br>
-      <%= text_field_tag :description,
-      params[:description],class: "form-control has-search",placeholder: "Vous recherchez? Ex: cloison, moquette,...", style:"font-style:italic"%>
-    </div>
-      <br>
-      <%= submit_tag "Recherche", class: "btn main-button-centered" %>
+        <%#= collection_select :material, :category, Material::CATEGORIES, :material%>
+        <%= select_tag "category", options_for_select(Material::CATEGORIES, params[:category]), include_blank: "Choisir une catégorie",
+        class: "form-control has-search"%>
+        <br>
+        <%= select_tag "address", options_from_collection_for_select(Site.all, "address", "address", params[:address]),
+        include_blank: "Choisir une adresse de chantier", class: "form-control has-search"%>
+        <br>
+        <%= text_field_tag :description,
+        params[:description], class: "form-control has-search", placeholder: "Vous recherchez? Ex: cloison, moquette,...", style:"font-style:italic"%>
+      </div>
+        <br>
+        <%= submit_tag "Recherche", class: "btn main-button-centered" %>
+        <br>
+         <span> <strong><%= @materials.count %> found</strong></span>
     <% end %>
+
     <br>
 
   </div>
@@ -34,7 +37,7 @@
           <p><%= material.deadline %></p>
           <p><%= material.site.address%></p> -->
           <%= link_to material_path(material) do %>
-            <%= render 'shared/card-material-search', material: material %>
+            <%= render 'shared/card-material-search', material: material, deadline: @deadline %>
               <br>
           <% end %>
         <% end %>

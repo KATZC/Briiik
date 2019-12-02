@@ -1,17 +1,17 @@
-
-<%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
+<% if @material.photo.attached? %>
+  <%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
+<% else %>
+  <%= image_tag "hammer.jpg", height: 300, width: 400 %>
+<% end %>
 <ul>
   <li><%= @material.category %></li>
   <li><%= @material.description %></li>
   <li>prix initial: <%= @material.minimum_price %></li>
   <li>enchère en cours: <%= @material.highest_bid %></li>
   <li><%= @material.detailed_description %></li>
-  <li><%= @material.deadline %></li>
+  <li><%= @material.remaining_time %></li>
   <li><%= @material.status %></li>
 </ul>
-
-
-
 
 <% if @material.user == current_user %>
   <%= render "shared/footer-sales" %>
@@ -30,3 +30,4 @@
 <% end %>
   <%= render "shared/footer-orders" %>
 <% end %>
+
