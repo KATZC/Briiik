@@ -1,12 +1,16 @@
 <div class="row footer">
     <div class="col-6 h-100 d-flex justify-content-center align-items-center">
-      <i class="fas fa-shopping-basket"></i>
-      <%= link_to "Je vends", new_material_path, class:"footer-link"%>
+      <div class="icon-and-text">
+        <p><span><i class="fas fa-camera"></i></span>
+        <span><%= link_to "Je vends", new_material_path, class:"footer-link"%></span></p>
+      </div>
     </div>
     <div class="col-6 h-100 d-flex justify-content-center align-items-center red">
-     <%= link_to "J'achète", materials_path, class:"footer-link"%>
+            <div class="icon-and-text">
+    <p><span><i class="fas fa-shopping-basket"></i>
+    <span><%= link_to "J'achète", materials_path, class:"footer-link"%></span></p>
+      </div>
     </div>
-
 </div>
 
 

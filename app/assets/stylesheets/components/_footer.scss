@@ -72,19 +72,29 @@
 .footer-link:link {
   color: white;
   text-decoration: none;
-
 }
 
 .footer-link:hover {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.fa-shopping-basket{
+.fa-shopping-basket, .fa-camera, .fa-clipboard-list, .fa-shopping-cart {
   color: white;
-  font-size: 20px;
+  font-size: 25px;
 }
 
+p > span > img {
+  color: white
+}
+
+p span {
+  display: block;
+  text-align: center;
+}
+
+.icon-and-text {
+  padding-top: 20px;
+}
 
 
