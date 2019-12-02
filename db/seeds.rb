@@ -163,186 +163,200 @@ seventh_site_user.save!
 
 
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_contreplaque_6 = URI.open('http://www.bois-dussault.fr/site/images/normal/518df61c6c9fa.jpg')
 contreplaque_6 = Material.new(
     category: "Habillage",
-    description: "6 contreplaqués en bon état",
+    description: "Contreplaqués",
+    detailed_description: "2mx1m - 2kg - 6 unités en bon état",
     minimum_price: 100,
     deadline: Date.new(2019, 12, 20),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: first_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  contreplaque_6.photo.attach(io: file_contreplaque_6, filename: '6 contreplaque.jpg', content_type: 'image/jpg')
 contreplaque_6.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_barrette_20 = URI.open('https://www.cdiscount.com/pdt2/8/8/4/1/300x300/neu6296623592884/rw/neufu-99-cuivre-t2-cu-metal-plat-barre-plaque-ban.jpg')
 barrette_20 = Material.new(
     category: "Plomberie",
-    description: "20 barrettes de cuivres non utilisées",
+    description: "Barrettes de cuivres",
+    detailed_description: "2mx20cm - 3kg - 20 unités non utilisées",
     minimum_price: 300,
     deadline: Date.new(2019, 12, 25),
     status: "Vendu",
     site: vinci_paradis_10,
     site_user: second_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  barrette_20.photo.attach(io: file_barrette_20, filename: 'barrette_20.jpg', content_type: 'image/jpg')
 barrette_20.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_vitre_4 = URI.open('http://www.lekapverre.fr/image.php/5677fc917b7275677d7df3cce6_cloison-40.jpg?width=480&height=480&cropratio=480:480/&image=/uploads/images/5677fc917b7275677d7df3cce6_cloison-40.jpg')
 vitre_4 = Material.new(
     category: "Habillage",
-    description: "4 cloisons vitrées",
+    description: "Cloisons vitrées",
+    detailed_description: "5mx2m - 60kg - 4 unités neuves",
     minimum_price: 450,
     deadline: Date.new(2019, 12, 25),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: third_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  vitre_4.photo.attach(io: file_vitre_4, filename: 'vitre_4.jpg', content_type: 'image/jpg')
 vitre_4.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_peinture_10 = URI.open('https://lecoindupro.blob.core.windows.net/upload/1249328.Lg.jpg')
 peinture_10 = Material.new(
     category: "Consommable",
-    description: "10 pots de peinture blanche non ouverts",
+    description: "Pots de peinture blanche",
+    detailed_description: "4kg - 10 unités non-ouvertes",
     minimum_price: 40,
     deadline: Date.new(2019, 12, 25),
     status: "Vendu",
     site: vinci_richer_10,
     site_user: fourth_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  peinture_10.photo.attach(io: file_peinture_10, filename: 'peinture_10.jpg', content_type: 'image/jpg')
 peinture_10.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_moquette_1  = URI.open('https://servimg.marche.fr/photo/big/73/22/61/61227374_1.jpg')
 moquette_1 = Material.new(
     category: "Consommable",
-    description: "1 moquette rayée bleu/rouge non utilisée",
+    description: "Moquette rayée bleu/rouge",
+    detailed_description: "15mx10m - 10kg - 1 unités non-utilisée",
     minimum_price: 70,
     deadline: Date.new(2020, 01, 13),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: fifth_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  moquette_1 .photo.attach(io: file_moquette_1 , filename: 'moquette_1.jpg', content_type: 'image/jpg')
 moquette_1.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_kitchenette_2 = URI.open('https://images.fr.shopping.rakuten.com/cat/500x500/meuble+kitchenette.jpg')
 kitchenette_2 = Material.new(
     category: "Habillage",
-    description: "2 kitchenettes en bon état",
+    description: "Kitchenettes",
+    detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 85,
     deadline: Date.new(2019, 12, 30),
     status: "Non-vendu",
     site: vinci_richer_10,
     site_user: sixth_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  kitchenette_2.photo.attach(io: file_kitchenette_2, filename: 'kitchenette_2.jpg', content_type: 'image/jpg')
 kitchenette_2.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_cloison_2 = URI.open('http://www.macocco.com/globalflexit/images/img_base/gallery_v2/560_500_2_sas-vitre-zoo-de-vincennes-020-ss1.jpg')
 cloison_2 = Material.new(
     category: "Habillage",
-    description: "2 cloisons double vitrage en excellent état",
+    description: "Cloisons double vitrage",
+    detailed_description: "250cmx150cm - 60kg - 2 unités en excellent état",
     minimum_price: 1200,
     deadline: Date.new(2019, 12, 21),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  cloison_2.photo.attach(io: file_cloison_2, filename: 'cloison_2.jpg', content_type: 'image/jpg')
 cloison_2.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_cloison_5 = URI.open('https://www.simon-bureau.com/an_content/_upload/img-prod/206/3_1.jpg')
 cloison_5 = Material.new(
     category: "Habillage",
-    description: "5 cloisons neuves, made in Poland",
+    description: "Cloisons isolantes",
+    detailed_description: "150cmx100cm - 15kg - 5 unités neuves, made in Poland",
     minimum_price: 1500,
     deadline: Date.new(2019, 12, 26),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  cloison_5.photo.attach(io: file_cloison_5, filename: 'cloison_5.jpg', content_type: 'image/jpg')
 cloison_5.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_moquette_10 = URI.open('https://pieces-voiture-sans-permis.com/images/article/pics/44/44130-1a.JPG')
 moquette_10 = Material.new(
     category: "Consommable",
-    description: "1 moquette grise utilisée et en bon état, made in France",
+    description: "Moquette grise",
+    detailed_description: "10mx5m - 4kg - 10 unité utilisée et en bon état, made in France",
     minimum_price: 300,
     deadline: Date.new(2020, 01, 04),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  moquette_10.photo.attach(io: file_moquette_10, filename: 'moquette_10.jpg', content_type: 'image/jpg')
 moquette_10.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_store_4 = URI.open('https://assetscdn.lespac.com/binary/detBig/350910572.jpg')
 store_4 = Material.new(
     category: "Habillage",
-    description: "4 stores avec lamelles intérieures neufs",
+    description: "Stores avec lamelles intérieures",
+    detailed_description: "150cmx100cm - 5kg - 4 unités comme neuves",
     minimum_price: 120,
     deadline: Date.new(2020, 01, 17),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  store_4.photo.attach(io: file_store_4, filename: 'store_4.jpg', content_type: 'image/jpg')
 store_4.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_radiateur_1 = URI.open('https://images.fr.shopping.rakuten.com/cat/500x500/radiateur+acier.jpg')
 radiateur_1 = Material.new(
     category: "Consommable",
-    description: "1 radiateur made in Germany en bon état",
+    description: "Radiateur",
+    detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
     minimum_price: 120,
     deadline: Date.new(2020, 12, 17),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  radiateur_1.photo.attach(io: file_radiateur_1, filename: 'radiateur_1.jpg', content_type: 'image/jpg')
 radiateur_1.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_cloison_4 = URI.open('https://ifdb.eu/_images/c/cloison/cloison-de-bureau-vitr%C3%A9e-occasion/cloison-amovible-alu-avantages-des-cloisons-amovibles-de-bureau.jpg')
 cloison_4 = Material.new(
     category: "Habillage",
-    description: "1 radiateur made in Germany en bon état",
+    description: "Cloisons",
+    detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
     minimum_price: 200,
     deadline: Date.new(2020, 12, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  cloison_4.photo.attach(io: file_cloison_4, filename: 'cloison_4.jpg', content_type: 'image/jpg')
 cloison_4.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_table_10 = URI.open('https://manager.web-troc.com/medias/depots-vente/38/article/43656_9443.jpg')
 table_10 = Material.new(
     category: "Habillage",
-    description: "10 petites tables rondes neuves très design",
+    description: "Petites tables rondes",
+    detailed_description: "60cmx60cm - 15kg - 10 unités neuves très design",
     minimum_price: 1000,
     deadline: Date.new(2020, 12, 23),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  table_10 .photo.attach(io: file_table_10 , filename: 'table_10.jpg', content_type: 'image/jpg')
 table_10.save!
 
-# file_contreplaque_6 = URI.open('./app/assets/images/contreplaqué.jpg')
+file_fauteuil_2 = URI.open('https://machines-a-bois.pro/3225-home_default/fauteuil-bureau-occasion.jpg')
 fauteuil_2 = Material.new(
     category: "Habillage",
-    description: "2 fauteuils gris made in UK comme neufs",
+    description: "Fauteuils gris",
+    detailed_description: "70cmx50cm - 5kg - 2 unités made in UK comme neufs",
     minimum_price: 300,
     deadline: Date.new(2020, 12, 28),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
   )
-  # contreplaque_6.photo.attach(io: file_contreplaque_6, filename: 'some-image.jpg', content_type: 'image/jpg')
+  fauteuil_2.photo.attach(io: file_fauteuil_2, filename: 'fauteuil_2.jpg', content_type: 'image/jpg')
 fauteuil_2.save!
 
 

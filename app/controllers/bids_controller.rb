@@ -3,11 +3,20 @@ class BidsController < ApplicationController
 
   def index
     @bids = Bid.all
-    # authorize :bid, :index?
-    # A voir avec un TA
-    # @user = current_user
-    # @my_bids = current_user.bids
-    # @my_bids_pending = @user.bids.materials.where(@user.bids.any? &&material.status: 'En ligne')
+    authorize :bid, :index?
+    @user = current_user
+    @my_bids_pending = @user.bidden_materials.where(status:'En ligne')
+    @my_bids_pickup = @user.bidden_materials.where(status:'Vendu').select do |material|
+      material.highest_bid == material.highest_bid_user(current_user)
+    end
+    @my_bids_winsale = @user.bidden_materials.where(status:'Cloturé').select do |material|
+      material.highest_bid == material.highest_bid_user(current_user)
+    end
+    @my_bids_lostsale = @user.bidden_materials.where(status:'Cloturé'||'Vendu').select do |material|
+      material.highest_bid > material.highest_bid_user(current_user)
+    end
+    # à supprimer
+    # @user.bids.materials.where(@user.bids.any? &&material.status: 'En ligne')
     # @my_bids_pickup = @user.bids.materials.where(@user.bids == material.higest &&material.status: 'Vendu')
     # @my_bids_winsale = @user.materials.where(@user.bids == material.higest &&material.status: 'Cloturé')
     # @my_bids_lostsale = @user.materials.where(@user.bids < material.higest &&material.status: 'Cloturé')

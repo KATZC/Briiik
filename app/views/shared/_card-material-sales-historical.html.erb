@@ -16,10 +16,15 @@
             </div>
             <div class="card-material-right">
               <div class="card-prices">
-                <p>Prix départ</p><h2 class="card-material-pricing card-material blue"> <%= material.minimum_price%>€</h2>
+                <p>Prix départ</p><h2 class="card-material-pricing card-material blue-text"> <%= material.minimum_price%>€</h2>
               </div>
               <div class="card-prices">
-                <p>Prix de vente</p><h2 class="card-material-pricing card-material"> <%= 'historical_price à faire'%>€</h2>
+                <p>Prix de vente</p>
+                <% if material.bids.any? %>
+                  <h2 class="card-material-pricing card-material"><%= material.highest_bid%>€</h2>
+                <% else %>
+                  <h2 class="card-material-pricing card-material">Non vendu€</h2>
+                 <% end %>
               </div>
 
 

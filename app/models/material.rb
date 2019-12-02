@@ -27,7 +27,11 @@ class Material < ApplicationRecord
     }
 
   def highest_bid
-    bids.order('price ASC').last&.price  || minimum_price
+    bids.order('price ASC').last&.price || minimum_price
+  end
+
+  def highest_bid_user(current_user)
+    bids.where(user: current_user).order('price ASC').last&.price
   end
 end
 
