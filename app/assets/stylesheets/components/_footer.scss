@@ -21,10 +21,11 @@
   color: rgba(0, 0, 0, 0.3);
   align-item: flex-end;
   position: sticky;
-  position: absolute;
-  bottom: -73px;
-  width: 100%;
+  bottom: 0px;
+  left:0px;
+  width: 100vw;
 }
+
 
 .footer-sales {
   background: #3D2B3D;

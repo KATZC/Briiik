@@ -1,12 +1,13 @@
 <div class="row footer">
     <div class="col-6 h-100 d-flex justify-content-center align-items-center">
       <i class="fas fa-shopping-basket"></i>
-      <%= link_to "Je vends", new_material_path, class:"footer-link"%>
+      <%= link_to "Je vends", new_material_path, class:"footer-link current_class?(new_material_path) "%>
     </div>
     <div class="col-6 h-100 d-flex justify-content-center align-items-center red">
      <%= link_to "J'achète", materials_path, class:"footer-link"%>
     </div>
 
 </div>
+
 
 
