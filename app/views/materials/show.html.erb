@@ -3,13 +3,19 @@
 <ul>
   <li><%= @material.category %></li>
   <li><%= @material.description %></li>
+  <li>prix initial: <%= @material.minimum_price %></li>
+  <li>enchère en cours: <%= @material.highest_bid %></li>
   <li><%= @material.detailed_description %></li>
-  <li><%= @material.highest_bid %></li>
   <li><%= @material.deadline %></li>
   <li><%= @material.status %></li>
 </ul>
 
 
+
+
+<% if @material.user == current_user %>
+  <%= render "shared/footer-sales" %>
+<% else %>
 <%= simple_form_for([@material, @bid]) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -22,9 +28,5 @@
     <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
   </div>
 <% end %>
-
-<% if @material.user == current_user %>
-  <%= render "shared/footer-sales" %>
-<% else %>
   <%= render "shared/footer-orders" %>
 <% end %>
