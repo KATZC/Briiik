@@ -1,0 +1,27 @@
+<h1>Somme total</h1>
+<%= @sum%>
+
+<h1> Matériel Vendu sur ce chantier: <%= @site.address %> </h1>
+<ul>
+<% @my_posts_pickup.each do |my_post_pickup| %>
+<h2>Matériel: </h2>
+<li> Catégorie: <%= my_post_pickup.category %> </li>
+<li> Description: <%= my_post_pickup.description %> </li>
+<li> prix de vente: <%= my_post_pickup.highest_bid %> </li>
+<li> Statut: <%= my_post_pickup.status %> </li>
+<%end  %>
+</ul>
+
+
+<h1> Matériel clôturé sur ce chantier: <%= @site.address %></h1>
+<ul>
+<% @my_posts_done.each do |my_post_done| %>
+<h2>Matériel: </h2>
+<li> Catégorie: <%= my_post_done.category %> </li>
+<li> Description: <%= my_post_done.description %> </li>
+<li> prix de vente: <%= my_post_done.highest_bid %> </li>
+<li> Statut: <%= my_post_done.status %> </li>
+<%end  %>
+</ul>
+
+
