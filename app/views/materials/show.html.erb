@@ -1,3 +1,5 @@
+  <%= render "shared/footer-orders" %>
+
 <% if @material.photo.attached? %>
   <%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
 <% else %>
@@ -28,6 +30,6 @@
     <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
   </div>
 <% end %>
-  <%= render "shared/footer-orders" %>
+  <%= render "shared/footer-home" %>
 <% end %>
 
