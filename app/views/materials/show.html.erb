@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 <%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
 <ul>
@@ -22,11 +23,52 @@
 
   <div class="form-inputs">
     <%= f.input :price %>
+=======
+<div class="container">
+  <br>
+  <div class="row d-flex justify-content-center">
+    <% if @material.photo.attached? %>
+      <%= cl_image_tag @material.photo.key, height: 250, width: 300, crop: :fill %>
+    <% else %>
+      <%= image_tag "hammer.jpg", height: 250, width: 300 %>
+    <% end %>
+>>>>>>> Stashed changes
   </div>
+  <br>
+  <div class="card-information">
+    <ul>
+      <li><%= @material.category %></li>
+      <li><%= @material.description %></li>
+      <li>prix initial: <%= @material.minimum_price %></li>
+      <li>enchère en cours: <%= @material.highest_bid %></li>
+      <li><%= @material.detailed_description %></li>
+      <li><%= @material.remaining_time %></li>
+      <li><%= @material.status %></li>
+    </ul>
 
-  <div class="form-actions">
-    <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
+    <% if @material.user == current_user %>
+      <%= render "shared/footer-sales" %>
+    <% else %>
+    <%= simple_form_for([@material, @bid]) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   </div>
+<<<<<<< Updated upstream
 <% end %>
   <%= render "shared/footer-orders" %>
 <% end %>
+=======
+
+      <div class="form-inputs">
+        <%= f.input :price %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+      <%= render "shared/footer-orders" %>
+    <% end %>
+
+</div>
+>>>>>>> Stashed changes
