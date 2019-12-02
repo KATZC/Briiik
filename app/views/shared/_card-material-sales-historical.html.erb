@@ -20,8 +20,8 @@
               </div>
               <div class="card-prices">
                 <p>Prix de vente</p>
-                <% if material.higesht_bid.any? %>
-                  <h2 class="card-material-pricing card-material"><%= material.highest.bid%>€</h2>
+                <% if material.bids.any? %>
+                  <h2 class="card-material-pricing card-material"><%= material.highest_bid%>€</h2>
                 <% else %>
                   <h2 class="card-material-pricing card-material">Non vendu€</h2>
                  <% end %>
