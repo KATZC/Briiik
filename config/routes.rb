@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'sales', to: 'materials#sales', as: :sales
 
+  get 'map', to: 'sites#map', as: :map
+
   resources :sites do
     resources :site_users
   end

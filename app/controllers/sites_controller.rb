@@ -43,6 +43,17 @@ class SitesController < ApplicationController
     @site.destroy
   end
 
+  def map
+    @flats = Flat.geocoded #returns flats with coordinates
+
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
+  end
+
   private
 
   def set_site
