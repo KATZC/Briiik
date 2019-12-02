@@ -15,19 +15,12 @@
               <p><%= material.site.address%></p>
             </div>
             <div class="card-material-right">
-              <div class="card-prices">
-                <p>Prix départ</p><h2 class="card-material-pricing card-material blue-text"> <%= material.minimum_price%>€</h2>
+               <div class="card-prices">
+                <p>Prix actuel</p><h2 class="card-material-pricing card-material blue-text"><%= material.highest_bid%>€</h2>
               </div>
               <div class="card-prices">
-                <p>Prix de vente</p>
-                <% if material.bids.any? %>
-                  <h2 class="card-material-pricing card-material"><%= material.highest_bid%>€</h2>
-                <% else %>
-                  <h2 class="card-material-pricing card-material">Non vendu€</h2>
-                 <% end %>
+                <p>Mon prix</p><h2 class="card-material-pricing card-material"> <%= material.highest_bid_user(current_user)%>€</h2>
               </div>
-
-
             </div>
           </div>
         </div>

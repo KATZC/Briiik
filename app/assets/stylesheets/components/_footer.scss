@@ -11,15 +11,16 @@
   // bottom: 0;
   // width: 100%;
   background: #3D2B3D;
-  display: -webkit-box;
+  // display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
+  // -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: space-evenly;
+  // -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
   height: 60px;
   color: rgba(0, 0, 0, 0.3);
   align-item: flex-end;
+  position: sticky;
   position: absolute;
   bottom: -73px;
   width: 100%;
@@ -27,15 +28,16 @@
 
 .footer-sales {
   background: #3D2B3D;
-  display: -webkit-box;
+  // display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
+  // -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: space-evenly;
+  // -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
   height: 60px;
   color: rgba(0, 0, 0, 0.3);
   align-item: flex-end;
+  position: sticky;
   position: absolute;
   bottom: -10px;
   width: 104%;
@@ -43,6 +45,10 @@
 
 .red {
   background: #9B1D20;
+}
+
+.blue {
+ background: #3D2B3D;
 }
 
 .footer-links {
