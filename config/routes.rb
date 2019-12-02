@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   get 'sales', to: 'materials#sales', as: :sales
 
+
+  get 'map', to: 'sites#map', as: :map
+
   get '/sites/:id/records', to: 'sites#records', as: :records
+
 
   resources :sites do
     resources :site_users

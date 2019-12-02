@@ -45,6 +45,17 @@ class SitesController < ApplicationController
     @site.destroy
   end
 
+
+  def map
+    @flats = Flat.geocoded #returns flats with coordinates
+
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
+
   def records
     @user = current_user
     @my_posts_pickup = @user.materials.where(status: 'Vendu', site_id: params[:id])
@@ -58,6 +69,7 @@ class SitesController < ApplicationController
       b << y.highest_bid
     end
     @sum = a.sum + b.sum
+
   end
 
   private
