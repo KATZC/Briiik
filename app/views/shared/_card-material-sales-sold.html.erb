@@ -2,15 +2,11 @@
     <%= image_tag("hammer.jpg") %>
       <div class="card-material-infos">
         <p class="card-material-user"><%= material.deadline.strftime('%F')%></p>
-
-
         <div class="card-material-text">
           <div class="card-material-description"> <h2><%=material.description%></h2>
           </div>
-
           <div class="card-material-details">
             <div class ='card-material-left'>
-
               <p><%= material.category %></p>
               <p><%= material.site.address%></p>
             </div>
@@ -21,8 +17,6 @@
               <div class="card-prices">
                 <p>Prix de vente</p><h2 class="card-material-pricing card-material"> <%= material.highest_bid%>€</h2>
               </div>
-
-
             </div>
           </div>
         </div>
