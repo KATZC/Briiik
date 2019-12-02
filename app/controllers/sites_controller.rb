@@ -1,9 +1,11 @@
 class SitesController < ApplicationController
-  before_action :set_site, only: %i(show edit update destroy)
+  before_action :set_site, only: %i(show edit update destroy records)
 
   def index
     @sites = Site.all
     @sites = policy_scope(Site)
+    @user = current_user
+    @site_users = SiteUser.where(user_id: @user.id)
   end
 
   def new
@@ -41,6 +43,21 @@ class SitesController < ApplicationController
 
   def destroy
     @site.destroy
+  end
+
+  def records
+    @user = current_user
+    @my_posts_pickup = @user.materials.where(status: 'Vendu', site_id: params[:id])
+    @my_posts_done = @user.materials.where(status: 'Cloturé', site_id: params[:id])
+    a = []
+    b = []
+    @my_posts_pickup.each do |x|
+      a << x.highest_bid
+    end
+    @my_posts_done.each do |y|
+      b << y.highest_bid
+    end
+    @sum = a.sum + b.sum
   end
 
   private

@@ -25,6 +25,10 @@ class SitePolicy < ApplicationPolicy
     user_is_a_site_user?
   end
 
+  def records?
+    true
+  end
+
   private
 
   def user_is_a_site_user?
