@@ -14,19 +14,19 @@
               <%= f.input :minimum_price, :label => "Prix minimum" %>
 
                 <div class="form-date">
-                  <%= f.input :deadline, :label => "Date de fin des enchères" %>
+                  <%= f.input :deadline, as: :string, required: false, :label => "Date de fin des enchères", input_html: {class: "datepicker"} %>
                 </div>
 
-              <%= f.input :photo, as: :file, class: "btn btn-flat" %>
+              <%= f.input :photo, as: :file %>
             </div>
           </div>
           <div class="form-actions">
-            <%= f.submit "Ajouter un matériel", class: "btn main-button" %>
+            <%= f.submit "Ajouter un matériel", class: "btn main-button", style:"cursor:pointer" %>
           </div>
           <br>
         <% end %>
     </div>
-<%= render "shared/footer-sales" %>
+  <%= render "shared/footer-sales" %>
   </div>
 </div>
 
