@@ -38,12 +38,13 @@ class Material < ApplicationRecord
     diff = (self.deadline - Time.zone.now).to_i
     diff_format = diff.fdiv(3600 * 24)
     if diff_format.positive? && diff_format < 1
-      deadline_text = "H - #{diff / 3600} heures"
+      "H - #{diff / 3600} heures"
     elsif diff > 1
-      deadline_text = "J - #{diff_format.to_i} jours"
+      "J - #{diff_format.to_i} jours"
     else
-      deadline = "Terminée"
+      "Terminée"
     end
+  end
 end
 
 
