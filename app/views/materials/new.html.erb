@@ -1,7 +1,6 @@
 <div class="container">
   <div class="row justify-content">
     <div class="col-sm-6 mt-3 p-3">
-      <h3>Je vends un matériel</h3>
         <%= simple_form_for(@material) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -21,7 +20,7 @@
             </div>
           </div>
           <div class="form-actions">
-            <%= f.submit "Ajouter un matériel", class: "btn main-button", style:"cursor:pointer" %>
+            <%= f.submit "Publier", class: "btn main-button" %>
           </div>
           <br>
         <% end %>
