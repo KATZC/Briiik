@@ -14,12 +14,19 @@
     <% end %>
   </div>
   <br>
-  <div class="row justify-content-center card-information">
+  <div class="row justify-content-center card-information show-box">
     <ul>
       <li> <strong>Catégorie :</strong>  <%= @material.category %></li>
       <li> <strong>Description :</strong> <%= @material.description %></li>
       <li> <strong>Prix initial :</strong> <%= @material.minimum_price %> €</li>
-      <li> <strong>Dernière enchère :</strong> <%= @material.highest_bid %> €</li>
+      <li> <strong>Dernière enchère :</strong>
+         <% if @material.bids.any? %>
+        <%= @material.highest_bid%>€
+        <% else %>
+        <span>Pas d'enchère</span>
+        <% end %>
+      </li>
+
       <li> <strong>Description détaillée :</strong> <%= @material.detailed_description %></li>
       <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline %></li>
     </ul>

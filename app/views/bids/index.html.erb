@@ -1,9 +1,12 @@
 <%= render "shared/footer-orders-bids-index" %>
 <div class="container">
 
+    <br>
+
     <div class="row">
-    <h3 class= 'title-cards'><strong>Enchères en cours</strong></h3>
+
       <div class="col-sm-8 offset-sm-2">
+         <h3 class= 'title-cards'><strong>Enchères en cours</strong></h3>
         <div id="materials">
           <% @my_bids_pending.each do |material| %>
             <div class="card-material-sales">
@@ -14,6 +17,7 @@
               <p><%= material.site.address%></p> -->
             <%= link_to material_path(material) do %>
               <%= render 'shared/card-material-orders-online', material: material %>
+                <br>
             <% end %>
           </div>
             <% end %>
@@ -22,8 +26,8 @@
     </div>
 
     <div class="row">
-      <h3 class= 'title-cards'><strong>Matériaux à récupérer</strong></h3>
       <div class="col-sm-8 offset-sm-2">
+         <h3 class= 'title-cards'><strong>Matériaux à récupérer</strong></h3>
         <div id="materials">
           <% @my_bids_pickup.each do |material| %>
             <div class="card-material-sales">
@@ -34,6 +38,7 @@
               <p><%= material.site.address%></p> -->
             <%= link_to material_path(material) do %>
               <%= render 'shared/card-material-orders-sold', material: material %>
+                <br>
           <% end %>
           </div>
             <% end %>
@@ -43,8 +48,8 @@
 
 
     <div class="row">
-      <h3 class= 'title-cards'><strong>Historique des enchères gagnées</strong></h3>
       <div class="col-sm-8 offset-sm-2">
+              <h3 class= 'title-cards'><strong>Historique des enchères gagnées</strong></h3>
         <div id="materials">
           <% @my_bids_winsale.each do |material| %>
             <div class="card-material-sales">
@@ -55,6 +60,7 @@
               <p><%= material.site.address%></p> -->
             <%= link_to material_path(material) do %>
               <%= render 'shared/card-material-orders-sold', material: material %>
+                <br>
             <% end %>
           </div>
           <% end %>
@@ -64,8 +70,8 @@
 
 
     <div class="row">
-        <h3 class= 'title-cards'><strong>Historique des enchères perdues</strong></h3>
       <div class="col-sm-8 offset-sm-2">
+         <h3 class= 'title-cards'><strong>Historique des enchères perdues</strong></h3>
         <div id="materials">
           <% @my_bids_lostsale.each do |material| %>
             <div class="card-material-sales">
@@ -76,6 +82,7 @@
               <p><%= material.site.address%></p> -->
             <%= link_to material_path(material) do %>
               <%= render 'shared/card-material-orders-historical-lost', material: material %>
+                <br>
             <% end %>
           </div>
           <% end %>
@@ -84,4 +91,4 @@
     </div>
 </div>
 
-<%= render "shared/footer-home" %>
+<%= render "shared/footer-home-buy" %>
