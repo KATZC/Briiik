@@ -62,7 +62,10 @@
   overflow: hidden;
 }
 
-
+.active {
+  border-bottom: solid;
+  border-width: thin;
+}
 
 .red {
   background: #9B1D20;
