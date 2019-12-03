@@ -40,3 +40,34 @@ body {
 .briiik-color {
   color : #F46036;
 }
+
+.image-box-home-cdc {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-box-home-particulier {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.description-home {
+  text-align: justify;
+  font-size: 18px;
+  font-weight: lighter;
+
+}
+
+.title-home {
+  font-size: 28px;
+  font-variant-caps: small-caps;
+  text-decoration: overline;
+  text-decoration-color: #385369;
+}
+
+
+.description-home-last {
+  font-size: 22px;
+  text-align: justify;
+  font-weight: lighter;
+}
