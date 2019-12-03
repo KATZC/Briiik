@@ -4,7 +4,7 @@
     <% else %>
     <%= render "shared/footer-orders" %>
     <% end %>
-  
+
   <br>
   <div class="row justify-content-center">
     <% if @material.photo.attached? %>
@@ -26,6 +26,15 @@
       <li> <strong>Statut :</strong> <%= @material.status %></li>
     </ul>
   </div>
+
+  <% if Time.now > @material.deadline %>
+  <p>Votre enchère: <%= humanized_money_with_symbol(@material.highest_bid) %></p>
+  <%= form_tag orders_path do %>
+  <%= hidden_field_tag 'material_id', @material.id %>
+  <%= submit_tag 'Payer', class: 'btn btn-primary' %>
+    <% end %>
+    <% else %>
+  <% end %>
 
 <br>
 <br>

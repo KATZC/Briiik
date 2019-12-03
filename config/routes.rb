@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   resources :bids, only: [:index, :show]
   # get 'profiles' to: 'profiles#index'
 
+  resources :orders, only: [:show, :create] do
+  resources :payments, only: :new
+end
+
 
 
 end
