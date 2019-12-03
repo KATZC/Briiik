@@ -9,6 +9,7 @@ class MaterialsController < ApplicationController
     @my_posts_pickup = current_user.materials.where(status: 'Vendu')
     @my_posts_done = current_user.materials.where(status: 'Cloturé')
 
+    # A voir avec TA
     # if material.bids.order.any?
     #  @historical_price = current_user.materials.bids.order('price ASC').last&.price
     # else
@@ -37,12 +38,13 @@ class MaterialsController < ApplicationController
     end
 
     @materials = Material.all if @materials.nil?
-    @materials.sort_by { |material| material.highest_bid}
+    @materials = @materials.order(deadline: :asc)
   end
 
   def show
     @material = Material.find(params[:id])
     @bid = Bid.new
+    # deadline_show
     authorize @material
   end
 
@@ -75,4 +77,16 @@ class MaterialsController < ApplicationController
   def material_params
     params.require(:material).permit(:category, :minimum_price, :photo, :deadline, :description, :site_id, :user_id)
   end
+
+  # def deadline_show
+  #   diff = (@material.deadline - Time.zone.now).to_i
+  #   diff_format = diff.fdiv(3600 * 24)
+  #   if diff_format.positive? && diff_format < 1
+  #     @deadline_text = "H - #{diff / 3600} heures"
+  #   elsif diff > 1
+  #     @deadline_text = "J - #{diff_format.to_i} jours"
+  #   else
+  #     @deadline = "Terminée"
+  #   end
+  # end
 end

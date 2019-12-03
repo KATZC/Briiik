@@ -29,6 +29,10 @@ class SitePolicy < ApplicationPolicy
     true
   end
 
+  def map?
+    true
+  end
+
   private
 
   def user_is_a_site_user?

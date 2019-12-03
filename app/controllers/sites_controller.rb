@@ -46,12 +46,14 @@ class SitesController < ApplicationController
   end
 
   def map
-    @flats = Flat.geocoded #returns flats with coordinates
-
-    @markers = @flats.map do |flat|
+    @sites = Site.geocoded #returns flats with coordinates
+    authorize @sites
+    @markers = @sites.map do |site|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: site.latitude,
+        lng: site.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { site: site }),
+        image_url: helpers.asset_url('helmet.svg')
       }
     end
   end
@@ -69,7 +71,6 @@ class SitesController < ApplicationController
       b << y.highest_bid
     end
     @sum = a.sum + b.sum
-
   end
 
   private
