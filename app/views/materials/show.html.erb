@@ -1,33 +1,44 @@
-<% if @material.photo.attached? %>
-  <%= cl_image_tag @material.photo.key, height: 300, width: 400, crop: :fill %>
-<% else %>
-  <%= image_tag "hammer.jpg", height: 300, width: 400 %>
-<% end %>
-<ul>
-  <li><%= @material.category %></li>
-  <li><%= @material.description %></li>
-  <li>prix initial: <%= @material.minimum_price %></li>
-  <li>enchère en cours: <%= @material.highest_bid %></li>
-  <li><%= @material.detailed_description %></li>
-  <li><%= @material.remaining_time %></li>
-  <li><%= @material.status %></li>
-</ul>
-
-<% if @material.user == current_user %>
-  <%= render "shared/footer-sales" %>
-<% else %>
-<%= simple_form_for([@material, @bid]) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :price %>
+<div class="container">
+  <br>
+  <div class="row justify-content-center">
+    <% if @material.photo.attached? %>
+      <%= cl_image_tag @material.photo.key, height: 270, width: 345, crop: :fill %>
+    <% else %>
+      <%= image_tag "hammer.jpg", height: 270, width: 345 %>
+    <% end %>
+  </div>
+  <br>
+  <div class="row justify-content-center card-information">
+    <p><strong>Informations pratiques :</strong></p>
+    <ul>
+      <li> <strong>Catégorie :</strong>  <%= @material.category %></li>
+      <li> <strong>Description :</strong> <%= @material.description %></li>
+      <li> <strong>Prix initial :</strong> <%= @material.minimum_price %> €</li>
+      <li> <strong>Enchère en cours :</strong> <%= @material.highest_bid %> €</li>
+      <li> <strong>Description détaillée :</strong> <%= @material.detailed_description %></li>
+      <li> <strong>Temps restant :</strong> <%= @material.remaining_time %></li>
+      <li> <strong>Statut :</strong> <%= @material.status %></li>
+    </ul>
   </div>
 
-  <div class="form-actions">
-    <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
-  </div>
-<% end %>
-  <%= render "shared/footer-orders" %>
-<% end %>
+<br>
+<br>
+<br>
+  <% if @material.user == current_user %>
+    <%= render "shared/footer-sales" %>
+  <% else %>
+  <%= simple_form_for([@material, @bid]) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
+    <div class="form-inputs">
+      <%= f.input :price %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+    <%= render "shared/footer-orders" %>
+  <% end %>
+</div>

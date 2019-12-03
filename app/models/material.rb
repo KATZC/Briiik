@@ -33,5 +33,17 @@ class Material < ApplicationRecord
   def highest_bid_user(current_user)
     bids.where(user: current_user).order('price ASC').last&.price
   end
+
+  def remaining_time
+    diff = (self.deadline - Time.zone.now).to_i
+    diff_format = diff.fdiv(3600 * 24)
+    if diff_format.positive? && diff_format < 1
+      "H - #{diff / 3600}"
+    elsif diff > 1
+      "J - #{diff_format.to_i}"
+    else
+      "Terminée"
+    end
+  end
 end
 
