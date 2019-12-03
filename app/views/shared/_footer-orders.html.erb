@@ -1,33 +1,37 @@
-<div class="row footer">
+<div class="row mini-footer">
   <!--   <div class="col-4 h-100 d-flex justify-content-center align-items-center">
       <div class="icon-and-text">
         <p><span><i class="fas fa-camera"></i></span>
         <span><%= link_to "Je vends", new_material_path, class:"footer-link"%></span></p>
       </div>
     </div> -->
-      <div class="col-4 h-100 d-flex justify-content-center align-items-center red">
+      <div class="col-4 h-100 d-flex justify-content-center align-items-center red-text">
       <div class="icon-and-text">
-        <p><span><i class="fas fa-search-plus"></i>
-        <span><%= link_to "Je cherche quoi?", materials_path, class:"footer-link"%></span></p>
+
+        <p><span><i class="fas fa-search-plus red-text"></i>
+        <span><%= link_to "Je cherche quoi?", materials_path, class:"footer-link red-text"%></span></p>
+
       </div>
     </div>
 
-     <div class="col-4 h-100 d-flex justify-content-center align-items-center red">
+     <div class="col-4 h-100 d-flex justify-content-center align-items-center red-text">
       <div class="icon-and-text">
-        <p><span><i class="fas fa-search-location"></i>
-        <span><%= link_to "Je cherche où?", map_path, class:"footer-link"%></span></p>
+
+        <p><span><i class="fas fa-search-location red-text"></i>
+        <span><%= link_to "Je cherche où?", map_path, class:"footer-link red-text"%></span></p>
+
       </div>
     </div>
 
-    <div class="col-4 h-100 d-flex justify-content-center align-items-center red">
+    <div class="col-4 h-100 d-flex justify-content-center align-items-center red-text">
       <div class="icon-and-text">
         <p><span>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="26" height="26"
+width="25" height="25"
 viewBox="0 0 172 172"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M33.90385,7.23558c0,0 26.66827,6.61538 44.03365,24.80769c14.26442,14.96214 15.19471,23.56731 10.12981,28.52885l-6.40865,6.40865l23.36058,23.36058l12.19712,-12.19712c0.67188,0.67188 3.87621,3.64363 8.0625,7.85577c2.89423,2.89423 2.27404,8.5018 1.24038,10.54327c-0.62019,1.24038 0,3.30769 0,3.30769l13.02404,13.02404c2.58413,2.58413 6.92548,2.58413 9.50962,0l20.46635,-20.67308c2.58413,-2.58413 2.55829,-6.71875 0,-9.30288l-12.81731,-13.02404c0,0 -1.96394,-0.8786 -2.89423,-0.41346c-2.04147,1.03365 -8.03666,1.67969 -10.95673,-1.24038c-3.85036,-3.85036 -7.13221,-7.13221 -7.85577,-7.85577l1.44712,-1.44712c1.88642,-1.88642 2.32572,-4.67728 1.44712,-7.02885c-0.02584,-0.05168 0.02584,-0.15504 0,-0.20673c-0.3101,-0.80108 -0.80108,-1.42128 -1.44712,-2.06731l-14.05769,-14.05769c-7.70072,-7.70072 -14.67788,-14.67788 -16.53846,-16.53846c-11.65445,-11.68029 -71.94231,-11.78365 -71.94231,-11.78365zM72.76923,75.87019l-70.70192,70.70192c-2.58413,2.58413 -2.58413,6.71875 0,9.30288l14.05769,14.05769c2.58413,2.58413 6.71875,2.58413 9.30288,0l70.70192,-70.70192z"></path></g></g></svg>
-        </span>
-        <%= link_to "Mes enchères", bids_path, class:"footer-link"%></span></p>
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#9b1d20"><path d="M49.3425,6.665c-1.62594,0 -3.10406,1.20938 -3.44,2.795c-0.33594,1.59906 0.55094,3.21156 2.0425,3.87c0.13438,0.05375 13.27625,5.97969 28.595,22.0375c6.86656,7.2025 14.09594,16.74313 9.245,21.5c-0.1075,0.12094 -0.68531,0.77938 -2.795,2.9025c-0.20156,0.20156 -0.26875,0.34938 -0.43,0.5375l-0.1075,0.1075l26.3375,26.3375l2.4725,-2.365c0.05375,-0.05375 0.06719,-0.16125 0.1075,-0.215l3.87,-3.87c0.17469,0.17469 1.12875,1.12875 4.8375,4.8375c1.3975,1.3975 1.06156,4.85094 0.645,5.6975c-1.29,2.58 -1.04812,5.29438 0.645,6.9875c0.67188,0.67188 11.9325,11.9325 11.9325,11.9325c1.85438,1.85438 4.32688,2.795 6.7725,2.795c2.44563,0 4.81063,-0.94062 6.665,-2.795l19.0275,-18.92c3.72219,-3.70875 3.70875,-9.82281 0,-13.545l-11.9325,-11.9325c-1.73344,-1.73344 -4.34031,-2.09625 -6.5575,-0.9675c-1.04812,0.52406 -4.71656,0.87344 -6.02,-0.43l-4.945,-4.945c1.12875,-1.59906 1.73344,-3.49375 1.72,-5.4825c0.01344,-2.56656 -0.98094,-4.97187 -2.795,-6.7725l-12.9,-12.9c-0.06719,-0.06719 -0.29562,-0.215 -0.43,-0.3225l-2.6875,-2.6875c-5.61687,-5.61687 -10.81719,-10.92469 -12.1475,-12.255c-11.395,-11.40844 -53.02437,-11.91906 -57.7275,-11.9325zM77.615,65.2525l-67.295,67.295c-3.70875,3.70875 -3.70875,9.71531 0,13.4375l12.9,12.9c1.85438,1.85438 4.32688,2.795 6.7725,2.795c2.44563,0 4.81063,-0.94062 6.665,-2.795l67.295,-67.1875z"></path></g></g></svg>
+      </span>
+        <%= link_to "Mes enchères", bids_path, class:"footer-link red-text"%></span></p>
       </div>
     </div>
 
