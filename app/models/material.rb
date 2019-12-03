@@ -1,7 +1,7 @@
 class Material < ApplicationRecord
   include PgSearch::Model
 
-  CATEGORIES = ['Habillage', 'Consommable', 'Plomberie']
+  CATEGORIES = ['Electricité', 'Plomberie', 'Mur', 'Sol', 'Mobilier']
 
   belongs_to :site
   belongs_to :site_user
