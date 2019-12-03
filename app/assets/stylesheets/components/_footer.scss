@@ -25,6 +25,11 @@
   left:0px;
   width: 100vw;
   overflow: hidden;
+  color: #FDFFFC;
+}
+
+.footer:hover {
+  color: #FDFFFC;
 }
 
 
@@ -87,6 +92,8 @@ color: #3D2B3D;
   overflow: hidden;
 }
 
+
+
 .footer-link {
   // color: white;
   text-decoration: none;
@@ -144,5 +151,6 @@ p span {
 
 .big-title {
   font-size: 21px;
+  color: #FDFFFC;
 }
 
