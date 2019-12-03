@@ -5,12 +5,8 @@
     <div class="col-sm-6 mt-3 p-3">
       <h4>Vous êtes chef de chantier ?</h4>
       <br>
-        <%= link_to 'Créer un chantier', new_site_path, class: "main-button-chantier" %>
+        <%= link_to ("Créer un chantier <i class='far fa-plus-square'></i>").html_safe, new_site_path %>
       <br>
-      <br>
-        <h5> <strong>
-          Mes chantiers : </strong> </h5> ajouter des ouvriers
-      (    controller à modifier pour ne faire apparaitre que mes chantiers)
       <br>
       <!-- <h5> <% @sites.each do |site| %>
          <%= site.company %>
@@ -21,19 +17,19 @@
       </h5>
       <br> -->
 
-      <h3>Mes chantiers en cours:</h3>
+      <h5><strong>Ajouter des compagnons :</strong></h5>
       <ul>
           <% @site_users.each do |site_user| %>
-            <li><%= Site.find(site_user.site_id).address %>
-            <%= link_to 'Modifier le chantier/ajouter des compagnons', edit_site_path(Site.find(site_user.site_id))%> </li>
+          <li></i> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", edit_site_path(Site.find(site_user.site_id))%> </li>
           <% end %>
       </ul>
 
-      <h5><strong> Mes ventes par chantier (à créer) </strong></h5>
+      <br>
+
+      <h5><strong> Historique par chantier </strong></h5>
       <ul>
         <% @site_users.each do |site_user| %>
-          <li> <%= Site.find(site_user.site_id).address %>
-          <%= link_to 'Historique de mes ventes', records_path(Site.find(site_user.site_id)) %> </li>
+          <li> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id))%> </li>
         <% end %>
       </ul>
 
