@@ -6,7 +6,8 @@ class Material < ApplicationRecord
   belongs_to :site
   belongs_to :site_user
   has_one :user, through: :site_user
-  has_many :bids
+  has_many :bids, dependent: :destroy
+  # has_many :orders, dependent: :destroy
   has_one_attached :photo
 
   monetize :price_cents

@@ -1,6 +1,7 @@
 require 'faker'
 require 'open-uri'
 
+Order.destroy_all
 Bid.destroy_all
 Material.destroy_all
 SiteUser.destroy_all
