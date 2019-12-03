@@ -1,25 +1,38 @@
-<div class="container">
-  <div class="col-xs-6">
-    <br>
-  <%= render "shared/carousel-home" %>
+
+  <div class="concept blue-home white">
+
+    <div class="col-sm-6 home-image ">
+      <span class="big-helmet">
+          <%= show_svg('helmet.svg') %>
+      </span>
+      <br>
+      <br>
+      <h2 ><strong>BRIIIK</strong> </h2>
+      <h3 class="text-home"> L'économie circulaire du BTP <i>brique</i> par <i>brique</i> </h3>
+      <br>
+      <br>
+
+      <%= image_tag "homeBRIIIK"%>
+    </div>
+
+
+    <div class="actors text-home ">
+
+      <h2><i class="fas fa-coins icons-home "></i> <bold>Vous gérez un chantier?</bold></h2>
+        <p> Economisez de l’argent, du temps et de l’espace <br>sur la collecte des déchets.</p>
+      <h2><i class="far fa-clipboard icons-home"></i> <bold>Vous travaillez sur un chantier ?</bold></h2>
+        <p> Mettez en ligne les matériaux non utilisés <br>et augmentez vos primes</p>
+      <h2><i class="fas fa-leaf icons-home"></i> <bold>Vous faites des travaux chez vous?</bold></h2>
+        <p> Récupérez des matériaux à proximité et à moindre coût.</p>
+      <h2> <i class="fas fa-leaf icons-home"></i> <bold>La consommation responsable vous parle?</bold></h2>
+        <p > Rejoignez <bold>BRIIIK</bold> et construisons ensemble l’économie circulaire du BTP de demain</p>
+
+    </div>
+
   </div>
-  <br>
-  <div class="col-xs-6 concept">
-    <h2><strong><span class="briiik-color">BRIIIK : </span> Le concept</strong> </h2>
-  <br>
-    <h5 class="home-title"><i class="fas fa-coins icons-home "></i> Vous gérez un chantier?</h5>
-      <p class= "home-text"> Economisez de l’argent, du temps et de l’espace <br>sur la collecte des déchets.</p>
-    <h5 class="home-title"><i class="far fa-clipboard icons-home"></i> Vous travaillez sur un chantier ?</h5>
-      <p class= "home-text"> Mettez en ligne les matériaux non utilisés <br>et augmentez vos primes</p>
-    <h5 class="home-title"><i class="fas fa-leaf icons-home"></i> Vous faites des travaux chez vous?</h5>
-      <p class= "home-text"> Récupérez des matériaux à proximité et à moindre coût.</p>
-    <h5 class="home-title"><i class="fas fa-leaf icons-home"></i> La consommation responsable vous parle?</h5>
-      <p class= "home-text"> Rejoignez<span class="briiik-color home-title">BRIIIK</span>
-        et construisons ensemble
-        <br><span class="briiik-color"><b>l’économie circulaire du BTP , brique par brique.</b></span></p>
-  </div>
+
   <%= render "shared/footer-home" %>
-</div>
+
 
 
 
