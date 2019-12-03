@@ -14,7 +14,7 @@ class Material < ApplicationRecord
   validates :deadline, presence: true
   validates :status, presence: true
   validates_inclusion_of :status, in: ['En ligne', 'Vendu', 'Non-vendu', 'Remis', 'Cloturé']
-  validates :category, presence:true, :inclusion => CATEGORIES
+  validates :category, presence: true, :inclusion => CATEGORIES
   validates :site_id, presence: true
 
   pg_search_scope :search_by_category_and_description,
@@ -38,12 +38,15 @@ class Material < ApplicationRecord
     diff = (self.deadline - Time.zone.now).to_i
     diff_format = diff.fdiv(3600 * 24)
     if diff_format.positive? && diff_format < 1
+
       "H - #{diff / 3600}"
     elsif diff > 1
       "J - #{diff_format.to_i}"
+
     else
       "Terminée"
     end
   end
 end
+
 

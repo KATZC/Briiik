@@ -162,7 +162,6 @@ seventh_site_user = SiteUser.new(
 seventh_site_user.save!
 
 
-
 file_contreplaque_6 = URI.open('http://www.bois-dussault.fr/site/images/normal/518df61c6c9fa.jpg')
 contreplaque_6 = Material.new(
     category: "Habillage",

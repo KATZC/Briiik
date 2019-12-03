@@ -1,4 +1,10 @@
 <div class="container">
+  <% if @material.user == current_user %>
+    <%= render "shared/footer-sales" %>
+    <% else %>
+    <%= render "shared/footer-orders" %>
+    <% end %>
+  
   <br>
   <div class="row justify-content-center">
     <% if @material.photo.attached? %>
@@ -25,7 +31,6 @@
 <br>
 <br>
   <% if @material.user == current_user %>
-    <%= render "shared/footer-sales" %>
   <% else %>
   <%= simple_form_for([@material, @bid]) do |f| %>
     <%= f.error_notification %>
@@ -36,7 +41,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.submit "Valider une enchère", class: 'btn btn-primary' %>
+      <%= f.submit "Valider une enchère", class: 'btn main-button' %>
     </div>
   <% end %>
     <%= render "shared/footer-orders" %>
