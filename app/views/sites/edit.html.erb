@@ -10,8 +10,10 @@
       <%= f.input :address, :label => "Adresse du chantier"%>
 
       </div>
-      <div class="form-actions main-button">
-        <%= f.submit "Mettre à jour le chantier" %>
+      <div class="form-actions">
+        <div class="box-button">
+          <%= f.submit "Mettre à jour le chantier", class: "box-button" %>
+        </div>
       </div>
     <% end %>
     <%= link_to 'Back', @site_path, class: "button-back" %>

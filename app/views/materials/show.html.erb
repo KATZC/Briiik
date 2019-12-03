@@ -4,7 +4,7 @@
     <% else %>
     <%= render "shared/footer-orders" %>
     <% end %>
-  
+
   <br>
   <div class="row justify-content-center">
     <% if @material.photo.attached? %>
@@ -15,20 +15,16 @@
   </div>
   <br>
   <div class="row justify-content-center card-information">
-    <p><strong>Informations pratiques :</strong></p>
     <ul>
       <li> <strong>Catégorie :</strong>  <%= @material.category %></li>
       <li> <strong>Description :</strong> <%= @material.description %></li>
       <li> <strong>Prix initial :</strong> <%= @material.minimum_price %> €</li>
-      <li> <strong>Enchère en cours :</strong> <%= @material.highest_bid %> €</li>
+      <li> <strong>Dernière enchère :</strong> <%= @material.highest_bid %> €</li>
       <li> <strong>Description détaillée :</strong> <%= @material.detailed_description %></li>
-      <li> <strong>Temps restant :</strong> <%= @material.remaining_time %></li>
-      <li> <strong>Statut :</strong> <%= @material.status %></li>
+      <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline %></li>
     </ul>
   </div>
 
-<br>
-<br>
 <br>
   <% if @material.user == current_user %>
   <% else %>
@@ -37,11 +33,13 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :price %>
+      <%= f.input :price, :label => "Enchérir !"%>
     </div>
 
     <div class="form-actions">
-      <%= f.submit "Valider une enchère", class: 'btn main-button' %>
+      <div class="box-button">
+        <%= f.submit "Valider une enchère", class: 'btn main-button' %>
+      </div>
     </div>
   <% end %>
     <%= render "shared/footer-orders" %>

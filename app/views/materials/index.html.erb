@@ -16,9 +16,11 @@
         params[:description], class: "form-control has-search", placeholder: "Vous recherchez? Ex: cloison, moquette,...", style:"font-style:italic"%>
       </div>
         <br>
-        <%= submit_tag "Recherche", class: "btn main-button-centered" %>
-        <br>
-         <span> <strong><%= @materials.count %> found</strong></span>
+        <div class="box-button">
+          <%= submit_tag "Recherche", class: "btn main-button" %>
+          <br>
+        </div>
+         <p> <strong><%= @materials.count %> résultats</strong></p>
     <% end %>
 
     <br>

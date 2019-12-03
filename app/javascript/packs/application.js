@@ -6,3 +6,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
+
+// document.querySelector(".navbar-toggler").addEventListener("click", (event) => {
+//   document.querySelector(".collapse").classList.toggle("show")
+// })
