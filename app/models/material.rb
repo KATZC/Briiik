@@ -9,6 +9,8 @@ class Material < ApplicationRecord
   has_many :bids
   has_one_attached :photo
 
+  monetize :price_cents
+
   validates :minimum_price, presence: true
   validates :description, presence: true
   validates :deadline, presence: true

@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :site_users, dependent: :destroy
   has_many :sites, through: :site_users
   has_many :materials, through: :site_users
+  has_many :orders
 end
