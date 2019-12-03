@@ -167,8 +167,8 @@ contreplaque_6 = Material.new(
     category: "Habillage",
     description: "Contreplaqués",
     detailed_description: "2mx1m - 2kg - 6 unités en bon état",
-    minimum_price: 100,
-    deadline: Date.new(2019, 12, 20),
+    minimum_price: 20,
+    deadline: Date.new(2019, 12, 7),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: first_site_user
@@ -182,7 +182,7 @@ barrette_20 = Material.new(
     description: "Barrettes de cuivre",
     detailed_description: "2mx20cm - 3kg - 20 unités non utilisées",
     minimum_price: 300,
-    deadline: Date.new(2019, 12, 25),
+    deadline: Date.new(2019, 12, 9),
     status: "Vendu",
     site: vinci_paradis_10,
     site_user: second_site_user
@@ -196,7 +196,7 @@ vitre_4 = Material.new(
     description: "Cloisons vitrées",
     detailed_description: "5mx2m - 60kg - 4 unités neuves",
     minimum_price: 450,
-    deadline: Date.new(2019, 12, 25),
+    deadline: Date.new(2019, 12, 10),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: third_site_user
@@ -210,7 +210,7 @@ peinture_10 = Material.new(
     description: "Pots de peinture blanche",
     detailed_description: "4kg - 10 unités non-ouvertes",
     minimum_price: 40,
-    deadline: Date.new(2019, 12, 25),
+    deadline: Date.new(2019, 12, 10),
     status: "Vendu",
     site: vinci_richer_10,
     site_user: fourth_site_user
@@ -238,7 +238,7 @@ kitchenette_2 = Material.new(
     description: "Kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 85,
-    deadline: Date.new(2019, 12, 30),
+    deadline: Date.new(2019, 12, 15),
     status: "Non-vendu",
     site: vinci_richer_10,
     site_user: sixth_site_user
@@ -280,7 +280,7 @@ moquette_10 = Material.new(
     description: "Moquette grise",
     detailed_description: "10mx5m - 4kg - 10 unités utilisées et en bon état, made in France",
     minimum_price: 300,
-    deadline: Date.new(2020, 01, 04),
+    deadline: Date.new(2020, 01, 4),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
@@ -294,7 +294,7 @@ store_4 = Material.new(
     description: "Stores avec lamelles intérieures",
     detailed_description: "150cmx100cm - 5kg - 4 unités comme neuves",
     minimum_price: 120,
-    deadline: Date.new(2020, 01, 17),
+    deadline: Date.new(2019, 12, 17),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
@@ -361,21 +361,21 @@ fauteuil_2.save!
 
 bid_1 = Bid.new(
   user: idrissi_obama,
-  price: 110,
+  price: 25,
   material: contreplaque_6
   )
 bid_1.save!
 
 bid_2 = Bid.new(
   user: adam_levin,
-  price: 115,
+  price: 27,
   material: contreplaque_6
   )
 bid_2.save!
 
 bid_3 = Bid.new(
   user: manu_chao,
-  price: 120,
+  price: 30,
   material: contreplaque_6
   )
 bid_3.save!
