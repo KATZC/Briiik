@@ -1,27 +1,48 @@
-<h1>Somme total</h1>
-<%= @sum%>
+<div class="container">
+  <div class="row justify-content">
+    <div class="col-sm-6 mt-3 p-3">
 
-<h1> Matériel Vendu sur ce chantier: <%= @site.address %> </h1>
-<ul>
-<% @my_posts_pickup.each do |my_post_pickup| %>
-<h2>Matériel: </h2>
-<li> Catégorie: <%= my_post_pickup.category %> </li>
-<li> Description: <%= my_post_pickup.description %> </li>
-<li> prix de vente: <%= my_post_pickup.highest_bid %> </li>
-<li> Statut: <%= my_post_pickup.status %> </li>
-<%end  %>
-</ul>
+      <span>Addresse du chantier concerné :</span>
+        <p class="site-address"><strong> <%= @site.address %> </strong></p>
+
+      <p>Matériel Vendu :</p>
+      <ul>
+      <% @my_posts_pickup.each do |my_post_pickup| %>
+      <p>Matériel : </p>
+      <li> Catégorie: <%= my_post_pickup.category %> </li>
+      <li> Description: <%= my_post_pickup.description %> </li>
+      <li> Prix de vente: <%= my_post_pickup.highest_bid %> € </li>
+      <li> Statut: <%= my_post_pickup.status %> </li>
+      <%end  %>
+      </ul>
+
+      <table class="mr-3 ml-3">
+          <thead>
+              <tr>
+                  <th id="table-border-left">Description</th>
+                  <th>Date de vente</th>
+                  <th id="table-border-right">Prix</th>
+              </tr>
+          </thead>
+          <tbody>
+            <% @my_posts_pickup.each do |my_post_pickup| %>
+              <tr>
+                  <td><%= my_post_pickup.description %></td>
+                  <td> date de vente </td>
+                  <td><%= my_post_pickup.highest_bid %></td>
+              </tr>
+            <% end  %>
+          </tbody>
+      </table>
 
 
-<h1> Matériel clôturé sur ce chantier: <%= @site.address %></h1>
-<ul>
-<% @my_posts_done.each do |my_post_done| %>
-<h2>Matériel: </h2>
-<li> Catégorie: <%= my_post_done.category %> </li>
-<li> Description: <%= my_post_done.description %> </li>
-<li> prix de vente: <%= my_post_done.highest_bid %> </li>
-<li> Statut: <%= my_post_done.status %> </li>
-<%end  %>
-</ul>
+      <p class="table-sum row mr-3 ml-3">
+        <span class="column left" >Somme totale : </span>
+        <span class="column"> <%= @sum%> € </span>
+      </p>
 
+    </div>
+  </div>
+    <%= render "shared/footer-home" %>
+</div>
 
