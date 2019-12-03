@@ -25,6 +25,15 @@
   fill: #F46036;
 }
 
+.big-helmet > svg {
+  height: 100px;
+  width: 100px;
+}
+
+.big-helmet > svg > path {
+  fill: #F46036;
+}
+
 .briiik-home {
   text-align: center;
   text-decoration: none;
