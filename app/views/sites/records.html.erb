@@ -2,7 +2,7 @@
   <div class="row justify-content">
     <div class="col-sm-6 mt-3 p-3">
 
-      <span>Addresse du chantier concerné :</span>
+      <span>Adresse du chantier concerné :</span>
         <p class="site-address"><strong> <%= @site.address %> </strong></p>
 
       <p>Matériel Vendu :</p>
@@ -19,9 +19,9 @@
       <table class="mr-3 ml-3">
           <thead>
               <tr>
-                  <th id="table-border-left">Description</th>
+                  <th>Description</th>
                   <th>Date de vente</th>
-                  <th id="table-border-right">Prix</th>
+                  <th>Prix</th>
               </tr>
           </thead>
           <tbody>
@@ -36,11 +36,15 @@
       </table>
 
 
+
       <p class="table-sum row mr-3 ml-3">
         <span class="column left" >Somme totale : </span>
         <span class="column"> <%= @sum%> € </span>
       </p>
 
+      <div class="image-box">
+        <%= image_tag("cdchantier.png") %>
+      </div>
     </div>
   </div>
     <%= render "shared/footer-home-sale" %>
