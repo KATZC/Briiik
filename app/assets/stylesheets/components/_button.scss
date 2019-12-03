@@ -2,16 +2,23 @@
   background-color: #F46036;
   color: #FDFFFC;
   border-radius: 18px;
-  margin: 10px 80px 20px;
   text-align: center;
   cursor: pointer;
   padding: 5px 15px;
 }
 .main-button:hover {
   cursor: grab;
-
 }
 
+.main-button-publish {
+  background-color: #F46036;
+  color: #FDFFFC;
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 130px 19px;
+}
 .main-button-centered {
   background-color: #F46036;
   color: #FDFFFC;

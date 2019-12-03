@@ -45,7 +45,6 @@ class SitesController < ApplicationController
     @site.destroy
   end
 
-
   def map
     @flats = Flat.geocoded #returns flats with coordinates
 
@@ -55,6 +54,7 @@ class SitesController < ApplicationController
         lng: flat.longitude
       }
     end
+  end
 
   def records
     @user = current_user
