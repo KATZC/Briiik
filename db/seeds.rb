@@ -89,19 +89,19 @@ idrissi_obama = User.new(
 
 vinci_paradis_10 = Site.new(
     company:    "Vinci",
-    address: "10 rue de paradis 75010 paris"
+    address: "10 rue de Paradis 75010 paris"
   )
 vinci_paradis_10.save!
 
 vinci_richer_10 = Site.new(
     company:    "Vinci",
-    address: "14 rue richer 75009 paris"
+    address: "14 rue Richer 75009 paris"
   )
 vinci_richer_10.save!
 
 bouygues_lobineau_20 = Site.new(
-    company:    "bouyguess",
-    address: "20 rue lobineau 75006 Paris"
+    company:    "Bouygues",
+    address: "20 rue Lobineau 75006 Paris"
   )
 bouygues_lobineau_20.save!
 
@@ -179,7 +179,7 @@ contreplaque_6.save!
 file_barrette_20 = URI.open('https://www.cdiscount.com/pdt2/8/8/4/1/300x300/neu6296623592884/rw/neufu-99-cuivre-t2-cu-metal-plat-barre-plaque-ban.jpg')
 barrette_20 = Material.new(
     category: "Plomberie",
-    description: "Barrettes de cuivres",
+    description: "Barrettes de cuivre",
     detailed_description: "2mx20cm - 3kg - 20 unités non utilisées",
     minimum_price: 300,
     deadline: Date.new(2019, 12, 25),
@@ -278,7 +278,7 @@ file_moquette_10 = URI.open('https://pieces-voiture-sans-permis.com/images/artic
 moquette_10 = Material.new(
     category: "Consommable",
     description: "Moquette grise",
-    detailed_description: "10mx5m - 4kg - 10 unité utilisée et en bon état, made in France",
+    detailed_description: "10mx5m - 4kg - 10 unités utilisées et en bon état, made in France",
     minimum_price: 300,
     deadline: Date.new(2020, 01, 04),
     status: "Vendu",
@@ -308,7 +308,7 @@ radiateur_1 = Material.new(
     description: "Radiateur",
     detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
     minimum_price: 120,
-    deadline: Date.new(2020, 12, 17),
+    deadline: Date.new(2019, 12, 17),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
@@ -322,7 +322,7 @@ cloison_4 = Material.new(
     description: "Cloisons",
     detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
     minimum_price: 200,
-    deadline: Date.new(2020, 12, 20),
+    deadline: Date.new(2019, 12, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
@@ -336,7 +336,7 @@ table_10 = Material.new(
     description: "Petites tables rondes",
     detailed_description: "60cmx60cm - 15kg - 10 unités neuves très design",
     minimum_price: 1000,
-    deadline: Date.new(2020, 12, 23),
+    deadline: Date.new(2019, 12, 23),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
@@ -350,7 +350,7 @@ fauteuil_2 = Material.new(
     description: "Fauteuils gris",
     detailed_description: "70cmx50cm - 5kg - 2 unités made in UK comme neufs",
     minimum_price: 300,
-    deadline: Date.new(2020, 12, 28),
+    deadline: Date.new(2019, 12, 28),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: seventh_site_user
