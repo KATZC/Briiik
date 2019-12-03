@@ -222,7 +222,7 @@ file_moquette_1  = URI.open('https://servimg.marche.fr/photo/big/73/22/61/612273
 moquette_1 = Material.new(
     category: "Consommable",
     description: "Moquette rayée bleu/rouge",
-    detailed_description: "15mx10m - 10kg - 1 unités non-utilisée",
+    detailed_description: "15mx10m - 10kg - 1 unité non utilisée",
     minimum_price: 70,
     deadline: Date.new(2020, 01, 13),
     status: "En ligne",
