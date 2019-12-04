@@ -3,12 +3,14 @@
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <div class="container">
     <div class="form-inputs">
-      <%= f.input :company, :label => "Nom de la compagnie" %>
+      <%= f.input :company, :label => "Nom de l'enteprise" %>
       <%= f.input :address, :label => "Adresse du chantier"%>
+    <br>
     </div>
   </div>
   <div class="form-actions">
     <div class="box-button">
+    <br>
       <%= f.submit "Ajouter un chantier", class: "main-button" %>
     </div>
   </div>

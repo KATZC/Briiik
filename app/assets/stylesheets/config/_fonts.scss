@@ -18,3 +18,10 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 .white {
 color: #FDFFFC
 }
+
+.middle {
+display: flex;
+text-direction: column;
+justify-content: center;
+}
+

@@ -1,9 +1,16 @@
+<%= render "shared/footer-sales-sites" %>
+
 <div class="container">
   <div class="row justify-content">
-    <div class="col-sm-6 mt-3 p-3">
-      <h3>Créer un chantier </h3>
+    <div class="col-sm-6 mt-3 p-3 ">
+      <br>
+        <br>
+          <br>
       <%= render "form", site: @site %>
-      <%= link_to 'Back', @site, class: "button-back"%>
+      <br>
+      <%= link_to 'Retour', @site, class: "button-back"%>
     </div>
   </div>
 </div>
+
+<%= render "shared/footer-home-sale" %>
