@@ -196,7 +196,7 @@ contreplaque_6 = Material.new(
     category: "Mur",
     description: "Contreplaqués",
     detailed_description: "2mx1m - 2kg - 6 unités en bon état",
-    minimum_price: 20,
+    minimum_price: 8,
     deadline: Date.new(2019, 12, 7),
     status: "En ligne",
     site: vinci_paradis_10,
@@ -210,7 +210,7 @@ barrette_20 = Material.new(
     category: "Electricité",
     description: "Barrettes de cuivre",
     detailed_description: "2mx20cm - 3kg - 20 unités non utilisées",
-    minimum_price: 300,
+    minimum_price: 15,
     deadline: Date.new(2019, 12, 9),
     status: "Vendu",
     site: vinci_paradis_10,
@@ -224,7 +224,7 @@ vitre_4 = Material.new(
     category: "Mur",
     description: "Cloisons vitrées",
     detailed_description: "5mx2m - 60kg - 4 unités neuves",
-    minimum_price: 450,
+    minimum_price: 12,
     deadline: Date.new(2019, 12, 10),
     status: "En ligne",
     site: vinci_richer_10,
@@ -252,7 +252,7 @@ moquette_1 = Material.new(
     category: "Sol",
     description: "Moquette rayée bleu/rouge",
     detailed_description: "15mx10m - 10kg - 1 unité non utilisée",
-    minimum_price: 70,
+    minimum_price: 5,
     deadline: Date.new(2020, 01, 13),
     status: "En ligne",
     site: vinci_richer_10,
@@ -266,7 +266,7 @@ kitchenette_2 = Material.new(
     category: "Mobilier",
     description: "Kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
-    minimum_price: 85,
+    minimum_price: 30,
     deadline: Date.new(2019, 12, 15),
     status: "Non-vendu",
     site: vinci_richer_10,
@@ -280,7 +280,7 @@ cloison_2 = Material.new(
     category: "Mur",
     description: "Cloisons double vitrage",
     detailed_description: "250cmx150cm - 60kg - 2 unités en excellent état",
-    minimum_price: 1200,
+    minimum_price: 11,
     deadline: Date.new(2019, 12, 21),
     status: "Cloturé",
     site: bouygues_lobineau_20,
@@ -294,7 +294,7 @@ cloison_5 = Material.new(
     category: "Mur",
     description: "Cloisons isolantes",
     detailed_description: "150cmx100cm - 15kg - 5 unités neuves, made in Poland",
-    minimum_price: 1500,
+    minimum_price: 14,
     deadline: Date.new(2019, 12, 26),
     status: "Vendu",
     site: bouygues_lobineau_20,
@@ -308,7 +308,7 @@ moquette_10 = Material.new(
     category: "Sol",
     description: "Moquette grise",
     detailed_description: "10mx5m - 4kg - 10 unités utilisées et en bon état, made in France",
-    minimum_price: 300,
+    minimum_price: 30,
     deadline: Date.new(2020, 01, 4),
     status: "Vendu",
     site: bouygues_lobineau_20,
@@ -322,7 +322,7 @@ store_4 = Material.new(
     category: "Mur",
     description: "Stores avec lamelles intérieures",
     detailed_description: "150cmx100cm - 5kg - 4 unités comme neuves",
-    minimum_price: 120,
+    minimum_price: 8,
     deadline: Date.new(2019, 12, 17),
     status: "Cloturé",
     site: bouygues_lobineau_20,
@@ -336,7 +336,7 @@ radiateur_1 = Material.new(
     category: "Mobilier",
     description: "Radiateur",
     detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
-    minimum_price: 120,
+    minimum_price: 12,
     deadline: Date.new(2019, 12, 17),
     status: "Vendu",
     site: bouygues_lobineau_20,
@@ -350,7 +350,7 @@ cloison_4 = Material.new(
     category: "Mur",
     description: "Cloisons",
     detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
-    minimum_price: 200,
+    minimum_price: 20,
     deadline: Date.new(2019, 12, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
@@ -364,7 +364,7 @@ table_10 = Material.new(
     category: "Mobilier",
     description: "Petites tables rondes",
     detailed_description: "60cmx60cm - 15kg - 10 unités neuves très design",
-    minimum_price: 1000,
+    minimum_price: 10,
     deadline: Date.new(2019, 12, 23),
     status: "En ligne",
     site: bouygues_lobineau_20,
@@ -378,7 +378,7 @@ fauteuil_2 = Material.new(
     category: "Mobilier",
     description: "Fauteuils gris",
     detailed_description: "70cmx50cm - 5kg - 2 unités made in UK comme neufs",
-    minimum_price: 300,
+    minimum_price: 20,
     deadline: Date.new(2019, 12, 28),
     status: "En ligne",
     site: bouygues_lobineau_20,
@@ -390,49 +390,49 @@ fauteuil_2.save!
 
 bid_1 = Bid.new(
   user: idrissi_obama,
-  price: 25,
+  price: 10,
   material: contreplaque_6
   )
 bid_1.save!
 
 bid_2 = Bid.new(
   user: adam_levin,
-  price: 27,
+  price: 12,
   material: contreplaque_6
   )
 bid_2.save!
 
 bid_3 = Bid.new(
   user: manu_chao,
-  price: 30,
+  price: 14,
   material: contreplaque_6
   )
 bid_3.save!
 
 bid_4 = Bid.new(
   user: manu_chao,
-  price: 320,
+  price: 22,
   material: barrette_20
   )
 bid_4.save!
 
 bid_5 = Bid.new(
   user: alfred_dalton,
-  price: 335,
+  price: 24,
   material: barrette_20
   )
 bid_5.save!
 
 bid_6 = Bid.new(
   user: idrissi_obama,
-  price: 460,
+  price: 14,
   material: vitre_4
   )
 bid_6.save!
 
 bid_7 = Bid.new(
   user: margot_blakchouche,
-  price: 460,
+  price: 16,
   material: vitre_4
   )
 bid_7.save!
@@ -460,70 +460,70 @@ bid_10.save!
 
 bid_11 = Bid.new(
   user: moktar_oulabala,
-  price: 1250,
+  price: 13,
   material: cloison_2
   )
 bid_11.save!
 
 bid_12 = Bid.new(
   user: margot_blakchouche,
-  price: 130,
+  price: 13,
   material: radiateur_1
   )
 bid_12.save!
 
 bid_13 = Bid.new(
   user: alfred_dalton,
-  price: 145,
+  price: 14,
   material: radiateur_1
   )
 bid_13.save!
 
 bid_14 = Bid.new(
   user: moktar_oulabala,
-  price: 145,
+  price: 15,
   material: radiateur_1
   )
 bid_14.save!
 
 bid_15 = Bid.new(
   user: alfred_dalton,
-  price: 150,
+  price: 10,
   material: store_4
   )
 bid_15.save!
 
 bid_16 = Bid.new(
   user: adam_levin,
-  price: 160,
+  price: 12,
   material: store_4
   )
 bid_16.save!
 
 bid_17 = Bid.new(
   user: adam_levin,
-  price: 340,
+  price: 34,
   material: moquette_10
   )
 bid_17.save!
 
 bid_18 = Bid.new(
   user: adam_levin,
-  price: 1600,
+  price: 15,
   material: cloison_5
   )
 bid_18.save!
 
 bid_19 = Bid.new(
   user: manu_chao,
-  price: 1650,
+  price: 16,
   material: cloison_5
   )
 bid_19.save!
 
 bid_19 = Bid.new(
   user: margot_blakchouche,
-  price: 1750,
+  price: 17,
   material: cloison_5
   )
 bid_19.save!
@@ -531,7 +531,7 @@ bid_19.save!
 
 bid_20 = Bid.new(
   user: idrissi_obama,
-  price: 325,
+  price: 32,
   material: fauteuil_2
   )
 bid_20.save!
