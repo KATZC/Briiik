@@ -350,7 +350,7 @@ cloison_4 = Material.new(
     category: "Mur",
     description: "Grandes cloisons vitrées",
     detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
-    minimum_price: 20,
+    minimum_price: 2,
     deadline: Date.new(2019, 12, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
