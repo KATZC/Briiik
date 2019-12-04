@@ -12,7 +12,7 @@
       <h5><strong>Ajouter des compagnons </strong></h5>
       <ul>
           <% @site_users.each do |site_user| %>
-          <li class="taille14"></i> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", edit_site_path(Site.find(site_user.site_id))%> </li>
+          <li ></i> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", edit_site_path(Site.find(site_user.site_id))%> </li>
           <% end %>
       </ul>
 
@@ -21,7 +21,7 @@
       <h5><strong> Historique par chantier </strong></h5>
       <ul>
         <% @site_users.each do |site_user| %>
-          <li class="taille14"> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id))%> </li>
+          <li class="taille13"> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id))%> </li>
         <% end %>
       </ul>
 
