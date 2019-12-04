@@ -281,7 +281,7 @@ cloison_2 = Material.new(
     description: "Cloisons double vitrage",
     detailed_description: "250cmx150cm - 60kg - 2 unités en excellent état",
     minimum_price: 11,
-    deadline: Date.new(2019, 12, 21),
+    deadline: Date.new(2019, 07, 21),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -323,7 +323,7 @@ store_4 = Material.new(
     description: "Stores avec lamelles intérieures",
     detailed_description: "150cmx100cm - 5kg - 4 unités comme neuves",
     minimum_price: 8,
-    deadline: Date.new(2019, 12, 17),
+    deadline: Date.new(2019, 08, 17),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
