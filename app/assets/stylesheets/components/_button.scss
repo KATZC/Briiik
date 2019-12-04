@@ -61,11 +61,18 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 .button-back {
-  background-color: #e5dfdf;
+  // background-color: #e5dfdf;
   color: #1E1E24;
-  border-radius: 18px;
-  margin: 0px 101px 9px;
-  padding: 5px 41px;
-  text-align: center;
+  // border-radius: 18px;
+  // margin: 0px 101px 9px;
+  // padding: 5px 41px;
+  text-align: left;
 }
 
+.button-back:link {
+  text-decoration: none;
+}
+
+.link-no-deco {
+  text-decoration: none;
+}
