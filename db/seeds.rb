@@ -236,7 +236,7 @@ vitre_4.save!
 file_peinture_10 = URI.open('https://lecoindupro.blob.core.windows.net/upload/1249328.Lg.jpg')
 peinture_10 = Material.new(
     category: "Mur",
-    description: "10 pots de peinture blanche 2,5L",
+    description: "10 pots de peinture blanche 2L",
     detailed_description: "10 unités non-ouvertes",
     minimum_price: 40,
     deadline: Date.new(2019, 12, 11),
