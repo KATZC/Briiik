@@ -32,17 +32,17 @@
     </ul>
   </div>
 
-  <% if Time.now > @material.deadline %>
-  <p>Votre enchère: <%= humanized_money_with_symbol(@material.highest_bid) %></p>
+  <% if Time.now < @material.deadline || @material.user == current_user %>
+    <% else %>
+    <p>Votre enchère: <%= humanized_money_with_symbol(@material.highest_bid) %></p>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'material_id', @material.id %>
   <%= submit_tag 'Payer', class: 'btn btn-primary' %>
     <% end %>
-    <% else %>
   <% end %>
 
 <br>
-  <% if @material.user == current_user %>
+  <% if Time.now > @material.deadline || @material.user == current_user %>
   <% else %>
   <%= simple_form_for([@material, @bid]) do |f| %>
     <%= f.error_notification %>
