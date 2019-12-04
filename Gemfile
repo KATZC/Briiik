@@ -23,7 +23,6 @@ gem 'pg_search', '~> 2.3.0'
 gem 'geocoder'
 gem 'money-rails'
 gem 'stripe'
-gem 'i18n_data'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
