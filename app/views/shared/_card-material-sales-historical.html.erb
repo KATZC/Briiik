@@ -1,7 +1,7 @@
 <div class="card-material">
     <%= image_tag("hammer.jpg") %>
       <div class="card-material-infos">
-        <p class="card-material-user"><%= material.remaining_time %></p>
+        <p class="card-material-user"><%= material.deadline.strftime('%d - %m - %Y') %></p>
 
 
         <div class="card-material-text">
@@ -16,15 +16,15 @@
             </div>
             <div class="card-material-right">
               <div class="card-prices">
-                <p>Prix départ</p><h2 class="card-material-pricing card-material blue-text"> <%= material.minimum_price%>€</h2>
+                <p class="mr-2">Prix départ</p><h2 class="card-material-pricing blue-text"> <%= material.minimum_price%>€</h2>
               </div>
               <div class="card-prices">
 
                 <% if material.bids.any? %>
-                  <p>Prix de vente</p>
-                  <h2 class="card-material-pricing card-material"><%= material.highest_bid %>€</h2>
+                  <p class="mr-2">Prix de vente</p>
+                  <h2 class="card-material-pricing txt-red"><%= material.highest_bid %>€</h2>
                 <% else %>
-                  <h2 class="card-material-pricing card-material">Non vendu</h2>
+                  <h2 class="card-material-pricing">Non vendu</h2>
                  <% end %>
               </div>
 
