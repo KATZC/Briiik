@@ -5,6 +5,17 @@
   text-align: center;
   cursor: pointer;
 }
+
+.main-button-payer {
+  background-color: #F46036;
+  color: #FDFFFC;
+  border-radius: 18px;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 10px;
+   padding-right: 10px;
+}
+
 .main-button:hover {
   cursor: grab;
 }
