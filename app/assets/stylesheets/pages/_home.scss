@@ -15,7 +15,7 @@
 
 body {
   background-color: #FDFFFC;
-  color: #1E1E24;
+  color: #040F2E;
 }
 
 .container {
@@ -43,26 +43,39 @@ body {
 
 .image-box-home-cdc {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.image-box-home-team {
+  display: flex;
+  justify-content: center;
 }
 
 .image-box-home-particulier {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+.image-box-home-ouvrie{
+  display: flex;
+  justify-content: center;
 }
 
 .description-home {
   text-align: justify;
+  text-align-last:center;
   font-size: 18px;
   font-weight: lighter;
-
 }
 
 .title-home {
   font-size: 28px;
   font-variant-caps: small-caps;
-  text-decoration: overline;
-  text-decoration-color: #385369;
+  // text-decoration: overline;
+  // text-decoration-color: #385369;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  border-top: 1px solid #FDFFFC;
 }
 
 
@@ -70,4 +83,6 @@ body {
   font-size: 22px;
   text-align: justify;
   font-weight: lighter;
+  padding-bottom: 18px;
+
 }

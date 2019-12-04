@@ -2,11 +2,19 @@
   justify-content: center;
   // height: 60px;
   box-shadow: 0px 1px grey;
-  background: white;
+  // background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+}
+
+.nav-transparent {
+    color: transparent;
+    background-color: #91b4cd !important;
+    box-shadow: none !important;
+    // background-color: #FDFFFC;
+    // z-index: 999;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -14,7 +22,11 @@
 }
 
 .navbar {
+  position: sticky;
+  top: 0px;
+  left:0px;
   background-color: #FDFFFC;
+  z-index: 999;
 }
 
 #toto > svg {

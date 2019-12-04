@@ -30,7 +30,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  color: #1E1E24;
+  color: #040F2E;
   flex: column;
 }
 
@@ -131,6 +131,7 @@
   padding: 15px;
 }
 
+
 .materials {
   display: flex;
   overflow-x: scroll;
@@ -145,3 +146,13 @@
 .txt-red {
   color: #9B1D20;
 }
+
+.my_bid_box{
+display: flex;
+margin-top: 25px;
+justify-content: space-around;
+}
+
+
+
+
