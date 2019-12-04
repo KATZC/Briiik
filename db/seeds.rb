@@ -211,7 +211,7 @@ barrette_20 = Material.new(
     description: "Barrettes de cuivre",
     detailed_description: "2mx20cm - 3kg - 20 unités non utilisées",
     minimum_price: 15,
-    deadline: Date.new(2019, 12, 9),
+    deadline: Date.new(2019, 11, 9),
     status: "Vendu",
     site: vinci_paradis_10,
     site_user: second_site_user
@@ -239,7 +239,7 @@ peinture_10 = Material.new(
     description: "Pots de peinture blanche",
     detailed_description: "4kg - 10 unités non-ouvertes",
     minimum_price: 40,
-    deadline: Date.new(2019, 12, 10),
+    deadline: Date.new(2019, 11, 10),
     status: "Vendu",
     site: vinci_richer_10,
     site_user: fourth_site_user
@@ -267,7 +267,7 @@ kitchenette_2 = Material.new(
     description: "Kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 30,
-    deadline: Date.new(2019, 12, 15),
+    deadline: Date.new(2019, 11, 15),
     status: "Non-vendu",
     site: vinci_richer_10,
     site_user: sixth_site_user
@@ -295,7 +295,7 @@ cloison_5 = Material.new(
     description: "Cloisons isolantes",
     detailed_description: "150cmx100cm - 15kg - 5 unités neuves, made in Poland",
     minimum_price: 14,
-    deadline: Date.new(2019, 12, 26),
+    deadline: Date.new(2019, 11, 26),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -309,7 +309,7 @@ moquette_10 = Material.new(
     description: "Moquette grise",
     detailed_description: "10mx5m - 4kg - 10 unités utilisées et en bon état, made in France",
     minimum_price: 30,
-    deadline: Date.new(2020, 01, 4),
+    deadline: Date.new(2019, 10, 4),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -337,7 +337,7 @@ radiateur_1 = Material.new(
     description: "Radiateur",
     detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
     minimum_price: 12,
-    deadline: Date.new(2019, 12, 17),
+    deadline: Date.new(2019, 11, 17),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
