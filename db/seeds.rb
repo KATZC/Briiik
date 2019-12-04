@@ -11,10 +11,21 @@ User.destroy_all
 puts 'Cleaning database...'
 
 # file_joe_dalton = URI.open('./app/assets/images/joe_dalton.jpg')
+
+celine = User.new(
+    name:    "Salim Cheddadi",
+    email: "salim.cheddadi@gmail.com",
+    phone_number: "O612343324",
+    password: "123456"
+  )
+  # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
+  celine.save!
+
+
 celine = User.new(
     name:    "Céline Katz",
     email: "katz.celine@gmail.com",
-    phone_number: "O612343324",
+    phone_number: "O632343324",
     password: "123456"
   )
   # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
@@ -161,6 +172,20 @@ seventh_site_user = SiteUser.new(
   manager: false
   )
 seventh_site_user.save!
+
+eigth_site_user = SiteUser.new(
+  user: celine_katz,
+  site: bouygues_lobineau_20,
+  manager: false
+  )
+eigth_site_user.save!
+
+ninth_site_user = SiteUser.new(
+  user: salim_cheddadi,
+  site: bouygues_lobineau_20,
+  manager: false
+  )
+ninth_site_user.save!
 
 
 file_contreplaque_6 = URI.open('http://www.bois-dussault.fr/site/images/normal/518df61c6c9fa.jpg')
