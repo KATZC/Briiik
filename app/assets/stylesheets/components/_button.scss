@@ -73,10 +73,9 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .links-sign-in {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 15px;
   text-decoration: none!important;
-  padding-left: 37px;
 }
 
 .button-back {
