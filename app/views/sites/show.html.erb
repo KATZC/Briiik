@@ -2,12 +2,10 @@
 
 <div class="container">
   <br>
-  <div class="site-title middle"><h5><b> <%= @site.company %></b></h5></div>
-   <div class="site-title middle"><h5><b><%= @site.address%><b></h5></div>
-
-
-<br>
-  <h5 class="title-cards">Membres du chantier : </h5>
+  <div class="site-title middle"><h6><b> <%= @site.company %></b></h6></div>
+   <div class="site-title middle"><h6><b><%= @site.address%></b></h6></div>
+  <br>
+  <h5 class="title-cards"><b>Membres du chantier </b></h5>
   <% @site_users.each do |user| %>
    <%= user.email %>
    <br>
@@ -17,7 +15,7 @@
 
   <% if policy(@site).create? %>
     <%= simple_form_for([@site, @site_user]) do |f| %>
-      <%= f.input :user_id, collection: @users, label:'Ajouter des compagnons :', class: 'title-cards'%>
+      <%= f.input :user_id, collection: @users, label:'Ajouter des compagnons', class: 'title-cards'%>
       <div class="middle">
       <%= f.submit 'Ajouter', class: 'main-button' %>
       </div>

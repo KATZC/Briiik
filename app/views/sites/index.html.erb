@@ -16,7 +16,7 @@
         </div>
         <br>
 
-        <h6><strong>Ajouter des compagnons </strong></h6>
+        <h6><strong>Modifier / Ajouter des compagnons </strong></h6>
         <ul class='cancel_padding'>
           <% @site_users.each do |site_user| %>
             <li class="taille13"> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}",
