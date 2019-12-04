@@ -1,31 +1,35 @@
-<div class="card-material search">
-  <% if material.photo.attached? %>
-    <%= cl_image_tag material.photo.key, height: 300, width: 400, crop: :fill %>
-  <% else %>
-    <%= image_tag "hammer.jpg", height: 300, width: 400 %>
-  <% end %>
+<% if material.status == 'En ligne'%>
+  <div class="card-material search">
+    <% if material.photo.attached? %>
+      <%= cl_image_tag material.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+      <%= image_tag "hammer.jpg", height: 300, width: 400 %>
+    <% end %>
 
-      <div class="card-material-infos">
-        <p class="card-material-user"><%= material.remaining_time %></p>
 
-        <div class="card-material-text">
-          <div class="card-material-description"> <h2><%= material.description %></h2>
-          </div>
+        <div class="card-material-infos">
+          <p class="card-material-user"><%= material.remaining_time %></p>
 
-          <div class="card-material-details">
-            <div class ='card-material-left'>
-              <p><%= material.category %></p>
-              <p><%= material.site.address %></p>
+          <div class="card-material-text">
+            <div class="card-material-description"> <h2><%= material.description %></h2>
             </div>
-            <div class="card-material-right">
-              <div class="card-prices">
-                <h2 class="card-material-pricing txt-red"> <%= material.highest_bid %>€</h2>
+
+            <div class="card-material-details">
+              <div class ='card-material-left'>
+                <p><%= material.category %></p>
+                <p><%= material.site.address %></p>
+              </div>
+              <div class="card-material-right">
+                <div class="card-prices">
+                  <h2 class="card-material-pricing txt-red"> <%= material.highest_bid %>€</h2>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-    </div>
-</div>
+      </div>
+  </div>
+<%else%>
+<%end%>
 
 
 
