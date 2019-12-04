@@ -6,6 +6,15 @@
   cursor: pointer;
 }
 
+.main-button:hover {
+  cursor: grab;
+  text-decoration: none;
+}
+
+.main-button:link {
+  text-decoration: none;
+}
+
 .main-button-payer {
   background-color: #F46036;
   color: #FDFFFC;
@@ -16,9 +25,7 @@
    padding-right: 10px;
 }
 
-.main-button:hover {
-  cursor: grab;
-}
+
 
 .box-button {
   display: flex;
