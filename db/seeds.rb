@@ -334,7 +334,7 @@ store_4.save!
 file_radiateur_1 = URI.open('https://images.fr.shopping.rakuten.com/cat/500x500/radiateur+acier.jpg')
 radiateur_1 = Material.new(
     category: "Mobilier",
-    description: "Radiateur",
+    description: "Radiateur neuf",
     detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
     minimum_price: 12,
     deadline: Date.new(2019, 11, 17),
@@ -348,7 +348,7 @@ radiateur_1.save!
 file_cloison_4 = URI.open('https://ifdb.eu/_images/c/cloison/cloison-de-bureau-vitr%C3%A9e-occasion/cloison-amovible-alu-avantages-des-cloisons-amovibles-de-bureau.jpg')
 cloison_4 = Material.new(
     category: "Mur",
-    description: "Cloisons",
+    description: "Grandes cloisons vitrées",
     detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
     minimum_price: 20,
     deadline: Date.new(2019, 12, 20),
@@ -362,7 +362,7 @@ cloison_4.save!
 file_table_10 = URI.open('https://manager.web-troc.com/medias/depots-vente/38/article/43656_9443.jpg')
 table_10 = Material.new(
     category: "Mobilier",
-    description: "Petites tables rondes",
+    description: "Petites tables en bois rondes",
     detailed_description: "60cmx60cm - 15kg - 10 unités neuves très design",
     minimum_price: 10,
     deadline: Date.new(2019, 12, 23),
@@ -376,7 +376,7 @@ table_10.save!
 file_fauteuil_2 = URI.open('https://machines-a-bois.pro/3225-home_default/fauteuil-bureau-occasion.jpg')
 fauteuil_2 = Material.new(
     category: "Mobilier",
-    description: "Fauteuils gris",
+    description: "10 fauteuils de bureau gris",
     detailed_description: "70cmx50cm - 5kg - 2 unités made in UK comme neufs",
     minimum_price: 20,
     deadline: Date.new(2019, 12, 28),
@@ -486,19 +486,19 @@ bid_14 = Bid.new(
   )
 bid_14.save!
 
-bid_15 = Bid.new(
-  user: alfred_dalton,
-  price: 10,
-  material: store_4
-  )
-bid_15.save!
+# bid_15 = Bid.new(
+#   user: alfred_dalton,
+#   price: 10,
+#   material: store_4
+#   )
+# bid_15.save!
 
-bid_16 = Bid.new(
-  user: adam_levin,
-  price: 12,
-  material: store_4
-  )
-bid_16.save!
+# bid_16 = Bid.new(
+#   user: adam_levin,
+#   price: 12,
+#   material: store_4
+#   )
+# bid_16.save!
 
 bid_17 = Bid.new(
   user: adam_levin,
