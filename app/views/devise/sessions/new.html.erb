@@ -1,6 +1,6 @@
 <div class="container">
-  <br>
-  <h2>Se connecter</h2>
+<br>
+<br>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
@@ -21,6 +21,7 @@
       <div class="main-button box-button">
         <%= f.button :submit, "Se connecter" %>
       </div>
+      <br>
     </div>
   <% end %>
   <div class="links-sign-in">
