@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
       line_items: [{
         name: material.description,
         images: [material.photo.key],
-        amount: material.highest_bid,
+        amount: (material.highest_bid * 100),
         currency: 'eur',
         quantity: 1
       }],
