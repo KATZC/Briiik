@@ -63,6 +63,7 @@ body {
 
 .description-home {
   text-align: justify;
+  text-align-last:center;
   font-size: 18px;
   font-weight: lighter;
 }
@@ -72,8 +73,9 @@ body {
   font-variant-caps: small-caps;
   // text-decoration: overline;
   // text-decoration-color: #385369;
-  padding-top: 15px;
-  border-top: 1px solid #385369;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  border-top: 1px solid #FDFFFC;
 }
 
 
@@ -82,5 +84,5 @@ body {
   text-align: justify;
   font-weight: lighter;
   padding-bottom: 18px;
-  border-bottom: 1px solid #385369;
+
 }
