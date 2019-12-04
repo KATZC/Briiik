@@ -67,6 +67,7 @@ class MaterialsController < ApplicationController
     @material.status = "En ligne"
     authorize @material
     if @material.save
+      flash[:notice] = "Votre équipement a bien été ajouté"
       redirect_to material_path(@material)
     else
       render 'new'
