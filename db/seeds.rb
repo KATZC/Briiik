@@ -239,8 +239,8 @@ peinture_10 = Material.new(
     description: "Pots de peinture blanche",
     detailed_description: "4kg - 10 unités non-ouvertes",
     minimum_price: 40,
-    deadline: Date.new(2019, 11, 10),
-    status: "Vendu",
+    deadline: Date.new(2019, 12, 11),
+    status: "En ligne",
     site: vinci_richer_10,
     site_user: fourth_site_user
   )
@@ -253,7 +253,7 @@ moquette_1 = Material.new(
     description: "Moquette rayée bleu/rouge",
     detailed_description: "15mx10m - 10kg - 1 unité non utilisée",
     minimum_price: 5,
-    deadline: Date.new(2020, 01, 13),
+    deadline: Date.new(2019, 12, 25),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: fifth_site_user
@@ -267,8 +267,8 @@ kitchenette_2 = Material.new(
     description: "Kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 30,
-    deadline: Date.new(2019, 11, 15),
-    status: "Non-vendu",
+    deadline: Date.new(2019, 12, 15),
+    status: "En ligne",
     site: vinci_richer_10,
     site_user: sixth_site_user
   )
@@ -386,6 +386,7 @@ fauteuil_2 = Material.new(
   )
   fauteuil_2.photo.attach(io: file_fauteuil_2, filename: 'fauteuil_2.jpg', content_type: 'image/jpg')
 fauteuil_2.save!
+
 
 
 bid_1 = Bid.new(
@@ -535,3 +536,63 @@ bid_20 = Bid.new(
   material: fauteuil_2
   )
 bid_20.save!
+
+bid_21 = Bid.new(
+  user: salim_cheddadi,
+  price: 56,
+  material: peinture_10
+  )
+bid_21.save!
+
+bid_22 = Bid.new(
+  user: salim_cheddadi,
+  price: 7,
+  material: moquette_1
+  )
+bid_22.save!
+
+bid_23 = Bid.new(
+  user: salim_cheddadi,
+  price: 40,
+  material: kitchenette_2
+  )
+bid_23.save!
+
+bid_24= Bid.new(
+  user: salim_cheddadi,
+  price: 20,
+  material: radiateur_1
+  )
+bid_24.save!
+
+bid_25= Bid.new(
+  user: salim_cheddadi,
+  price: 25,
+  material: barrette_20
+  )
+bid_25.save!
+
+
+bid_26= Bid.new(
+  user: salim_cheddadi,
+  price: 12,
+  material: store_4
+
+  )
+bid_26.save!
+
+bid_27= Bid.new(
+  user: salim_cheddadi,
+  price: 11,
+  material: cloison_5
+
+  )
+bid_27.save!
+
+bid_28= Bid.new(
+  user: salim_cheddadi,
+  price: 11,
+  material: cloison_2
+
+  )
+bid_28.save!
