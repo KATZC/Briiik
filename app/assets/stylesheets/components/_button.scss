@@ -6,6 +6,15 @@
   cursor: pointer;
 }
 
+.main-button:hover {
+  cursor: grab;
+  text-decoration: none;
+}
+
+.main-button:link {
+  text-decoration: none;
+}
+
 .main-button-payer {
   background-color: #F46036;
   color: #FDFFFC;
@@ -16,9 +25,7 @@
    padding-right: 10px;
 }
 
-.main-button:hover {
-  cursor: grab;
-}
+
 
 .box-button {
   display: flex;
@@ -73,7 +80,7 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .button-back {
   // background-color: #e5dfdf;
-  color: #1E1E24;
+  color: #040F2E;
   // border-radius: 18px;
   // margin: 0px 101px 9px;
   // padding: 5px 41px;
