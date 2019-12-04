@@ -18,8 +18,9 @@ salim_cheddadi = User.new(
     phone_number: "O612343324",
     password: "123456"
   )
+# PROFIL ACHETEUR
   # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
-  celine.save!
+  salim_cheddadi.save!
 
 
 celine_katz = User.new(
@@ -28,8 +29,10 @@ celine_katz = User.new(
     phone_number: "O632343324",
     password: "123456"
   )
+#PROFIL VENDEUR
   # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
-  celine.save!
+
+  celine_katz.save!
 
 joe_dalton = User.new(
     name:    "Joe Dalton",
