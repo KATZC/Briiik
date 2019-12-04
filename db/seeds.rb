@@ -527,3 +527,11 @@ bid_19 = Bid.new(
   material: cloison_5
   )
 bid_19.save!
+
+
+bid_20 = Bid.new(
+  user: idrissi_obama,
+  price: 325,
+  material: fauteuil_2
+  )
+bid_20.save!
