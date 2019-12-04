@@ -208,8 +208,8 @@ contreplaque_6.save!
 file_barrette_20 = URI.open('https://www.cdiscount.com/pdt2/8/8/4/1/300x300/neu6296623592884/rw/neufu-99-cuivre-t2-cu-metal-plat-barre-plaque-ban.jpg')
 barrette_20 = Material.new(
     category: "Electricité",
-    description: "Barrettes de cuivre",
-    detailed_description: "2mx20cm - 3kg - 20 unités non utilisées",
+    description: "Barrettes de cuivre (2mx20cm)",
+    detailed_description: "3kg - 20 unités non utilisées",
     minimum_price: 15,
     deadline: Date.new(2019, 11, 9),
     status: "Vendu",
@@ -236,8 +236,8 @@ vitre_4.save!
 file_peinture_10 = URI.open('https://lecoindupro.blob.core.windows.net/upload/1249328.Lg.jpg')
 peinture_10 = Material.new(
     category: "Mur",
-    description: "Pots de peinture blanche",
-    detailed_description: "4kg - 10 unités non-ouvertes",
+    description: "10 pots de peinture blanche 2,5L",
+    detailed_description: "10 unités non-ouvertes",
     minimum_price: 40,
     deadline: Date.new(2019, 12, 11),
     status: "En ligne",
@@ -264,7 +264,7 @@ moquette_1.save!
 file_kitchenette_2 = URI.open('https://images.fr.shopping.rakuten.com/cat/500x500/meuble+kitchenette.jpg')
 kitchenette_2 = Material.new(
     category: "Mobilier",
-    description: "Kitchenettes",
+    description: "2 kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 30,
     deadline: Date.new(2019, 12, 15),
@@ -539,7 +539,7 @@ bid_20.save!
 
 bid_21 = Bid.new(
   user: salim_cheddadi,
-  price: 56,
+  price: 45,
   material: peinture_10
   )
 bid_21.save!
