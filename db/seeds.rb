@@ -14,7 +14,7 @@ puts 'Cleaning database...'
 
 salim_cheddadi = User.new(
     name:    "Salim Cheddadi",
-    email: "salim.cheddadi@gmail.com",
+    email: "salim@cheddadi.com",
     phone_number: "O612343324",
     password: "123456"
   )
@@ -25,7 +25,7 @@ salim_cheddadi = User.new(
 
 celine_katz = User.new(
     name:    "Céline Katz",
-    email: "katz.celine@gmail.com",
+    email: "celine@katz.com",
     phone_number: "O632343324",
     password: "123456"
   )
