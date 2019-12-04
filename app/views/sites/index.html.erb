@@ -5,22 +5,14 @@
     <div class="col-sm-6 mt-3 p-3">
       <h4>Vous êtes chef de chantier ?</h4>
       <br>
-        <%= link_to ("Créer un chantier <i class='far fa-plus-square link-no-deco'></i>").html_safe, new_site_path %>
+        <%= link_to ("Créer un chantier<i class='far fa-plus-square'></i>").html_safe, new_site_path %>
       <br>
       <br>
-      <!-- <h5> <% @sites.each do |site| %>
-         <%= site.company %>
-        <%= site.address %>
-        <%= link_to 'Ajouter des compagnons au chantier', edit_site_path(site) %>
-        <br>
-        <% end %>
-      </h5>
-      <br> -->
 
-      <h5><strong>Ajouter des compagnons :</strong></h5>
+      <h5><strong>Ajouter des compagnons </strong></h5>
       <ul>
           <% @site_users.each do |site_user| %>
-          <li></i> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", edit_site_path(Site.find(site_user.site_id))%> </li>
+          <li class="taille14"></i> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", edit_site_path(Site.find(site_user.site_id))%> </li>
           <% end %>
       </ul>
 
@@ -29,7 +21,7 @@
       <h5><strong> Historique par chantier </strong></h5>
       <ul>
         <% @site_users.each do |site_user| %>
-          <li> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id))%> </li>
+          <li class="taille14"> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id))%> </li>
         <% end %>
       </ul>
 
