@@ -176,12 +176,12 @@ seventh_site_user = SiteUser.new(
   )
 seventh_site_user.save!
 
-eigth_site_user = SiteUser.new(
+eighth_site_user = SiteUser.new(
   user: celine_katz,
   site: bouygues_lobineau_20,
   manager: false
   )
-eigth_site_user.save!
+eighth_site_user.save!
 
 ninth_site_user = SiteUser.new(
   user: salim_cheddadi,
@@ -284,7 +284,7 @@ cloison_2 = Material.new(
     deadline: Date.new(2019, 12, 21),
     status: "Cloturé",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   cloison_2.photo.attach(io: file_cloison_2, filename: 'cloison_2.jpg', content_type: 'image/jpg')
 cloison_2.save!
@@ -298,7 +298,7 @@ cloison_5 = Material.new(
     deadline: Date.new(2019, 12, 26),
     status: "Vendu",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   cloison_5.photo.attach(io: file_cloison_5, filename: 'cloison_5.jpg', content_type: 'image/jpg')
 cloison_5.save!
@@ -312,7 +312,7 @@ moquette_10 = Material.new(
     deadline: Date.new(2020, 01, 4),
     status: "Vendu",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   moquette_10.photo.attach(io: file_moquette_10, filename: 'moquette_10.jpg', content_type: 'image/jpg')
 moquette_10.save!
@@ -326,7 +326,7 @@ store_4 = Material.new(
     deadline: Date.new(2019, 12, 17),
     status: "Cloturé",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   store_4.photo.attach(io: file_store_4, filename: 'store_4.jpg', content_type: 'image/jpg')
 store_4.save!
@@ -340,7 +340,7 @@ radiateur_1 = Material.new(
     deadline: Date.new(2019, 12, 17),
     status: "Vendu",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   radiateur_1.photo.attach(io: file_radiateur_1, filename: 'radiateur_1.jpg', content_type: 'image/jpg')
 radiateur_1.save!
@@ -354,7 +354,7 @@ cloison_4 = Material.new(
     deadline: Date.new(2019, 12, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   cloison_4.photo.attach(io: file_cloison_4, filename: 'cloison_4.jpg', content_type: 'image/jpg')
 cloison_4.save!
@@ -368,7 +368,7 @@ table_10 = Material.new(
     deadline: Date.new(2019, 12, 23),
     status: "En ligne",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   table_10 .photo.attach(io: file_table_10 , filename: 'table_10.jpg', content_type: 'image/jpg')
 table_10.save!
@@ -382,7 +382,7 @@ fauteuil_2 = Material.new(
     deadline: Date.new(2019, 12, 28),
     status: "En ligne",
     site: bouygues_lobineau_20,
-    site_user: seventh_site_user
+    site_user: eighth_site_user
   )
   fauteuil_2.photo.attach(io: file_fauteuil_2, filename: 'fauteuil_2.jpg', content_type: 'image/jpg')
 fauteuil_2.save!
