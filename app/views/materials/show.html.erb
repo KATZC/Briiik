@@ -58,6 +58,14 @@
       </div>
     </div>
   <% end %>
-    <%= render "shared/footer-orders" %>
   <% end %>
+
+  <% if @material.user == current_user %>
+    <%= render "shared/footer-home-sale" %>
+    <% else %>
+    <%= render "shared/footer-home-buy" %>
+  <% end %>
+
+    <%= render "shared/footer-orders" %>
+
 </div>
