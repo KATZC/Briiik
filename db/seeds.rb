@@ -12,7 +12,7 @@ puts 'Cleaning database...'
 
 # file_joe_dalton = URI.open('./app/assets/images/joe_dalton.jpg')
 
-celine = User.new(
+salim_cheddadi = User.new(
     name:    "Salim Cheddadi",
     email: "salim.cheddadi@gmail.com",
     phone_number: "O612343324",
@@ -22,7 +22,7 @@ celine = User.new(
   celine.save!
 
 
-celine = User.new(
+celine_katz = User.new(
     name:    "Céline Katz",
     email: "katz.celine@gmail.com",
     phone_number: "O632343324",
