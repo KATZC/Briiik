@@ -10,12 +10,24 @@
 }
 
 .nav-transparent {
-    color: transparent;
-    background-color: #91b4cd !important;
-    box-shadow: none !important;
-    // background-color: #FDFFFC;
-    // z-index: 999;
+  color: transparent;
+  background-color: #91b4cd !important;
+  box-shadow: none !important;
+  // background-color: #FDFFFC;
+  // z-index: 999;
 }
+
+#toto > svg {
+  margin-top: -11px;
+  margin-right: 9px;
+}
+
+.flexbox-nav {
+  display: flex;
+  padding-top: 8px;
+
+}
+
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
@@ -50,3 +62,4 @@
   text-align: center;
   text-decoration: none;
 }
+
