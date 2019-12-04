@@ -1,22 +1,23 @@
 <%= render "shared/footer-sales" %>
 
 <div class="container">
-  <div class="row justify-content">
+  <div class="row justify-content flex-column">
     <div class="col-sm-6 mt-3 p-3">
       <%= simple_form_for(@site) do |f| %>
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <%= f.input :company, :label => "Nom de la compagnie" %>
+      <%= f.input :company, :label => "Nom de l'entreprise" %>
       <%= f.input :address, :label => "Adresse du chantier"%>
 
       </div>
       <div class="form-actions">
         <div class="box-button">
-          <%= f.submit "Mettre à jour le chantier", class: "box-button" %>
+          <%= f.submit "Valider et ajouter des compagnons", class: "main-button" %>
         </div>
       </div>
     <% end %>
-    <%= link_to 'Back', @site_path, class: "button-back" %>
+    <br>
+    <%= link_to 'Retour', @site_path, class: "button-back" %>
     </div>
   </div>
 <%= render "shared/footer-home-sale" %>
