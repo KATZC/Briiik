@@ -28,7 +28,7 @@
       </li>
 
       <li> <strong>Description détaillée :</strong> <%= @material.detailed_description %></li>
-      <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline %></li>
+      <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline.strftime('%A %d %B %Y') %></li>
     </ul>
   </div>
 

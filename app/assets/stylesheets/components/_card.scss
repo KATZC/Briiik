@@ -131,6 +131,22 @@
   padding: 15px;
 }
 
+
+.materials {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 10px;
+}
+
+.card-material-sales, .card-material {
+  min-width: calc(100vw - 28px);
+  margin-right: 20px;
+}
+
+.txt-red {
+  color: #9B1D20;
+}
+
 .my_bid_box{
 display: flex;
 margin-top: 25px;
