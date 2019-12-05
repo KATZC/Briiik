@@ -195,3 +195,13 @@ p span {
   font-size: 21px;
 }
 
+.footer-bottom {
+  height: calc(100vh - 175px)
+}
+.footer-bottom-show-material {
+  height: calc(100vh - 140px);
+}
+
+.footer-bottom-site-records {
+  height: calc(100vh - 90px);
+}
