@@ -302,7 +302,7 @@ cloison_5 = Material.new(
   cloison_5.photo.attach(io: file_cloison_5, filename: 'cloison_5.jpg', content_type: 'image/jpg')
 cloison_5.save!
 
-file_moquette_10 = URI.open('https://pieces-voiture-sans-permis.com/images/article/pics/44/44130-1a.JPG')
+file_moquette_10 = URI.open('https://ag-cdn-production.azureedge.net/produits/images/d4858211-2f84-4e34-b308-e63882ad126b_800.jpg')
 moquette_10 = Material.new(
     category: "Sol",
     description: "Moquette grise",
