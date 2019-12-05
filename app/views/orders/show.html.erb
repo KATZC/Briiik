@@ -7,7 +7,7 @@
     <div class="col">
       <h1> <small><span class="main-button-payer"><%= "Payé" %></span></small></h1>
       <ul class="list-unstyled">
-        <h5><li> <%= @order.created_at.to_date %></li></h5>
+        <h5><li> <%= @order.created_at.strftime('%A %d %B %Y') %></li></h5>
       <br>
          <h5><b><li><%= @order.material.description %> </li></b></h5>
       <br>
