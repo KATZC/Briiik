@@ -21,7 +21,7 @@
           <br>
         </div>
          <p> <strong><%= @materials.count %> résultats</strong></p>
-      <% end %>
+    <% end %>
     <br>
   </div>
 </div>
@@ -31,7 +31,6 @@
     <div class="col-sm-8 offset-sm-2 d-flex align-items-center">
       <div class="materials">
         <% @materials.each do |material| %>
-        <div>
          <!--  <h4><%= material.description %></h4>
           <p><%= material.category %></p>
           <p><%= material.highest_bid %></p>
@@ -39,15 +38,14 @@
           <p><%= material.site.address%></p> -->
           <%= link_to material_path(material) do %>
             <%= render 'shared/card-material-search', material: material, deadline: @deadline %>
-              <br>
-            <% end %>
-          </div>
+            <br>
+          <% end %>
         <% end %>
       </div>
     </div>
   </div>
+<%= render "shared/footer-home-buy" %>
 </div>
 
-<%= render "shared/footer-home-buy" %>
 
 
