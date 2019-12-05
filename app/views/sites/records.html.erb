@@ -1,21 +1,10 @@
 <div class="container">
   <div class="row justify-content">
     <div class="col-sm-6 mt-3 p-3">
-
-      <span>Adresse du chantier concerné :</span>
-        <p class="site-address"><strong> <%= @site.address %> </strong></p>
-
-      <p>Matériel Vendu :</p>
-      <ul>
-      <% @my_posts_pickup.each do |my_post_pickup| %>
-      <p>Matériel : </p>
-      <li> Catégorie: <%= my_post_pickup.category %> </li>
-      <li> Description: <%= my_post_pickup.description %> </li>
-      <li> Prix de vente: <%= my_post_pickup.highest_bid %> € </li>
-      <li> Statut: <%= my_post_pickup.status %> </li>
-      <%end  %>
-      </ul>
-
+      <p class="site-address"><strong><%= @site.company %></strong></p>
+      <p class="site-address"><strong> <%= @site.address %> </strong></p>
+      <br>
+      <br>
       <table class="mr-3 ml-3">
           <thead>
               <tr>
@@ -28,23 +17,22 @@
             <% @my_posts_pickup.each do |my_post_pickup| %>
               <tr>
                   <td><%= my_post_pickup.description %></td>
-                  <td> date de vente </td>
-                  <td><%= my_post_pickup.highest_bid %></td>
+                  <td><%= my_post_pickup.deadline.strftime('%d-%m-%Y') %></td>
+                  <td><%= my_post_pickup.highest_bid %> €</td>
               </tr>
             <% end  %>
           </tbody>
       </table>
 
 
-
+<br>
       <p class="table-sum row mr-3 ml-3">
         <span class="column left" >Somme totale : </span>
         <span class="column"> <%= @sum%> € </span>
       </p>
 
-      <div class="image-box">
-        <%= image_tag("cdchantier.svg") %>
-      </div>
+      <%= link_to "Retour vers mes chantiers", sites_path, class: "button-back" %>
+
     </div>
   </div>
     <%= render "shared/footer-home-sale" %>
