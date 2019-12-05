@@ -1,35 +1,50 @@
 <%= render "shared/footer-sales-sites" %>
 
 <div class="container">
-  <div class="row justify-content">
+  <div class="row justify-content-center">
     <div class="col-sm-6 mt-3 p-3">
-      <h4>Vous êtes chef de chantier ?</h4>
-      <br>
-        <%= link_to ("Créer un chantier<i class='far fa-plus-square'></i>").html_safe, new_site_path %>
-      <br>
-      <br>
+      <div class="end_chef">
 
-      <h5><strong>Ajouter des compagnons </strong></h5>
-      <ul>
+        <div class="image_cdc d-flex justify-content-center">
+          <%= image_tag("cdchantier.svg") %>
+        </div>
+        <br>
+        <h5 class="d-flex justify-content-center"><strong>Vous êtes chef de chantier ? </strong></h5>
+        <br>
+        <div class="site_creation d-flex">
+          <h6><strong>Créer un chantier </strong></h6> &nbsp &nbsp<%= link_to ("  <i class='far fa-plus-square'></i>").html_safe, new_site_path %>
+        </div>
+        <br>
+
+        <h6><strong>Modifier / Ajouter des compagnons </strong></h6>
+        <ul class='cancel_padding'>
           <% @site_users.each do |site_user| %>
-          <li ></i> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", edit_site_path(Site.find(site_user.site_id))%> </li>
-          <% end %>
-      </ul>
+            <li class="taille13"> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}",
+            edit_site_path(Site.find(site_user.site_id)), class: 'light-blue-text link-no-deco'%> </li>
+            <% end %>
+        </ul>
+      </div>
+
 
       <br>
 
-      <h5><strong> Historique par chantier </strong></h5>
-      <ul>
+    <div class="end_chef">
+      <h6><strong> Ventes par chantier </strong></h6>
+      <ul class='cancel_padding'>
         <% @site_users.each do |site_user| %>
-          <li class="taille13"> <%= link_to "#{Site.find(site_user.site_id).company} : #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id))%> </li>
+          <li class="taille13"> <%= link_to "#{Site.find(site_user.site_id).company} :
+          #{Site.find(site_user.site_id).address}", records_path(Site.find(site_user.site_id)), class: 'light-blue-text link-no-deco'%> </li>
         <% end %>
       </ul>
 
       <div class="image-box">
         <%= image_tag("cdchantier.svg") %>
       </div>
+
     </div>
   </div>
+  </div>
+
 </div>
 
 <%= render "shared/footer-home-sale" %>
