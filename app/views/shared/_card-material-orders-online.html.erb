@@ -1,5 +1,9 @@
 <div class="card-material">
-    <%= image_tag("hammer.jpg") %>
+  <% if material.photo.attached? %>
+    <%= cl_image_tag material.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <%= image_tag "hammer.jpg", height: 300, width: 400 %>
+  <% end %>
       <div class="card-material-infos">
         <p class="card-material-user"><%= material.remaining_time %></p>
 
