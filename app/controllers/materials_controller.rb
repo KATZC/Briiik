@@ -9,6 +9,7 @@ class MaterialsController < ApplicationController
     @my_posts_pickup = current_user.materials.where(status: 'Vendu')
     @my_posts_done = current_user.materials.where(status: 'Cloturé')
 
+
     # A voir avec TA
     # if material.bids.order.any?
     #  @historical_price = current_user.materials.bids.order('price ASC').last&.price
@@ -39,6 +40,7 @@ class MaterialsController < ApplicationController
 
     @materials = Material.all if @materials.nil?
     @materials = @materials.order(deadline: :asc)
+    @total_result = @materials.where(status: 'En ligne').count
   end
 
   def show
