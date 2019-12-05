@@ -37,7 +37,7 @@
   position: sticky;
   top: 0px;
   left:0px;
-  background-color: #FDFFFC;
+  background-color: #F46036;
   z-index: 999;
 }
 
@@ -51,7 +51,8 @@ margin-right: 0rem;
   width: 30px;
 }
 #toto > svg > path {
-  fill: #F46036;
+  fill: #FDFFFC;
+
 }
 
 .big-helmet > svg {
@@ -69,3 +70,6 @@ margin-right: 0rem;
 }
 
 
+#branding-nav {
+  color: white;
+}
