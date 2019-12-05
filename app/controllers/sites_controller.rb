@@ -71,6 +71,7 @@ class SitesController < ApplicationController
       b << y.highest_bid
     end
     @sum = a.sum + b.sum
+    @sum_done = b.sum
   end
 
   private

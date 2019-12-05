@@ -14,11 +14,11 @@
               </tr>
           </thead>
           <tbody>
-            <% @my_posts_pickup.each do |my_post_pickup| %>
+            <% @my_posts_done.each do |my_post_done| %>
               <tr>
-                  <td><%= my_post_pickup.description %></td>
-                  <td><%= my_post_pickup.deadline.strftime('%d-%m-%Y') %></td>
-                  <td><%= my_post_pickup.highest_bid %> €</td>
+                  <td><%= my_post_done.description %></td>
+                  <td><%= my_post_done.deadline.strftime('%d-%m-%Y') %></td>
+                  <td><%= my_post_done.highest_bid %> €</td>
               </tr>
             <% end  %>
           </tbody>
@@ -28,7 +28,7 @@
 <br>
       <p class="table-sum row mr-3 ml-3">
         <span class="column left" >Somme totale : </span>
-        <span class="column"> <%= @sum%> € </span>
+        <span class="column"> <%= @sum_done%> € </span>
       </p>
 
 
