@@ -5,7 +5,7 @@ class MaterialsController < ApplicationController
     authorize :material, :sales?
     @user = current_user
     @my_posts = current_user.materials
-    @my_posts_online = current_user.materials.where(status: 'En ligne')
+    @my_posts_online = current_user.materials.where(status: 'En ligne').order(deadline: :asc)
     @my_posts_pickup = current_user.materials.where(status: 'Vendu')
     @my_posts_done = current_user.materials.where(status: 'Cloturé')
 
