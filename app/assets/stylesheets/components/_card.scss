@@ -12,13 +12,13 @@
 }
 
 .card-material h2 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-material p {
-  font-size: 11px;
+  font-size: 13px;
   opacity: .7;
   margin: 0;
 }
@@ -145,7 +145,6 @@
 
 .my_bid_box{
 display: flex;
-margin-top: 25px;
 justify-content: space-around;
 }
 
@@ -160,4 +159,16 @@ justify-content: space-around;
   border-width:thin;
   border-color: #8AADC6;
 
+}
+
+.show-price-blue {
+  font-size: 16px;
+  font-weight: bold;
+  color: #385369;
+}
+
+.show-price-orange {
+  font-size: 16px;
+  font-weight: bold;
+  color: #F46036;
 }

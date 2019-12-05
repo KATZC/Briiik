@@ -5,9 +5,10 @@ class MaterialsController < ApplicationController
     authorize :material, :sales?
     @user = current_user
     @my_posts = current_user.materials
-    @my_posts_online = current_user.materials.where(status: 'En ligne')
+    @my_posts_online = current_user.materials.where(status: 'En ligne').order(deadline: :asc)
     @my_posts_pickup = current_user.materials.where(status: 'Vendu')
     @my_posts_done = current_user.materials.where(status: 'Cloturé')
+
 
     # A voir avec TA
     # if material.bids.order.any?
@@ -39,6 +40,7 @@ class MaterialsController < ApplicationController
 
     @materials = Material.all if @materials.nil?
     @materials = @materials.order(deadline: :asc)
+    @total_result = @materials.where(status: 'En ligne').count
   end
 
   def show

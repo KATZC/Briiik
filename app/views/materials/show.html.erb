@@ -14,21 +14,24 @@
     <% end %>
   </div>
   <br>
-  <div class="row justify-content-center card-information show-box">
+  <div class="row justify-content-center text-center">
     <ul>
-      <li> <strong>Catégorie :</strong>  <%= @material.category %></li>
-      <li> <strong>Description :</strong> <%= @material.description %></li>
-      <li> <strong>Prix initial :</strong> <%= @material.minimum_price %> €</li>
-      <li> <strong>Dernière enchère :</strong>
+
+      <h5><li> <strong><%= @material.description %></strong> </li></h5>
+      <li> </strong> <%= @material.detailed_description %></li>
+      <br>
+
+      <li>
          <% if @material.bids.any? %>
-        <%= @material.highest_bid%>€
+         <strong>Prix actuel :</strong>
+        <span class="show-price-orange"><%= @material.highest_bid%> €</span>
         <% else %>
         <span>Pas d'enchère</span>
         <% end %>
       </li>
-
-      <li> <strong>Description détaillée :</strong> <%= @material.detailed_description %></li>
-      <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline.strftime('%d-%m-%Y') %></li>
+       <li> <strong>Prix avant enchère :</strong> <span class="show-price-blue"><%= @material.minimum_price %>€</span></li>
+      <li> <strong>Fin d'enchère :</strong> <%= @material.deadline.strftime('%d-%m-%Y') %></li>
+      <li> <strong>Contact vendeur : </strong> <%= @material.user.phone_number %></li>
     </ul>
   </div>
 
@@ -36,7 +39,7 @@
   <% if Time.now < @material.deadline || @material.user == current_user  || @material.status == "Cloturé" || @material.status == "Non vendu"  %>
     <% else %>
 
-      <p>Votre enchère: <%= humanized_money_with_symbol(@material.highest_bid) %></p>
+      <span>Votre enchère: <%= humanized_money_with_symbol(@material.highest_bid) %></span>
     <%= form_tag orders_path do %>
     <%= hidden_field_tag 'material_id', @material.id %>
     <%= submit_tag 'Payer', class: 'main-button-payer' %>
@@ -64,11 +67,14 @@
   <% end %>
 
   <% if @material.user == current_user %>
-  <%= link_to 'Consulter mes annonces', materials_path, class: 'light-blue-text link-no-deco'%>
+
+<!--   <%= link_to 'Consulter mes annonces', sales_path, class: 'light-blue-text link-no-deco'%> -->
+  <br>
+
     <%= render "shared/footer-home-sale" %>
     <% else %>
-    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text link-no-deco'%>
-
+ <!--    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text link-no-deco'%> -->
+    <br>
     <%= render "shared/footer-home-buy" %>
   <% end %>
 </div>
