@@ -28,7 +28,7 @@
       </li>
 
       <li> <strong>Description détaillée :</strong> <%= @material.detailed_description %></li>
-      <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline.strftime('%A %d %B %Y') %></li>
+      <li> <strong>Date de fin d'enchère :</strong> <%= @material.deadline.strftime('%d-%m-%Y') %></li>
     </ul>
   </div>
 
@@ -66,13 +66,13 @@
 
 
   <% if @material.user == current_user %>
-  <%= link_to 'Consulter mes annonces', materials_path, class: 'light-blue-text'%>
+  <%= link_to 'Consulter mes annonces', materials_path, class: 'light-blue-text link-no-deco'%>
   <br>
     <%= render "shared/footer-home-sale" %>
 
     <% else %>
      <br>
-    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text'%>
+    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text link-no-deco'%>
     <br>
     <%= render "shared/footer-home-buy" %>
   <% end %>

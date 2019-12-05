@@ -205,7 +205,7 @@ contreplaque_6 = Material.new(
   contreplaque_6.photo.attach(io: file_contreplaque_6, filename: '6 contreplaque.jpg', content_type: 'image/jpg')
 contreplaque_6.save!
 
-file_barrette_20 = URI.open('https://www.cdiscount.com/pdt2/8/8/4/1/300x300/neu6296623592884/rw/neufu-99-cuivre-t2-cu-metal-plat-barre-plaque-ban.jpg')
+file_barrette_20 = URI.open('https://www.metaloutil.fr/WebRoot/Orange/Shops/397878d8-3c3d-11e6-b2f1-000d609a287c/59FD/8E02/9445/CB73/67CE/0A0C/0596/B62B/P1070514_m.JPG')
 barrette_20 = Material.new(
     category: "Electricité",
     description: "Barrettes de cuivre (2mx20cm)",
@@ -233,7 +233,7 @@ vitre_4 = Material.new(
   vitre_4.photo.attach(io: file_vitre_4, filename: 'vitre_4.jpg', content_type: 'image/jpg')
 vitre_4.save!
 
-file_peinture_10 = URI.open('https://lecoindupro.blob.core.windows.net/upload/1249328.Lg.jpg')
+file_peinture_10 = URI.open('https://media.paruvendu.fr/image/peinture/WB15/3/1/WB153141272_1.jpg')
 peinture_10 = Material.new(
     category: "Mur",
     description: "10 pots de peinture blanche 2L",
@@ -261,7 +261,7 @@ moquette_1 = Material.new(
   moquette_1 .photo.attach(io: file_moquette_1 , filename: 'moquette_1.jpg', content_type: 'image/jpg')
 moquette_1.save!
 
-file_kitchenette_2 = URI.open('https://images.fr.shopping.rakuten.com/cat/500x500/meuble+kitchenette.jpg')
+file_kitchenette_2 = URI.open('https://www.cuisibane.com/3650-thickbox_default/kitchenette-k13-140-cm-avec-etagere-emplacement-hotte-refrigerateur-et-micro-ondes.jpg')
 kitchenette_2 = Material.new(
     category: "Mobilier",
     description: "2 kitchenettes",
@@ -317,7 +317,7 @@ moquette_10 = Material.new(
   moquette_10.photo.attach(io: file_moquette_10, filename: 'moquette_10.jpg', content_type: 'image/jpg')
 moquette_10.save!
 
-file_store_4 = URI.open('https://assetscdn.lespac.com/binary/detBig/350910572.jpg')
+file_store_4 = URI.open('https://www.maison-du-rideau-nevers.com/ressources/images/aec39d8f7f46.jpg')
 store_4 = Material.new(
     category: "Mur",
     description: "Stores avec lamelles intérieures",
@@ -373,7 +373,7 @@ table_10 = Material.new(
   table_10 .photo.attach(io: file_table_10 , filename: 'table_10.jpg', content_type: 'image/jpg')
 table_10.save!
 
-file_fauteuil_2 = URI.open('https://machines-a-bois.pro/3225-home_default/fauteuil-bureau-occasion.jpg')
+file_fauteuil_2 = URI.open('https://www.ainbugeynegoce.fr/wp-content/uploads/DSC03462.jpg')
 fauteuil_2 = Material.new(
     category: "Mobilier",
     description: "10 fauteuils de bureau gris",
