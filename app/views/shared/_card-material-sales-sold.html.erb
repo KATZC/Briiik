@@ -1,7 +1,11 @@
 <div class="card-material">
-    <%= image_tag("hammer.jpg") %>
+  <% if material.photo.attached? %>
+    <%= cl_image_tag material.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <%= image_tag "hammer.jpg", height: 300, width: 400 %>
+  <% end %>
       <div class="card-material-infos">
-        <p class="card-material-user"><%= material.deadline.strftime('%d - %m - %Y') %></p>
+        <p class="card-material-user"><%= material.deadline.strftime('%d-%m-%Y') %></p>
         <div class="card-material-text">
           <div class="card-material-description"> <h2><%= material.description %></h2>
           </div>
