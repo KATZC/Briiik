@@ -22,7 +22,6 @@ salim_cheddadi = User.new(
   # joe_dalton.photo.attach(io: file_joe_dalton, filename: 'some-image.jpg', content_type: 'image/jpg')
   salim_cheddadi.save!
 
-
 celine_katz = User.new(
     name:    "Céline Katz",
     email: "celine@katz.com",
@@ -191,7 +190,7 @@ ninth_site_user = SiteUser.new(
 ninth_site_user.save!
 
 
-file_contreplaque_6 = URI.open('http://www.bois-dussault.fr/site/images/normal/518df61c6c9fa.jpg')
+file_contreplaque_6 = URI.open('https://media.paruvendu.fr/image/contreplaque/WB15/3/4/WB153418932_1.jpg')
 contreplaque_6 = Material.new(
     category: "Mur",
     description: "Contreplaqués",
@@ -295,7 +294,7 @@ cloison_5 = Material.new(
     description: "Cloisons isolantes",
     detailed_description: "150cmx100cm - 15kg - 5 unités neuves, made in Poland",
     minimum_price: 14,
-    deadline: Date.new(2019, 11, 26),
+    deadline: Date.new(2019, 12, 04),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -337,10 +336,10 @@ radiateur_1 = Material.new(
     description: "Radiateur neuf",
     detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
     minimum_price: 12,
-    deadline: Date.new(2019, 11, 17),
+    deadline: Date.new(2019, 12, 01),
     status: "Vendu",
-    site: bouygues_lobineau_20,
-    site_user: eighth_site_user
+    site: vinci_richer_10,
+    site_user: fifth_site_user
   )
   radiateur_1.photo.attach(io: file_radiateur_1, filename: 'radiateur_1.jpg', content_type: 'image/jpg')
 radiateur_1.save!
@@ -387,6 +386,33 @@ fauteuil_2 = Material.new(
   fauteuil_2.photo.attach(io: file_fauteuil_2, filename: 'fauteuil_2.jpg', content_type: 'image/jpg')
 fauteuil_2.save!
 
+file_luminaire_2 = URI.open('https://media.paruvendu.fr/image/luminaire-exterieur/WB15/2/8/WB152819500_1.jpg')
+luminaire_2 = Material.new(
+    category: "Electricité",
+    description: "2 luminaires exterieurs classique",
+    detailed_description: "50cmx40cm - 20kg - 2 unités en bon état",
+    minimum_price: 30,
+    deadline: Date.new(2019, 12, 25),
+    status: "En ligne",
+    site: bouygues_lobineau_20,
+    site_user: eighth_site_user
+  )
+  luminaire_2.photo.attach(io: file_luminaire_2, filename: 'luminaire_2.jpg', content_type: 'image/jpg')
+luminaire_2.save!
+
+file_vasque_4 = URI.open('https://manager.web-troc.com/medias/depots-vente/46/article/99251_5351.jpg')
+vasque_4 = Material.new(
+    category: "Plomberie",
+    description: "4 vasques blancs",
+    detailed_description: "90cmx50cmx30cm - 15kg - 4 unités neuves",
+    minimum_price: 40,
+    deadline: Date.new(2019, 12, 10),
+    status: "En ligne",
+    site: bouygues_lobineau_20,
+    site_user: eighth_site_user
+  )
+  vasque_4.photo.attach(io: file_vasque_4, filename: 'vasque_4.jpg', content_type: 'image/jpg')
+vasque_4.save!
 
 
 bid_1 = Bid.new(
