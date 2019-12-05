@@ -44,7 +44,7 @@
   <% end %>
   </div>
 
-<br>
+
   <% if (Time.now > @material.deadline || @material.user == current_user) || @material.status == "Cloturé" || @material.status == "Non vendu" %>
   <% else %>
   <%= simple_form_for([@material, @bid]) do |f| %>
