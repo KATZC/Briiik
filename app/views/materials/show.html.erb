@@ -63,9 +63,17 @@
   <% end %>
   <% end %>
 
+
+
   <% if @material.user == current_user %>
+  <%= link_to 'Consulter mes annonces', materials_path, class: 'light-blue-text'%>
+  <br>
     <%= render "shared/footer-home-sale" %>
+
     <% else %>
+     <br>
+    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text'%>
+    <br>
     <%= render "shared/footer-home-buy" %>
   <% end %>
 
