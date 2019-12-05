@@ -1,15 +1,23 @@
+
+<%= render "shared/footer-orders-bids-index" %>
+
 <div class="container">
-  <div class="row py-4">
+  <div class="row py-4 d-flex justify-content-center text-center">
     <div class="col-md-3"><%= image_tag url_for(@order.material.photo), width: '100%' %></div>
     <div class="col">
-      <h1>Order <%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
+      <h1> <small><span class="main-button-payer"><%= "Payé" %></span></small></h1>
       <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>MATERIAL</strong> <%= @order.material.description %> [<%= @order.material_sku %>]</li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
-        </li>
+        <h5><li> <%= @order.created_at.to_date %></li></h5>
+      <br>
+         <h5><b><li><%= @order.material.description %> </li></b></h5>
+      <br>
+         <h5><b><li><%= humanized_money_with_symbol @order.amount %></li></b></h5>
       </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
     </div>
   </div>
+   <%= link_to 'Retour', bids_path, class: 'light-blue-text link-no-deco'%>
 </div>
+
+
+
+<%= render "shared/footer-home-buy" %>
