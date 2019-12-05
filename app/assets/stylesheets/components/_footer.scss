@@ -76,25 +76,35 @@
 // }
 
 .active-bottom {
-border-left: solid;
-border-right: solid;
-border-top: solid;
+  border-left: solid;
+  border-right: solid;
+  border-top: solid;
 // border-color: #385369;
-box-shadow: 0 0 15px rgba(107, 136, 157, 1);
+  box-shadow: 0 0 15px #0f0f0f;
  // box-shadow: 0 -10px 20px -5px rgba(115,115,115,0.75);
-border-width: thin;
+  border-width: thin;
+  filter: drop-shadow(46px 11px 13px);
 }
+
+.big-title:link {
+  color: initial;
+}
+
 
 .navy-text {
 color: #385369;
 }
 
+.bg-navy {
+  background-color: #385369;
+}
+
+.bg-light-blue {
+  background-color: #8AADC6;
+}
 
 .light-blue-text {
 color: #8AADC6;
-
-}
-.small-action {
 
 }
 
@@ -105,7 +115,21 @@ color: #8AADC6;
   overflow: hidden;
 }
 
+.white-text {
+  color: white;
+ }
 
+// .inactive-bottom {
+//   background-color: #385369;
+//   // filter: opacity(0.5);
+//   color: white;
+//   }
+
+// .inactive-bottom-buy {
+//   background-color: #8AADC6;
+//   filter: opacity(0.5);
+//   color: white;
+// }
 
 .footer-link {
   // color: white;
@@ -144,10 +168,10 @@ p span {
   padding-top: 20px;
 }
 
-.active-bottom .footer-link {
-  border-bottom: 1px solid;
-  padding-bottom: 3px;
-}
+// .active-bottom .footer-link {
+//   border-bottom: 1px solid;
+//   padding-bottom: 3px;
+// }
 
 
 // .footer-sales {
