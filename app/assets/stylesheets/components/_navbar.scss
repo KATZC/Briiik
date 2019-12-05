@@ -41,6 +41,11 @@
   z-index: 999;
 }
 
+.navbar-brand {
+display: inline;
+margin-right: 0rem;
+}
+
 #toto > svg {
   height: 30px;
   width: 30px;
@@ -62,4 +67,5 @@
   text-align: center;
   text-decoration: none;
 }
+
 
