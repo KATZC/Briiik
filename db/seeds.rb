@@ -375,10 +375,10 @@ fauteuil_2.save!
 file_luminaire_2 = URI.open('https://media.paruvendu.fr/image/luminaire-exterieur/WB15/2/8/WB152819500_1.jpg')
 luminaire_2 = Material.new(
     category: "Electricité",
-    description: "2 luminaires exterieurs classique",
+    description: "2 luminaires exterieurs classiques",
     detailed_description: "50cmx40cm - 20kg - 2 unités en bon état",
     minimum_price: 30,
-    deadline: Date.new(2019, 12, 25),
+    deadline: Date.new(2019, 11, 25),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -624,6 +624,7 @@ bid_25= Bid.new(
   material: barrette_20
   )
 bid_25.save!
+
 
 bid_27= Bid.new(
   user: salim_cheddadi,
