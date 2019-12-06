@@ -372,7 +372,7 @@ table_10 = Material.new(
   table_10 .photo.attach(io: file_table_10 , filename: 'table_10.jpg', content_type: 'image/jpg')
 table_10.save!
 
-file_fauteuil_2 = URI.open('https://www.ainbugeynegoce.fr/wp-content/uploads/DSC03462.jpg')
+file_fauteuil_2 = URI.open('https://cdn.vente-unique.com/thumbnails/rs/930/346/346261/0/fauteuil-de-bureau_346261.jpg')
 fauteuil_2 = Material.new(
     category: "Mobilier",
     description: "10 fauteuils de bureau gris",
