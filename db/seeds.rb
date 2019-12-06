@@ -255,7 +255,7 @@ moquette_1 = Material.new(
     deadline: Date.new(2019, 12, 2),
     status: "Vendu",
     site: vinci_richer_10,
-    site_user: ninth_site_user
+    site_user: fourth_site_user
   )
   moquette_1 .photo.attach(io: file_moquette_1 , filename: 'moquette_1.jpg', content_type: 'image/jpg')
 moquette_1.save!
@@ -269,7 +269,7 @@ kitchenette_2 = Material.new(
     deadline: Date.new(2019, 12, 3),
     status: "Vendu",
     site: vinci_richer_10,
-    site_user: ninth_site_user
+    site_user: fourth_site_user
   )
   kitchenette_2.photo.attach(io: file_kitchenette_2, filename: 'kitchenette_2.jpg', content_type: 'image/jpg')
 kitchenette_2.save!
