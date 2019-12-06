@@ -252,10 +252,10 @@ moquette_1 = Material.new(
     description: "Moquette rayée bleu/rouge",
     detailed_description: "15mx10m - 10kg - 1 unité non utilisée",
     minimum_price: 5,
-    deadline: Date.new(2019, 12, 25),
-    status: "En ligne",
+    deadline: Date.new(2019, 12, 2),
+    status: "Vendu",
     site: vinci_richer_10,
-    site_user: fifth_site_user
+    site_user: ninth_site_user
   )
   moquette_1 .photo.attach(io: file_moquette_1 , filename: 'moquette_1.jpg', content_type: 'image/jpg')
 moquette_1.save!
@@ -266,10 +266,10 @@ kitchenette_2 = Material.new(
     description: "2 kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 30,
-    deadline: Date.new(2019, 12, 15),
-    status: "En ligne",
+    deadline: Date.new(2019, 12, 3),
+    status: "Vendu",
     site: vinci_richer_10,
-    site_user: sixth_site_user
+    site_user: ninth_site_user
   )
   kitchenette_2.photo.attach(io: file_kitchenette_2, filename: 'kitchenette_2.jpg', content_type: 'image/jpg')
 kitchenette_2.save!
