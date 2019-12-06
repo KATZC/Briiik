@@ -210,10 +210,10 @@ barrette_20 = Material.new(
     description: "Barrettes de cuivre (2mx20cm)",
     detailed_description: "3kg - 20 unités non utilisées",
     minimum_price: 15,
-    deadline: Date.new(2019, 11, 9),
-    status: "Vendu",
-    site: vinci_paradis_10,
-    site_user: second_site_user
+    deadline: Date.new(2019, 11, 2),
+    status: "Cloturé",
+    site: bouygues_lobineau_20,
+    site_user: eighth_site_user
   )
   barrette_20.photo.attach(io: file_barrette_20, filename: 'barrette_20.jpg', content_type: 'image/jpg')
 barrette_20.save!
@@ -280,7 +280,7 @@ cloison_2 = Material.new(
     description: "Cloisons double vitrage",
     detailed_description: "250cmx150cm - 60kg - 2 unités en excellent état",
     minimum_price: 11,
-    deadline: Date.new(2019, 7, 21),
+    deadline: Date.new(2019, 11, 21),
     status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -316,20 +316,6 @@ moquette_10 = Material.new(
   moquette_10.photo.attach(io: file_moquette_10, filename: 'moquette_10.jpg', content_type: 'image/jpg')
 moquette_10.save!
 
-file_store_4 = URI.open('https://www.maison-du-rideau-nevers.com/ressources/images/aec39d8f7f46.jpg')
-store_4 = Material.new(
-    category: "Mur",
-    description: "Stores avec lamelles intérieures",
-    detailed_description: "150cmx100cm - 5kg - 4 unités comme neuves",
-    minimum_price: 8,
-    deadline: Date.new(2019, 8, 17),
-    status: "Cloturé",
-    site: bouygues_lobineau_20,
-    site_user: eighth_site_user
-  )
-  store_4.photo.attach(io: file_store_4, filename: 'store_4.jpg', content_type: 'image/jpg')
-store_4.save!
-
 file_radiateur_1 = URI.open('https://images.fr.shopping.rakuten.com/cat/500x500/radiateur+acier.jpg')
 radiateur_1 = Material.new(
     category: "Mobilier",
@@ -337,9 +323,9 @@ radiateur_1 = Material.new(
     detailed_description: "60cmx100cm - 40kg - 1 unité made in Germany en bon état",
     minimum_price: 12,
     deadline: Date.new(2019, 12, 01),
-    status: "Vendu",
-    site: vinci_richer_10,
-    site_user: fifth_site_user
+    status: "Cloturé",
+    site: bouygues_lobineau_20,
+    site_user: eighth_site_user
   )
   radiateur_1.photo.attach(io: file_radiateur_1, filename: 'radiateur_1.jpg', content_type: 'image/jpg')
 radiateur_1.save!
@@ -372,7 +358,7 @@ table_10 = Material.new(
   table_10 .photo.attach(io: file_table_10 , filename: 'table_10.jpg', content_type: 'image/jpg')
 table_10.save!
 
-file_fauteuil_2 = URI.open('https://www.ainbugeynegoce.fr/wp-content/uploads/DSC03462.jpg')
+file_fauteuil_2 = URI.open('https://cdn.vente-unique.com/thumbnails/rs/930/346/346261/0/fauteuil-de-bureau_346261.jpg')
 fauteuil_2 = Material.new(
     category: "Mobilier",
     description: "10 fauteuils de bureau gris",
@@ -393,7 +379,7 @@ luminaire_2 = Material.new(
     detailed_description: "50cmx40cm - 20kg - 2 unités en bon état",
     minimum_price: 30,
     deadline: Date.new(2019, 12, 25),
-    status: "En ligne",
+    status: "Cloturé",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
   )
@@ -414,6 +400,47 @@ vasque_4 = Material.new(
   vasque_4.photo.attach(io: file_vasque_4, filename: 'vasque_4.jpg', content_type: 'image/jpg')
 vasque_4.save!
 
+file_store_1 = URI.open('https://www.stores-et-rideaux.com/data/ProduitImage/produit-stores-venitiens-alu-25-mm-colori-gris-anthracite-option-1-guidage-non-option-2-cote-de-commande-droite/S-R-SVA-CdeDte-SansGuide_GrisAnthracite.jpg')
+store_1 = Material.new(
+    category: "Mur",
+    description: "4 stores gris neufs",
+    detailed_description: " 2 unités neuves",
+    minimum_price: 8,
+    deadline: Date.new(2019, 12, 10),
+    status: "En ligne",
+    site: vinci_paradis_10,
+    site_user: fourth_site_user
+  )
+  store_1.photo.attach(io: file_store_1, filename: 'store_1.jpg', content_type: 'image/jpg')
+store_1.save!
+
+file_store_2 = URI.open('https://www.epoxia.com/media/catalog/product/cache/1/image/1080x/d7026a79cb3dd614b91b249de618db15/s/t/store-venitien-alu.jpg')
+store_2 = Material.new(
+    category: "Mur",
+    description: "Stores venitiens 30 cm ",
+    detailed_description: "A recupérer au plus vite",
+    minimum_price: 10,
+    deadline: Date.new(2019, 12, 11),
+    status: "En ligne",
+    site: vinci_paradis_10,
+    site_user: fourth_site_user
+  )
+  store_2.photo.attach(io: file_store_2, filename: 'store_2.jpg', content_type: 'image/jpg')
+store_2.save!
+
+file_store_3 = URI.open('https://www.domondo.fr/media/image/b5/28/51/zaluzje-faux_wood_14_725x725.jpg')
+store_3 = Material.new(
+    category: "Mur",
+    description: "Stores vénitiens blancs ",
+    detailed_description: "Métal - 2 unités",
+    minimum_price: 10,
+    deadline: Date.new(2019, 12, 13),
+    status: "En ligne",
+    site: vinci_richer_10,
+    site_user: fourth_site_user
+  )
+  store_3.photo.attach(io: file_store_3, filename: 'store_3.jpg', content_type: 'image/jpg')
+store_3.save!
 
 bid_1 = Bid.new(
   user: idrissi_obama,
@@ -597,15 +624,6 @@ bid_25= Bid.new(
   material: barrette_20
   )
 bid_25.save!
-
-
-bid_26= Bid.new(
-  user: salim_cheddadi,
-  price: 12,
-  material: store_4
-
-  )
-bid_26.save!
 
 bid_27= Bid.new(
   user: salim_cheddadi,
