@@ -210,10 +210,10 @@ barrette_20 = Material.new(
     description: "Barrettes de cuivre (2mx20cm)",
     detailed_description: "3kg - 20 unités non utilisées",
     minimum_price: 15,
-    deadline: Date.new(2019, 12, 2),
+    deadline: Date.new(2019, 11, 2),
     status: "Cloturé",
     site: bouygues_lobineau_20,
-    site_user: second_site_user
+    site_user: eighth_site_user
   )
   barrette_20.photo.attach(io: file_barrette_20, filename: 'barrette_20.jpg', content_type: 'image/jpg')
 barrette_20.save!
@@ -322,7 +322,7 @@ store_4 = Material.new(
     description: "Stores avec lamelles intérieures",
     detailed_description: "150cmx100cm - 5kg - 4 unités comme neuves",
     minimum_price: 15,
-    deadline: Date.new(2019, 8, 17),
+    deadline: Date.new(2019, 12, 17),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: eighth_site_user
