@@ -625,15 +625,6 @@ bid_25= Bid.new(
   )
 bid_25.save!
 
-
-bid_26= Bid.new(
-  user: salim_cheddadi,
-  price: 12,
-  material: store_4
-
-  )
-bid_26.save!
-
 bid_27= Bid.new(
   user: salim_cheddadi,
   price: 11,
