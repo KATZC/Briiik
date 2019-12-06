@@ -1,6 +1,6 @@
 <%= render "shared/footer-sales-sites" %>
 
-<div class="container">
+<div class="container footer-bottom-show-material">
   <div class="row justify-content flex-column">
     <div class="col-sm-6 mt-3 p-3">
       <%= simple_form_for(@site) do |f| %>
@@ -9,17 +9,17 @@
       <%= f.input :company, :label => "Nom de l'entreprise" %>
       <%= f.input :address, :label => "Adresse du chantier"%>
 
+    </div>
+    <div class="form-actions">
+      <div class="box-button">
+        <%= f.submit "Valider et ajouter des compagnons", class: "main-button" %>
       </div>
-      <div class="form-actions">
-        <div class="box-button">
-          <%= f.submit "Valider et ajouter des compagnons", class: "main-button" %>
-        </div>
-      </div>
+    </div>
     <% end %>
     <br>
     <%= link_to 'Retour', sites_path, class: "button-back" %>
-    </div>
   </div>
+</div>
 <%= render "shared/footer-home-sale" %>
 
 

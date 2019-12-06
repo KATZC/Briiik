@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container footer-bottom-show-material">
   <% if @material.user == current_user %>
     <%= render "shared/footer-sales" %>
     <% else %>
     <%= render "shared/footer-orders" %>
-    <% end %>
+  <% end %>
 
   <br>
   <div class="row justify-content-center">
@@ -35,7 +35,7 @@
     </ul>
   </div>
 
-  <div class="my_bid_box">
+  <div class="my_bid_box ">
   <% if Time.now < @material.deadline || @material.user == current_user  || @material.status == "Cloturé" || @material.status == "Non vendu"  %>
     <% else %>
 
@@ -66,18 +66,15 @@
   <% end %>
   <% end %>
 
-
-
   <% if @material.user == current_user %>
+
 <!--   <%= link_to 'Consulter mes annonces', sales_path, class: 'light-blue-text link-no-deco'%> -->
   <br>
-    <%= render "shared/footer-home-sale" %>
 
+    <%= render "shared/footer-home-sale" %>
     <% else %>
  <!--    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text link-no-deco'%> -->
     <br>
     <%= render "shared/footer-home-buy" %>
   <% end %>
-
-
 </div>
