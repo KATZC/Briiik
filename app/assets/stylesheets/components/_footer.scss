@@ -7,7 +7,7 @@
   // height: 80px;
   // color: rgba(0,0,0,0.3);
   // align-item: flex-end;
-  // position: absolute;
+  position: sticky;
   // bottom: 0;
   // width: 100%;
   background: #FDFFFC; //white
@@ -20,13 +20,15 @@
   height: 60px;
   // color: rgba(0, 0, 0, 0.3);
   align-item: flex-end;
-  position: sticky;
   bottom: 0px;
   left:0px;
   width: 100vw;
   overflow: hidden;
   color: #FDFFFC;
-}
+
+
+    }
+
 
 .footer:hover {
   color: inherit;
