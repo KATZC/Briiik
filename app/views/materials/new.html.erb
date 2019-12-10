@@ -1,8 +1,6 @@
   <%= render "shared/footer-sales-new" %>
 
 <div class="container">
-  <div class="row justify-content">
-    <div class="col-sm-6 mt-3 p-3">
         <%= simple_form_for(@material) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -15,7 +13,7 @@
               <%= f.input :minimum_price, :label => "Prix minimum" %>
 
                 <div class="form-date">
-                  <%= f.input :deadline, as: :string, required: false, :label => "Date de fin des enchères", input_html: {class: "datepicker"} %>
+                  <%= f.input :deadline, as: :string, required: false, :label => "Date de fin des enchères", input_html: {class: "datepicker"}, format: "mm/dd/yyyy" %>
                 </div>
 
               <%= f.input :photo, as: :file %>
@@ -28,8 +26,6 @@
           </div>
           <br>
         <% end %>
-    </div>
-  </div>
-    <%= render "shared/footer-home-sale" %>
 </div>
+    <%= render "shared/footer-home-sale" %>
 
