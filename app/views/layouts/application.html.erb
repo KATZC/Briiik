@@ -36,11 +36,12 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
        <%= yield %>
+    <%= render "shared/footer" unless devise_controller? || @nofooter  %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
 
-    <%= render "shared/footer" unless devise_controller? || @nofooter  %>
+
 
   </body>
 
