@@ -40,7 +40,10 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
 
+    <%= render "shared/footer" unless devise_controller? || @nofooter  %>
+
   </body>
-  <%= render "shared/footer" unless @skip_footer %>
+
 </html>
+
 
