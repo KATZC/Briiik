@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def remove_footer
+    @homepage = true
+  end
 end
