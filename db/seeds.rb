@@ -196,7 +196,7 @@ contreplaque_6 = Material.new(
     description: "Contreplaqués",
     detailed_description: "2mx1m - 2kg - 6 unités en bon état",
     minimum_price: 8,
-    deadline: Date.new(2019, 12, 7),
+    deadline: Date.new(2020, 6, 7),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: first_site_user
@@ -224,7 +224,7 @@ vitre_4 = Material.new(
     description: "Cloisons vitrées",
     detailed_description: "5mx2m - 60kg - 4 unités neuves",
     minimum_price: 12,
-    deadline: Date.new(2019, 12, 10),
+    deadline: Date.new(2020, 6, 10),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: third_site_user
@@ -238,7 +238,7 @@ peinture_10 = Material.new(
     description: "10 pots de peinture blanche 2L",
     detailed_description: "10 unités non-ouvertes",
     minimum_price: 40,
-    deadline: Date.new(2019, 12, 11),
+    deadline: Date.new(2020, 6, 11),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: fourth_site_user
@@ -336,7 +336,7 @@ cloison_4 = Material.new(
     description: "Grandes cloisons vitrées",
     detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
     minimum_price: 2,
-    deadline: Date.new(2019, 12, 20),
+    deadline: Date.new(2020, 6, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -350,7 +350,7 @@ table_10 = Material.new(
     description: "Petites tables en bois rondes",
     detailed_description: "60cmx60cm - 15kg - 10 unités neuves très design",
     minimum_price: 10,
-    deadline: Date.new(2019, 12, 23),
+    deadline: Date.new(2020, 6, 23),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -364,7 +364,7 @@ fauteuil_2 = Material.new(
     description: "10 fauteuils de bureau gris",
     detailed_description: "70cmx50cm - 5kg - 2 unités made in UK comme neufs",
     minimum_price: 20,
-    deadline: Date.new(2019, 12, 28),
+    deadline: Date.new(2020, 6, 28),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -392,7 +392,7 @@ vasque_4 = Material.new(
     description: "4 vasques blancs",
     detailed_description: "90cmx50cmx30cm - 15kg - 4 unités neuves",
     minimum_price: 40,
-    deadline: Date.new(2019, 12, 10),
+    deadline: Date.new(2020, 6, 10),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -406,7 +406,7 @@ store_1 = Material.new(
     description: "4 stores gris neufs",
     detailed_description: " 2 unités neuves",
     minimum_price: 8,
-    deadline: Date.new(2019, 12, 10),
+    deadline: Date.new(2020, 6, 10),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: fourth_site_user
@@ -420,7 +420,7 @@ store_2 = Material.new(
     description: "Stores venitiens 30 cm ",
     detailed_description: "A recupérer au plus vite",
     minimum_price: 10,
-    deadline: Date.new(2019, 12, 11),
+    deadline: Date.new(2020, 6, 11),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: fourth_site_user
@@ -434,7 +434,7 @@ store_3 = Material.new(
     description: "Stores vénitiens blancs ",
     detailed_description: "Métal - 2 unités",
     minimum_price: 10,
-    deadline: Date.new(2019, 12, 13),
+    deadline: Date.new(2020, 6, 13),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: fourth_site_user
