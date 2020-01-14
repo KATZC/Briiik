@@ -1,0 +1,57 @@
+Searching 242 files for "puma"
+
+/home/celine/code/KATZC/Briiik/Gemfile:
+    6  gem 'jbuilder', '~> 2.0'
+    7  gem 'pg', '~> 0.21'
+    8: gem 'puma'
+    9  gem 'rails', '5.2.3'
+   10  gem 'redis'
+
+/home/celine/code/KATZC/Briiik/Gemfile.lock:
+  133      pry-rails (0.3.9)
+  134        pry (>= 0.10.4)
+  135:     puma (4.3.1)
+  136        nio4r (~> 2.0)
+  137      pundit (2.1.0)
+  ...
+  246    pry-byebug
+  247    pry-rails
+  248:   puma
+  249    pundit
+  250    rails (= 5.2.3)
+
+/home/celine/code/KATZC/Briiik/Procfile:
+    1: web: bundle exec puma -C config/puma.rb
+    2
+
+/home/celine/code/KATZC/Briiik/config/puma.rb:
+    1: # Puma can serve each request in a thread from an internal thread pool.
+    2  # The `threads` method setting takes two numbers: a minimum and maximum.
+    3  # Any libraries that use thread pools should be configured to match
+    4: # the maximum value specified for Puma. Default is set to 5 threads for minimum
+    5  # and maximum; this matches the default thread size of Active Record.
+    6  #
+    .
+    8  threads threads_count, threads_count
+    9
+   10: # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+   11  #
+   12  port        ENV.fetch("PORT") { 3000 }
+   13
+   14: # Specifies the `environment` that Puma will run in.
+   15  #
+   16  environment ENV.fetch("RAILS_ENV") { "development" }
+   ..
+   25
+   26  # Use the `preload_app!` method when specifying a `workers` number.
+   27: # This directive tells Puma to first boot the application and load code
+   28  # before forking the application. This takes advantage of Copy On Write
+   29  # process behavior so workers use less memory.
+   ..
+   31  # preload_app!
+   32
+   33: # Allow puma to be restarted by `rails restart` command.
+   34  plugin :tmp_restart
+   35
+
+11 matches across 4 files
