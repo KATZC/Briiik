@@ -30,7 +30,7 @@
     <div class="col-sm-8 offset-sm-2 d-flex align-items-center">
       <div class="materials">
         <% @materials.each do |material| %>
-          <% if material.status == 'En ligne'%>
+          <% if material.status == 'En ligne' && material.deadline >= Time.now%>
             <%= link_to material_path(material) do %>
               <%= render 'shared/card-material-search', material: material, deadline: @deadline %>
               <br>
