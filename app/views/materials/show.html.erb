@@ -67,14 +67,3 @@
   <% end %>
 
 </div>
-  <% if @material.user == current_user %>
-
-<!--   <%= link_to 'Consulter mes annonces', sales_path, class: 'light-blue-text link-no-deco'%> -->
-  <br>
-
-    <%= render "shared/footer-home-sale" %>
-    <% else %>
- <!--    <%= link_to 'Consulter mes enchères', bids_path, class: 'light-blue-text link-no-deco'%> -->
-    <br>
-    <%= render "shared/footer-home-buy" %>
-  <% end %>
