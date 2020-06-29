@@ -330,7 +330,7 @@ radiateur_1 = Material.new(
   radiateur_1.photo.attach(io: file_radiateur_1, filename: 'radiateur_1.jpg', content_type: 'image/jpg')
 radiateur_1.save!
 
-file_cloison_4 = URI.open('https://ifdb.eu/_images/c/cloison/cloison-de-bureau-vitr%C3%A9e-occasion/cloison-amovible-alu-avantages-des-cloisons-amovibles-de-bureau.jpg')
+file_cloison_4 = URI.open('https://www.rolleco.fr/115214-pos_large/cloison-de-bureau-semi-vitre-hauteur-1600-mm.jpg?frz-v=120')
 cloison_4 = Material.new(
     category: "Mur",
     description: "Grandes cloisons vitrées",
