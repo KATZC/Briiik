@@ -193,10 +193,10 @@ ninth_site_user.save!
 file_contreplaque_6 = URI.open('https://media.paruvendu.fr/image/contreplaque/WB15/3/4/WB153418932_1.jpg')
 contreplaque_6 = Material.new(
     category: "Mur",
-    description: "Contreplaqués",
+    description: "Planche bois en contreplaqués",
     detailed_description: "2mx1m - 2kg - 6 unités en bon état",
     minimum_price: 8,
-    deadline: Date.new(2020, 6, 7),
+    deadline: Date.new(2020, 7, 27),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: first_site_user
@@ -224,7 +224,7 @@ vitre_4 = Material.new(
     description: "Cloisons vitrées",
     detailed_description: "5mx2m - 60kg - 4 unités neuves",
     minimum_price: 12,
-    deadline: Date.new(2020, 6, 10),
+    deadline: Date.new(2020, 7, 10),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: third_site_user
@@ -238,7 +238,7 @@ peinture_10 = Material.new(
     description: "10 pots de peinture blanche 2L",
     detailed_description: "10 unités non-ouvertes",
     minimum_price: 40,
-    deadline: Date.new(2020, 6, 11),
+    deadline: Date.new(2020, 7, 11),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: fourth_site_user
@@ -246,13 +246,13 @@ peinture_10 = Material.new(
   peinture_10.photo.attach(io: file_peinture_10, filename: 'peinture_10.jpg', content_type: 'image/jpg')
 peinture_10.save!
 
-file_moquette_1  = URI.open('https://servimg.marche.fr/photo/big/73/22/61/61227374_1.jpg')
+file_moquette_1  = URI.open('https://professionnels.tarkett.fr/media/img/M/TH_Frisk_7812.jpg')
 moquette_1 = Material.new(
     category: "Sol",
-    description: "Moquette rayée bleu/rouge",
+    description: "Moquette verte",
     detailed_description: "15mx10m - 10kg - 1 unité non utilisée",
     minimum_price: 5,
-    deadline: Date.new(2019, 12, 2),
+    deadline: Date.new(2020, 7, 2),
     status: "Vendu",
     site: vinci_richer_10,
     site_user: fourth_site_user
@@ -266,7 +266,7 @@ kitchenette_2 = Material.new(
     description: "2 kitchenettes",
     detailed_description: "150cmx90cmx120cm - 120kg - 2 unités en bon état",
     minimum_price: 30,
-    deadline: Date.new(2019, 12, 3),
+    deadline: Date.new(2020, 6, 26),
     status: "Vendu",
     site: vinci_richer_10,
     site_user: fourth_site_user
@@ -288,13 +288,13 @@ cloison_2 = Material.new(
   cloison_2.photo.attach(io: file_cloison_2, filename: 'cloison_2.jpg', content_type: 'image/jpg')
 cloison_2.save!
 
-file_cloison_5 = URI.open('https://www.simon-bureau.com/an_content/_upload/img-prod/206/3_1.jpg')
+file_cloison_5 = URI.open('https://www.knauf.fr/sites/default/files/styles/landscape_half_xl/public/maison_individuelle_-_haguenau_68_-_cloison_garage_-_16-ret2.jpg?itok=6YFyGs4f')
 cloison_5 = Material.new(
     category: "Mur",
     description: "Cloisons isolantes",
     detailed_description: "150cmx100cm - 15kg - 5 unités neuves, made in Poland",
     minimum_price: 14,
-    deadline: Date.new(2019, 12, 04),
+    deadline: Date.new(2020, 6, 04),
     status: "Vendu",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -336,7 +336,7 @@ cloison_4 = Material.new(
     description: "Grandes cloisons vitrées",
     detailed_description: "2mx5m - 60kg - 4 unités made in Spain de très bonne qualité",
     minimum_price: 2,
-    deadline: Date.new(2020, 6, 20),
+    deadline: Date.new(2020, 8, 20),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -350,7 +350,7 @@ table_10 = Material.new(
     description: "Petites tables en bois rondes",
     detailed_description: "60cmx60cm - 15kg - 10 unités neuves très design",
     minimum_price: 10,
-    deadline: Date.new(2020, 6, 23),
+    deadline: Date.new(2020, 7, 23),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -364,7 +364,7 @@ fauteuil_2 = Material.new(
     description: "10 fauteuils de bureau gris",
     detailed_description: "70cmx50cm - 5kg - 2 unités made in UK comme neufs",
     minimum_price: 20,
-    deadline: Date.new(2020, 6, 28),
+    deadline: Date.new(2020, 8, 28),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -391,8 +391,8 @@ vasque_4 = Material.new(
     category: "Plomberie",
     description: "4 vasques blancs",
     detailed_description: "90cmx50cmx30cm - 15kg - 4 unités neuves",
-    minimum_price: 40,
-    deadline: Date.new(2020, 6, 10),
+    minimum_price: 30,
+    deadline: Date.new(2020, 7, 10),
     status: "En ligne",
     site: bouygues_lobineau_20,
     site_user: eighth_site_user
@@ -403,10 +403,10 @@ vasque_4.save!
 file_store_1 = URI.open('https://www.stores-et-rideaux.com/data/ProduitImage/produit-stores-venitiens-alu-25-mm-colori-gris-anthracite-option-1-guidage-non-option-2-cote-de-commande-droite/S-R-SVA-CdeDte-SansGuide_GrisAnthracite.jpg')
 store_1 = Material.new(
     category: "Mur",
-    description: "4 stores gris neufs",
+    description: "Stores gris neufs",
     detailed_description: " 2 unités neuves",
     minimum_price: 8,
-    deadline: Date.new(2020, 6, 10),
+    deadline: Date.new(2020, 7, 10),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: fourth_site_user
@@ -417,10 +417,10 @@ store_1.save!
 file_store_2 = URI.open('https://www.epoxia.com/media/catalog/product/cache/1/image/1080x/d7026a79cb3dd614b91b249de618db15/s/t/store-venitien-alu.jpg')
 store_2 = Material.new(
     category: "Mur",
-    description: "Stores venitiens 30 cm ",
+    description: "4 stores vénitiens rouges 30 cm ",
     detailed_description: "A recupérer au plus vite",
     minimum_price: 10,
-    deadline: Date.new(2020, 6, 11),
+    deadline: Date.new(2020, 7, 3),
     status: "En ligne",
     site: vinci_paradis_10,
     site_user: fourth_site_user
@@ -434,7 +434,7 @@ store_3 = Material.new(
     description: "Stores vénitiens blancs ",
     detailed_description: "Métal - 2 unités",
     minimum_price: 10,
-    deadline: Date.new(2020, 6, 13),
+    deadline: Date.new(2020, 7, 13),
     status: "En ligne",
     site: vinci_richer_10,
     site_user: fourth_site_user
